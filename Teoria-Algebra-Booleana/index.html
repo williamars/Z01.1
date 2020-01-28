@@ -36,7 +36,7 @@
     
     
       
-        <title>Lab 6 : C Logica Comb. - 3 - 2020-1 - Elementos de Sistemas - Z01</title>
+        <title>Álgebra Booleana - 2020-1 - Elementos de Sistemas - Z01</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#proximos-passos" tabindex="1" class="md-skip">
+      <a href="#algebra-booleana" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Lab 6 : C Logica Comb. - 3
+                Álgebra Booleana
               
             </span>
           
@@ -216,7 +216,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Util-Video-Aulas/" class="md-tabs__link">
+        <a href="../Util-Video-Aulas/" class="md-tabs__link md-tabs__link--active">
           Teoria
         </a>
       
@@ -229,7 +229,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Util-Resumo-Labs/" class="md-tabs__link md-tabs__link--active">
+        <a href="../Util-Resumo-Labs/" class="md-tabs__link">
           Labs
         </a>
       
@@ -502,10 +502,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Teoria
@@ -533,11 +535,103 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Teoria-Algebra-Booleana/" title="Álgebra Booleana" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Álgebra Booleana
+      </label>
+    
+    <a href="./" title="Álgebra Booleana" class="md-nav__link md-nav__link--active">
       Álgebra Booleana
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bit" class="md-nav__link">
+    bit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equacoes" class="md-nav__link">
+    Equações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operacoes" class="md-nav__link">
+    Operações
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-and-or-nor" class="md-nav__link">
+    not, and, or, nor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-booleanas" class="md-nav__link">
+    Funções booleanas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-geradas-a-partir-de-tabelas-verdade" class="md-nav__link">
+    Funções geradas a partir de Tabelas Verdade
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soma-dos-produtos" class="md-nav__link">
+    Soma Dos Produtos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -562,12 +656,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
     
     <label class="md-nav__link" for="nav-4">
       Labs
@@ -799,20 +891,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Lab 6 : C Logica Comb. - 3" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../C-Logica-Combinacional-Lab-3/" title="Lab 6 : C Logica Comb. - 3" class="md-nav__link">
       Lab 6 : C Logica Comb. - 3
     </a>
-    
   </li>
 
         
@@ -1438,6 +1521,76 @@
     
   
   
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#bit" class="md-nav__link">
+    bit
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#equacoes" class="md-nav__link">
+    Equações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operacoes" class="md-nav__link">
+    Operações
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-and-or-nor" class="md-nav__link">
+    not, and, or, nor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-booleanas" class="md-nav__link">
+    Funções booleanas
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-geradas-a-partir-de-tabelas-verdade" class="md-nav__link">
+    Funções geradas a partir de Tabelas Verdade
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soma-dos-produtos" class="md-nav__link">
+    Soma Dos Produtos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -1448,96 +1601,277 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/insper/Z01.1/edit/master/docs/C-Logica-Combinacional-Lab-3.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/insper/Z01.1/edit/master/docs/Teoria-Algebra-Booleana.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                <ul>
-<li><strong>INDIVIDUAL</strong></li>
+                <h1 id="algebra-booleana">Álgebra Booleana<a class="headerlink" href="#algebra-booleana" title="Permanent link">&para;</a></h1>
+<p>A álgebra booleana foi desenvolvida por <a href="https://pt.wikipedia.org/wiki/George_Boole">George Boole</a>, um matemático britânico que desenvolveu os conceitos em 1847, base da computação moderna. Muito tempo depois, nos anos 30, Claude Shannon, um importante engenheiro na história da computação moderna, aplicou as ideias de Boole em circuitos elétricos. Ele trabalhava no Analisador Diferencial de Vannevar Bush, e logo percebeu a relação dos relés com álgebra booleana. Ele fazia um relé acionar o outro usando usando uma lógica binária do relé fechado ou aberto. Sua dissertação e artigos, levaram outras pessoas a perceber os benefícios da álgebra booleana em eletrônica e consequentemente computação.</p>
+<p>Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e ligado, ou falso e verdadeiro, 0 volt e 5 volts, branco e preto. Porém normalmente na computação usamos <code>0</code> e <code>1</code> pela conveniência. Todos os computadores tem como sua menor unidade de dado, esse elemento. Em computação chamamos isso de bit. quem vem dígito binário (ou do inglês binary digit).</p>
+<h2 id="bit">bit<a class="headerlink" href="#bit" title="Permanent link">&para;</a></h2>
+<p>Bit é a unidade mais simples de representação de dados digitais, um bit é uma unidade que pode assumir apenas dois valores: <code>0</code> ou <code>1</code>. Com um bit podemos representar o estado de uma luz na sala de aula, se uma cadeira está vazio ou não, .... não conseguimos representar <strong>com apenas um bit</strong> uma informação que não seja binária. Mas se combinarmos mais de um bit, criando um vetor de bits, somos capazes de representar quantos estados desejarmos.</p>
+<iframe width="948" height="534" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
+
+<h2 id="equacoes">Equações<a class="headerlink" href="#equacoes" title="Permanent link">&para;</a></h2>
+<p>Uma equação de lógica booleana pode possuir zero ou mais 'entradas' e apenas uma saída, na equação exemplo a seguir, <code>X</code> é uma saída (e pode assumir apenas valor <code>1</code> ou <code>0</code>) e <code>A</code> e <code>B</code> são entradas também do tipo binária.</p>
+<div class="codehilite"><pre><span></span>    X(A,B) = A ^ B
+</pre></div>
+
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-caixaPreta.png" width="400" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A operação <code>^</code> é chamada de <code>E</code> (<code>and</code>) que também pode ser representada pelo simbolo de multiplicação escalar <code>.</code></p>
+<p>X = A and B
+X = A . B</p>
+</div>
+<p>A operação de <code>and</code> pode ser entendida como uma multiplicação: A saída (<code>X</code>) só é verdadeira se as entradas <code>A</code> e <code>B</code> forem verdadeiras: <code>1 . 1 = 1</code>. Como A e B são números binários, é possível encontrar uma tabela que relaciona o valor da saída <code>X</code> com as possíveis entradas de <code>A</code> e <code>B</code></p>
+<table>
+<thead>
+<tr>
+<th>Entrada A</th>
+<th>Entrada B</th>
+<th>Saída X</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Tabela Verdade</p>
+<p>Essa tabela que acabamos de construir chama tabela verdade, e será muito utilizada 
+ao longo do curso.</p>
+</div>
+<p>Podemos representar essa equação <code>X = A ^ B</code> como sendo um circuito digital, como ilustrado a seguir:</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-and1.png" width="400" /></p>
+<h2 id="operacoes">Operações<a class="headerlink" href="#operacoes" title="Permanent link">&para;</a></h2>
+<p>O <code>and</code> utilizado no exemplo anterior é um operador da lógica booleana, operadores possuem uma ou mais entradas e geram uma saída. Os operadores mais comuns são: <code>not</code>, <code>and</code>, <code>or</code>, <code>nand</code>, <code>nor</code>, <code>xor</code>.</p>
+<h3 id="not-and-or-nor">not, and, or, nor<a class="headerlink" href="#not-and-or-nor" title="Permanent link">&para;</a></h3>
+<details class="note"><summary>not</summary><p>O operador <code>not</code> atua sobre uma variável, tornando a saída o inverso da entrada, ou seja, se a entrada do operador for <code>1</code> sua saída será <code>0</code> e vice versa.</p>
+<blockquote>
+<p>Uso: a luz interna do carro será acesa ('1') quando a porta estiver fechada ('0').</p>
+</blockquote>
+<ul>
+<li>Notação: <code>not</code>, <code>-</code>, <code>~</code>, <code>¬</code></li>
 </ul>
-<p>Executar antes!</p>
-<div class="codehilite"><pre><span></span>$ git submodule update --init --recursive
-$ git submodule foreach <span class="s1">&#39;git stash; git checkout master; git pull&#39;</span>
+<div class="codehilite"><pre><span></span>                              _
+X = not A  /  X = A  /  X = Ã / X = ¬ A
 </pre></div>
 
-<hr />
-<p>Vamos iremos trabalharmos em implementarmos a porta <code>or16</code> (que é uma parte do projeto C), para isso iremos editar o arquivo de configuração <code>/Z01.1/Projetos/C-LogicaCombinacional/tests/config.txt</code> comentando os demais módulos menos o <code>Or16</code>:</p>
-<div class="codehilite"><pre><span></span>######################################
-# Rafael.Corsi @ Insper.edu.br       #
-#  Elementos de Sistemas             # 
-#                                    # 
-# Arquivos de teste do projeto C     #
-#  - Para incluir o teste basta      #
-#  descomentar a linha               #
-#                                    #
-######################################
-
-#nand.vhd
-#Nor8Way.vhd
-#And16.vhd
-#Not16.vhd
-#Or8Way.vhd
-<span class="gi">+Or16.vhd</span>
-#DMux2Way.vhd
-#DMux4Way.vhd
-#DMux8Way.vhd
-#Mux2Way.vhd
-#Mux4Way.vhd
-#Mux16.vhd
-#Mux4Way16.vhd
-#Mux8Way.vhd
-#Mux8Way16.vhd
+<ul>
+<li>Tabela Verdade</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Entrada A</th>
+<th>X  = not A</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Simbologia</li>
+</ul>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-not.png" width="300" /></p>
+</details>
+<details class="note"><summary>and</summary><p>O operador <code>and</code> atua sobre duas variável, tornando a saída <code>verdadeira</code> somente se as duas entradas forem <code>verdadeiras</code>, se uma das entradas forem <code>falsa</code> a saída será <code>falsa</code>.</p>
+<blockquote>
+<p>Uso: o cofre será aberto somente quando as duas chaves de seguranças forem inseridas.</p>
+</blockquote>
+<ul>
+<li>Notação:  <code>and</code>, <code>.</code>, <code>^</code></li>
+</ul>
+<div class="codehilite"><pre><span></span>X = A and B  /  X = A . B   /  X = A ^ B
 </pre></div>
 
-<p>Abra o terminal na pasta <code>C-Logica-Combinacional/</code> e execute o script python:</p>
-<div class="codehilite"><pre><span></span>$ ./testeLogicaCombinacional.py
+<ul>
+<li>Tabela Verdade</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>X = A and B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Simbologia</li>
+</ul>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-and1.png" width="300" /></p>
+</details>
+<details class="note"><summary>or</summary><p>O operador <code>or</code> atua sobre duas variável, tornando a saída <code>verdadeira</code> sempre que uma das entradas forem <code>verdadeira</code>.</p>
+<blockquote>
+<p>Uso: O alarme de incêndio será acionado caso alguns dois dois botões sejam pressionados.  </p>
+</blockquote>
+<ul>
+<li>Notação:  <code>or</code>, <code>+</code>, <code>v</code></li>
+</ul>
+<div class="codehilite"><pre><span></span>X = A or B  /  X = A + B   /  X = A v B
 </pre></div>
 
-<p>O mesmo irá executar a compilação dos arquivos <code>src/rtl/*.vhd</code> e realizar testes unitários em cada um desses módulos, como os módulos não estão implementados e como estamos forçando o teste do <code>or16</code> devemos ter um erro nesse módulo.</p>
-<p><img alt="" src="../figs/C-LogiComb/erroC.png" /></p>
-<p>Esse erro acontece pois o mesmo ainda não foi implementado:</p>
-<div class="codehilite"><pre><span></span>library IEEE;
-use IEEE.STD_LOGIC_1164.ALL;
-
-entity Or16 is
-    port ( 
-            a:   in  STD_LOGIC_VECTOR(15 downto 0);
-            b:   in  STD_LOGIC_VECTOR(15 downto 0);
-            q:   out STD_LOGIC_VECTOR(15 downto 0));
-end entity;
-
-architecture arch of Or16 is
-begin
-
-
-end architecture;
+<ul>
+<li>Tabela Verdade</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>X = A or B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>1</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Simbologia</li>
+</ul>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-or.png" width="300" /></p>
+</details>
+<details class="note"><summary>nand</summary><p>Podemos começar a 'unir' operadores para formar novos comportamentos, o <code>nand</code> é a inversão (<code>not</code>) da porta lógica <code>and</code>. Na porta <code>nand</code> a saída só é <code>verdadeira</code> quando as entradas são <code>falsas</code>.</p>
+<blockquote>
+<p>Uso: Soar o alarme se os sensores de batimento cardíaco e o de pressão falharem.  </p>
+</blockquote>
+<ul>
+<li>Notação:  <code>nand</code>, <code>¬( ∧ )</code></li>
+</ul>
+<div class="codehilite"><pre><span></span>                    _____
+X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
 </pre></div>
 
-<p>Vamos agora editar esse arquivo para realizar sua implementação. Essa modificação deve ser salva em novo branch <strong>or16</strong>. Dentro do terminal (na pasta do projeto C):</p>
-<div class="codehilite"><pre><span></span>$ git checkout -B or16
-</pre></div>
+<ul>
+<li>Tabela Verdade</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>A</th>
+<th>B</th>
+<th>X = A nand B</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>0</code></td>
+<td><code>0</code></td>
+<td><code>1</code></td>
+</tr>
+<tr>
+<td><code>0</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>0</code></td>
+<td><code>0</code></td>
+</tr>
+<tr>
+<td><code>1</code></td>
+<td><code>1</code></td>
+<td><code>0</code></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Simbologia</li>
+</ul>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-nand.png" width="300" /></p>
+</details>
+<div class="admonition note">
+<p class="admonition-title">nor / xor / xnor</p>
+<p>Para as demais portas lógicas, consulte a referência: </p>
+<ul>
+<li><a href="https://en.wikipedia.org/wiki/Logic_gate#Symbols">https://en.wikipedia.org/wiki/Logic_gate#Symbols</a></li>
+</ul>
+</div>
+<iframe width="948" height="534" src="https://www.youtube.com/embed/UvI-AMAtrvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-<p>Modifique o arquivo <code>or16</code> para implementar uma OR</p>
-<p><code>/Z01.1/C-LogicaCombinacional/src/rtl/or16.vhd</code></p>
-<p><img alt="Implementando" src="../figs/C-LogiComb/C-4-push.gif" /></p>
-<p>Execute o comando no terminal para testarmos a implementação.</p>
-<div class="codehilite"><pre><span></span>$ ./testeLogicaCombinacional.py
-</pre></div>
-
-<p><img alt="Implementando" src="../figs/C-LogiComb/okC.png" /></p>
-<p>Realizando o commit:</p>
-<div class="codehilite"><pre><span></span>$ git commit -am <span class="s2">&quot;funcionando e testado&quot;</span>
-</pre></div>
-
-<p>Agora vamos enviar para o servidor (repositório git remoto) o novo branch <code>or16</code>:</p>
-<div class="codehilite"><pre><span></span>$ git push origin or16
-</pre></div>
-
-<h1 id="proximos-passos"><a href="B-Circuitos-Integrados-Lab-2">Próximos passos</a><a class="headerlink" href="#proximos-passos" title="Permanent link">&para;</a></h1>
-<p>Ágora é necessário que o desenvolvedor gerar o pullrequest para que o mediador tenha conhecimento da sua implementação. Se no grupo mais de uma pessoa fez a implementação, <strong>gere somente um PULL REQUEST</strong></p>
-<ol>
-<li>Desenvolvedor gera pullrequest </li>
-<li>Mediador analisa/ aprova o pullrequest.</li>
-</ol>
+<h2 id="funcoes-booleanas">Funções booleanas<a class="headerlink" href="#funcoes-booleanas" title="Permanent link">&para;</a></h2>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>"INSERIR VÍDEO"</p>
+</div>
+<h2 id="funcoes-geradas-a-partir-de-tabelas-verdade">Funções geradas a partir de Tabelas Verdade<a class="headerlink" href="#funcoes-geradas-a-partir-de-tabelas-verdade" title="Permanent link">&para;</a></h2>
+<p>É possível a partir de uma tabela verdade obter uma equação lógica que a represente (caminho inverso), podemos fazer isso por duas técnicas diferentes: </p>
+<ul>
+<li>Soma dos Produtos (SoP) </li>
+<li>Produto das Somas (PoS)</li>
+</ul>
+<h3 id="soma-dos-produtos">Soma Dos Produtos<a class="headerlink" href="#soma-dos-produtos" title="Permanent link">&para;</a></h3>
+<p>Na soma dos produtos, </p>
                 
                   
                 
@@ -1558,7 +1892,7 @@ end architecture;
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../D-ULA-Lab-2/" title="Lab 8 : D ULA - 2" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Util-Video-Aulas/" title="Vídeo Aulas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -1567,19 +1901,19 @@ end architecture;
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Lab 8 : D ULA - 2
+                Vídeo Aulas
               </span>
             </div>
           </a>
         
         
-          <a href="../C-Logica-Combinacional-Lab-2/" title="Lab 7 : C Logica Comb. - 2" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Util-vhdl/" title="VHDL - Básico" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Lab 7 : C Logica Comb. - 2
+                VHDL - Básico
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
