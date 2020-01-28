@@ -1,22 +1,22 @@
 # VHDL - Básico
 
-O VHDL é uma linguagem de descrição de hardware (Hardware description Language - HDL), e não uma programação. A linguagem foi criada durante a guerra fria no Departamento de Defesa Americano (DoD-DARPA) para a documentação de hardwares complexos (ela complementava/ substituía os esquemáticos). Com a evolução da tecnologia agora é possível utilizar a linguagem para implementar sistemas digitais em hardwares programáveis (FPGA/CPL/...).
+O VHDL é uma linguagem de descrição de hardware (Hardware Description Language - HDL), não sendo uma linguagem de programação. Foi criada durante a Guerra Fria no Departamento de Defesa Americano (DoD-DARPA) para a documentação de hardwares complexos (complementava/substituía os esquemáticos). Com a evolução da tecnologia agora é possível utilizar a linguagem para implementar sistemas digitais em hardwares programáveis (FPGA/CPL/...).
 
 Por não ser criada para o fim que a utilizamos, o VHDL é no primeiro momento bastante intricado. Mas com o usar, vocês irão se acostumar com a linguagem e serão capazes de realizar hardwares cada vez mais complexos.
 
 !!! note
-    Iremos utilizar a palavra 'codigo' para descrever um projeto em VHDL, 
+    Iremos utilizar a palavra 'código' para descrever um projeto em VHDL, 
     tenha em mente que não estamos falando de um programa e sim de um 
     projeto de hardware.
 
-Um programa em `pyhton`/`java`/`C` é como uma receita de bolo que será executada em uma cozinha que já está montada, essa cozinha é o seu CPU (processador), e não da para mudar com código (software), o que você muda de um programa para outro é a receita. Uma cozinha é capaz de realizar diversas receitas diferentes ....
+Um programa em `Python`/`Java`/`C` é como uma receita de bolo que será executada em uma cozinha que já está montada, essa cozinha é o seu CPU (processador), e não dá para mudar com código (software), o que você muda de um programa para outro é a receita. Uma cozinha é capaz de realizar diversas receitas diferentes ....
 
 No caso do VHDL não temos essa 'cozinha' pronta, na verdade, podemos criar qualquer cozinha que quisermos. Com o VHDL você será o arquiteto de cozinhas, capaz de criar praticamente qualquer hardware!
 
 ## Regras de Ouro do VHDL
 
 -   VHDL é uma descrição, ou projeto, do hardware e não uma programação dele.
-    -  As linhas de código não são executadas sequencialmente com exeção de algumas construções da linguagem.
+    -  As linhas de código não são executadas sequencialmente com exceção de algumas construções da linguagem.
     -  As linhas de código serão executadas simultaneamente.
 -   Deve-se possuir uma visão de como o circuito final será.
     - Se ele for muito complexo, use uma divisão em blocos menores até chegar às unidades construtivas básicas.
@@ -66,7 +66,7 @@ No exemplo anterior, o módulo é chamado de `TopLevel` e possui uma entrada `a`
 
 ![](figs/VHDL/entidade-descricao.png){width=800}
 
-Uma entidade pode ter 0 ou 'infintas' portas, para adicionarmos uma porta nova a uma entidade, basta adicionarmos uma nova linha com as três propriedades:
+Uma entidade pode ter nenhuma ou 'infinitas' portas, para adicionarmos uma porta nova a uma entidade, basta adicionarmos uma nova linha com as três propriedades:
 
 ```
    NOME : DIREÇÃO TIPO;
@@ -78,7 +78,7 @@ Uma entidade pode ter 0 ou 'infintas' portas, para adicionarmos uma porta nova a
     VHDL, só serve para facilitar nossa leitura.
     
 !!! warning
-    O `;` não deve aparecer na ultima porta! No exemplo anterior a porta `b : out STD_LOGIC` não possui `;`.
+    O `;` não deve aparecer na última porta! No exemplo anterior a porta `b : out STD_LOGIC` não possui `;`.
 
 #### Nome
 
@@ -88,7 +88,7 @@ No VHDL você **não** pode usar um nome de porta que:
 - É uma das muitas [palavras reservadas](https://www.csee.umbc.edu/portal/help/VHDL/reserved.html): `in`, `out`, `not`, ex: `bus : out std_logic;`
 - Possua espaço: `entrada 1: in std_logic;`
 
-Para mais detalhes, de uma olhada na [documentação completa](https://www.ics.uci.edu/~jmoorkan/vhdlref/names.html)
+Para mais detalhes, dê uma olhada na [documentação completa](https://www.ics.uci.edu/~jmoorkan/vhdlref/names.html)
 
 #### Direção
 
