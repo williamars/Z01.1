@@ -36,7 +36,7 @@
     
     
       
-        <title>Resumo Assembly - 2020-1 - Elementos de Sistemas - Z01</title>
+        <title>VHDL - Básico - 2020-1 - Elementos de Sistemas - Z01</title>
       
     
     
@@ -85,7 +85,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#notacao" tabindex="1" class="md-skip">
+      <a href="#vhdl-basico" tabindex="1" class="md-skip">
         Skip to content
       </a>
     
@@ -111,7 +111,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Resumo Assembly
+                VHDL - Básico
               
             </span>
           
@@ -216,7 +216,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Util-Video-Aulas/" class="md-tabs__link">
+        <a href="../Util-Video-Aulas/" class="md-tabs__link md-tabs__link--active">
           Teoria
         </a>
       
@@ -242,7 +242,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Util-Resumo-Projetos/" class="md-tabs__link md-tabs__link--active">
+        <a href="../Util-Resumo-Projetos/" class="md-tabs__link">
           Projetos
         </a>
       
@@ -458,194 +458,9 @@
 
 
   <li class="md-nav__item">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Resumo Assembly
-      </label>
-    
-    <a href="./" title="Resumo Assembly" class="md-nav__link md-nav__link--active">
+    <a href="../Util-Resumo-Assembly/" title="Resumo Assembly" class="md-nav__link">
       Resumo Assembly
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#notacao" class="md-nav__link">
-    Notação
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instrucoes" class="md-nav__link">
-    Instruções
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lea-carregamento-efetivo-do-endereco-valor" class="md-nav__link">
-    LEA - Carregamento Efetivo do Endereço (Valor)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mov-copia-valores" class="md-nav__link">
-    MOV - Copia Valores
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-adicao-de-inteiros" class="md-nav__link">
-    ADD - Adição de Inteiros
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sub-subtracao-de-inteiros" class="md-nav__link">
-    SUB - Subtração de Inteiros
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rsub-subtracao-de-inteiros-reversa" class="md-nav__link">
-    RSUB - Subtração de Inteiros Reversa
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inc-incrementa-inteiro" class="md-nav__link">
-    INC - Incrementa Inteiro
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dec-decrementa-inteiro" class="md-nav__link">
-    DEC - Decrementa Inteiro
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#not-negacao-por-complemento-de-um" class="md-nav__link">
-    NOT - Negação por Complemento de Um
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#neg-negacao-por-complemento-de-dois" class="md-nav__link">
-    NEG - Negação por Complemento de dois
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#and-operador-e-and" class="md-nav__link">
-    AND - Operador E (and)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#or-operador-ou-or" class="md-nav__link">
-    OR - Operador OU (or)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jmp-jump" class="md-nav__link">
-    JMP - Jump
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#je-desvia-execucao-se-igual-a-zero" class="md-nav__link">
-    JE - Desvia Execução se Igual a Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jne-desvia-execucao-se-diferente-de-zero" class="md-nav__link">
-    JNE - Desvia Execução se Diferente de Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jg-desvia-execucao-se-maior-que-zero" class="md-nav__link">
-    JG - Desvia Execução se Maior que Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jge-desvia-execucao-se-maior-igual-a-zero" class="md-nav__link">
-    JGE - Desvia Execução se Maior Igual a Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jl-desvia-execucao-se-menor-que-zero" class="md-nav__link">
-    JL - Desvia Execução se Menor que Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jle-desvia-execucao-se-menor-igual-a-zero" class="md-nav__link">
-    JLE - Desvia Execução se Menor Igual a Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nop-nao-faz-nada-no-operation" class="md-nav__link">
-    NOP - Não faz nada (No Operation)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#descricao-detalhada" class="md-nav__link">
-    Descrição Detalhada
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -687,10 +502,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
     
     <label class="md-nav__link" for="nav-3">
       Teoria
@@ -718,11 +535,144 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Util-vhdl/" title="VHDL - Básico" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        VHDL - Básico
+      </label>
+    
+    <a href="./" title="VHDL - Básico" class="md-nav__link md-nav__link--active">
       VHDL - Básico
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#regras-de-ouro-do-vhdl" class="md-nav__link">
+    Regras de Ouro do VHDL
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basico" class="md-nav__link">
+    Básico
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bibliotecas" class="md-nav__link">
+    Bibliotecas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#entidade" class="md-nav__link">
+    Entidade
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nome" class="md-nav__link">
+    Nome
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#direcao" class="md-nav__link">
+    Direção
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tipo" class="md-nav__link">
+    Tipo
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exemplos" class="md-nav__link">
+    Exemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#arquitetura" class="md-nav__link">
+    Arquitetura
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operacoes-basicas" class="md-nav__link">
+    Operações básicas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacao-com-vetores" class="md-nav__link">
+    Operação com vetores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signais" class="md-nav__link">
+    signais
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -1059,12 +1009,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
     
     <label class="md-nav__link" for="nav-5">
       Projetos
@@ -1356,12 +1304,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
     
     <label class="md-nav__link" for="nav-5-7">
       F - Assembly
@@ -1401,198 +1347,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Resumo Assembly
-      </label>
-    
-    <a href="./" title="Resumo Assembly" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../Util-Resumo-Assembly/" title="Resumo Assembly" class="md-nav__link">
       Resumo Assembly
     </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#notacao" class="md-nav__link">
-    Notação
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#instrucoes" class="md-nav__link">
-    Instruções
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#lea-carregamento-efetivo-do-endereco-valor" class="md-nav__link">
-    LEA - Carregamento Efetivo do Endereço (Valor)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mov-copia-valores" class="md-nav__link">
-    MOV - Copia Valores
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#add-adicao-de-inteiros" class="md-nav__link">
-    ADD - Adição de Inteiros
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#sub-subtracao-de-inteiros" class="md-nav__link">
-    SUB - Subtração de Inteiros
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#rsub-subtracao-de-inteiros-reversa" class="md-nav__link">
-    RSUB - Subtração de Inteiros Reversa
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inc-incrementa-inteiro" class="md-nav__link">
-    INC - Incrementa Inteiro
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dec-decrementa-inteiro" class="md-nav__link">
-    DEC - Decrementa Inteiro
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#not-negacao-por-complemento-de-um" class="md-nav__link">
-    NOT - Negação por Complemento de Um
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#neg-negacao-por-complemento-de-dois" class="md-nav__link">
-    NEG - Negação por Complemento de dois
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#and-operador-e-and" class="md-nav__link">
-    AND - Operador E (and)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#or-operador-ou-or" class="md-nav__link">
-    OR - Operador OU (or)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jmp-jump" class="md-nav__link">
-    JMP - Jump
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#je-desvia-execucao-se-igual-a-zero" class="md-nav__link">
-    JE - Desvia Execução se Igual a Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jne-desvia-execucao-se-diferente-de-zero" class="md-nav__link">
-    JNE - Desvia Execução se Diferente de Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jg-desvia-execucao-se-maior-que-zero" class="md-nav__link">
-    JG - Desvia Execução se Maior que Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jge-desvia-execucao-se-maior-igual-a-zero" class="md-nav__link">
-    JGE - Desvia Execução se Maior Igual a Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jl-desvia-execucao-se-menor-que-zero" class="md-nav__link">
-    JL - Desvia Execução se Menor que Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jle-desvia-execucao-se-menor-igual-a-zero" class="md-nav__link">
-    JLE - Desvia Execução se Menor Igual a Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nop-nao-faz-nada-no-operation" class="md-nav__link">
-    NOP - Não faz nada (No Operation)
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#descricao-detalhada" class="md-nav__link">
-    Descrição Detalhada
-  </a>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
   </li>
 
         
@@ -1788,154 +1547,66 @@
 <nav class="md-nav md-nav--secondary">
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">Table of contents</label>
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#notacao" class="md-nav__link">
-    Notação
+  <a href="#regras-de-ouro-do-vhdl" class="md-nav__link">
+    Regras de Ouro do VHDL
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#instrucoes" class="md-nav__link">
-    Instruções
+  <a href="#basico" class="md-nav__link">
+    Básico
   </a>
   
     <nav class="md-nav">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#lea-carregamento-efetivo-do-endereco-valor" class="md-nav__link">
-    LEA - Carregamento Efetivo do Endereço (Valor)
+  <a href="#bibliotecas" class="md-nav__link">
+    Bibliotecas
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#mov-copia-valores" class="md-nav__link">
-    MOV - Copia Valores
+  <a href="#entidade" class="md-nav__link">
+    Entidade
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nome" class="md-nav__link">
+    Nome
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#add-adicao-de-inteiros" class="md-nav__link">
-    ADD - Adição de Inteiros
+  <a href="#direcao" class="md-nav__link">
+    Direção
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#sub-subtracao-de-inteiros" class="md-nav__link">
-    SUB - Subtração de Inteiros
+  <a href="#tipo" class="md-nav__link">
+    Tipo
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#rsub-subtracao-de-inteiros-reversa" class="md-nav__link">
-    RSUB - Subtração de Inteiros Reversa
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#inc-incrementa-inteiro" class="md-nav__link">
-    INC - Incrementa Inteiro
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#dec-decrementa-inteiro" class="md-nav__link">
-    DEC - Decrementa Inteiro
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#not-negacao-por-complemento-de-um" class="md-nav__link">
-    NOT - Negação por Complemento de Um
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#neg-negacao-por-complemento-de-dois" class="md-nav__link">
-    NEG - Negação por Complemento de dois
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#and-operador-e-and" class="md-nav__link">
-    AND - Operador E (and)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#or-operador-ou-or" class="md-nav__link">
-    OR - Operador OU (or)
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jmp-jump" class="md-nav__link">
-    JMP - Jump
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#je-desvia-execucao-se-igual-a-zero" class="md-nav__link">
-    JE - Desvia Execução se Igual a Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jne-desvia-execucao-se-diferente-de-zero" class="md-nav__link">
-    JNE - Desvia Execução se Diferente de Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jg-desvia-execucao-se-maior-que-zero" class="md-nav__link">
-    JG - Desvia Execução se Maior que Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jge-desvia-execucao-se-maior-igual-a-zero" class="md-nav__link">
-    JGE - Desvia Execução se Maior Igual a Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jl-desvia-execucao-se-menor-que-zero" class="md-nav__link">
-    JL - Desvia Execução se Menor que Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#jle-desvia-execucao-se-menor-igual-a-zero" class="md-nav__link">
-    JLE - Desvia Execução se Menor Igual a Zero
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#nop-nao-faz-nada-no-operation" class="md-nav__link">
-    NOP - Não faz nada (No Operation)
+  <a href="#exemplos" class="md-nav__link">
+    Exemplos
   </a>
   
 </li>
@@ -1944,11 +1615,43 @@
     </nav>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#descricao-detalhada" class="md-nav__link">
-    Descrição Detalhada
+        
+          <li class="md-nav__item">
+  <a href="#arquitetura" class="md-nav__link">
+    Arquitetura
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#operacoes-basicas" class="md-nav__link">
+    Operações básicas
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#operacao-com-vetores" class="md-nav__link">
+    Operação com vetores
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#signais" class="md-nav__link">
+    signais
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1968,348 +1671,278 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/Insper/Z01.1/edit/master/docs-src/Util-Resumo-Assembly.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/Insper/Z01.1/edit/master/docs-src/Util-vhdl.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Resumo Assembly</h1>
-                
-                <div class="admonition note">
-<p class="admonition-title">Tipo A</p>
-<ul>
-<li><a href="#lea---carregamento-efetivo-do-endereco-(valor)">LEA  - Carregamento Efetivo do Endereço</a></li>
-</ul>
-</div>
+                <h1 id="vhdl-basico">VHDL - Básico<a class="headerlink" href="#vhdl-basico" title="Permanent link">&para;</a></h1>
+<p>O VHDL é uma linguagem de descrição de hardware (Hardware description Language - HDL), e não uma programação. A linguagem foi criada durante a guerra fria no Departamento de Defesa Americano (DoD-DARPA) para a documentação de hardwares complexos (ela complementava/ substituía os esquemáticos). Com a evolução da tecnologia agora é possível utilizar a linguagem para implementar sistemas digitais em hardwares programáveis (FPGA/CPL/...).</p>
+<p>Por não ser criada para o fim que a utilizamos, o VHDL é no primeiro momento bastante intricado. Mas com o usar, vocês irão se acostumar com a linguagem e serão capazes de realizar hardwares cada vez mais complexos.</p>
 <div class="admonition note">
-<p class="admonition-title">Tipo C</p>
-<ul>
-<li><a href="#mov---copia-valores">MOV  - Copia Valores</a></li>
-<li><a href="#add---adição-de-inteiros">ADD  - Adição de Inteiros</a></li>
-<li><a href="#sub---subtração-de-inteiros">SUB  - Subtração de Inteiros</a></li>
-<li><a href="#rsub---subtração-de-inteiros-reversa">RSUB - Subtração de Inteiros Reversa</a></li>
-<li><a href="#inc---incrementa-inteiro">INC  - Incrementa Inteiro</a></li>
-<li><a href="#dec---decrementa-inteiro">DEC  - Decrementa Inteiro</a></li>
-<li><a href="#not----negação-por-complemento-de-um">NOT  - Negação por Complemento de Um</a></li>
-<li><a href="#neg----negação-por-complemento-de-dois">NEG  - Negação por Complemento de dois</a></li>
-<li><a href="#and----operador-e-and">AND  - Operador E (and)</a></li>
-<li><a href="#or----operador-ou-or">OR   - Operador OU (or)</a></li>
-<li><a href="#jmp----jump">JMP  - Jump</a></li>
-<li><a href="#je----desvia-execução-se-igual-a-zero">JE   - Desvia Execução se Igual a Zero</a></li>
-<li><a href="#jne----desvia-execução-se-diferente-de-zero">JNE  - Desvia Execução se Diferente de Zero</a></li>
-<li><a href="#jg----desvia-execução-se-maior-que-zero">JG   - Desvia Execução se Maior que Zero</a></li>
-<li><a href="#jge----desvia-execução-se-maior-igual-a-zero">JGE  - Desvia Execução se Maior Igual a Zero</a></li>
-<li><a href="#jl----desvia-execução-se-menor-que-zero">JL   - Desvia Execução se Menor que Zero</a></li>
-<li><a href="#jle----desvia-execução-se-menor-igual-a-zero">JLE  - Desvia Execução se Menor Igual a Zero</a></li>
-<li><a href="#nop----não-faz-nada-no-operation">NOP  - Não faz nada (No Operation)</a></li>
-</ul>
+<p class="admonition-title">Note</p>
+<p>Iremos utilizar a palavra 'codigo' para descrever um projeto em VHDL, 
+tenha em mente que não estamos falando de um programa e sim de um 
+projeto de hardware.</p>
 </div>
-<hr />
-<h2 id="notacao">Notação<a class="headerlink" href="#notacao" title="Permanent link">&para;</a></h2>
+<p>Um programa em <code>pyhton</code>/<code>java</code>/<code>C</code> é como uma receita de bolo que será executada em uma cozinha que já está montada, essa cozinha é o seu CPU (processador), e não da para mudar com código (software), o que você muda de um programa para outro é a receita. Uma cozinha é capaz de realizar diversas receitas diferentes ....</p>
+<p>No caso do VHDL não temos essa 'cozinha' pronta, na verdade, podemos criar qualquer cozinha que quisermos. Com o VHDL você será o arquiteto de cozinhas, capaz de criar praticamente qualquer hardware!</p>
+<h2 id="regras-de-ouro-do-vhdl">Regras de Ouro do VHDL<a class="headerlink" href="#regras-de-ouro-do-vhdl" title="Permanent link">&para;</a></h2>
 <ul>
-<li><strong>reg</strong> : Registrador (<code>%A</code>, <code>%D</code>, <code>%S</code>)</li>
-<li><strong>mem</strong> : Acesso a memória (%A)</li>
-<li><strong>im</strong>: Imediato, pode ser: (<code>$1</code>, <code>$0</code>, <code>$-1</code>)</li>
-<li><strong>const</strong>: Constante positiva (<code>$0</code>, <code>$9</code>, ....)</li>
+<li>VHDL é uma descrição, ou projeto, do hardware e não uma programação dele.<ul>
+<li>As linhas de código não são executadas sequencialmente com exeção de algumas construções da linguagem.</li>
+<li>As linhas de código serão executadas simultaneamente.</li>
 </ul>
-<h2 id="instrucoes">Instruções<a class="headerlink" href="#instrucoes" title="Permanent link">&para;</a></h2>
-<h4 id="lea-carregamento-efetivo-do-endereco-valor">LEA - Carregamento Efetivo do Endereço (Valor)<a class="headerlink" href="#lea-carregamento-efetivo-do-endereco-valor" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p><strong>leaw</strong> const, reg</p>
+</li>
+<li>Deve-se possuir uma visão de como o circuito final será.<ul>
+<li>Se ele for muito complexo, use uma divisão em blocos menores até chegar às unidades construtivas básicas.</li>
+</ul>
+</li>
+</ul>
+<h2 id="basico">Básico<a class="headerlink" href="#basico" title="Permanent link">&para;</a></h2>
+<p>Um código em VHDL possui basicamente três partes:</p>
+<ol>
+<li>Declaração de bibliotecas utilizadas
+    <div class="codehilite"><pre><span></span><span class="k">library</span> <span class="nn">ieee</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">ieee.std_logic_1164.</span><span class="k">all</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">ieee.numeric_std.</span><span class="k">all</span><span class="p">;</span>
+<span class="k">use</span> <span class="nn">work.</span><span class="k">all</span><span class="p">;</span>
+</pre></div></li>
+<li>Declaração das entradas e saídas desse bloco (entidade)
+    <div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">TopLevel</span> <span class="k">is</span>
+  <span class="k">port</span><span class="p">(</span>
+        <span class="n">a</span> <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_logic</span><span class="p">;</span>
+        <span class="n">b</span> <span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span>
+  <span class="p">);</span>
+<span class="k">end</span> <span class="k">entity</span><span class="p">;</span>
+</pre></div></li>
+<li>Implementação da lógica que relaciona as entradas e saídas do módulo (arquitetura)
+    <div class="codehilite"><pre><span></span><span class="k">architecture</span> <span class="nc">rtl</span> <span class="k">of</span> <span class="nc">TopLevel</span> <span class="k">is</span>
+
+<span class="k">begin</span>
+
+  <span class="n">a</span> <span class="o">&lt;=</span> <span class="k">not</span> <span class="n">b</span><span class="p">;</span>
+
+<span class="k">end</span> <span class="nc">rtl</span><span class="p">;</span>
+</pre></div></li>
+</ol>
+<p><img alt="" src="../figs/VHDL/bloco.png" width="400" /></p>
+<h3 id="bibliotecas">Bibliotecas<a class="headerlink" href="#bibliotecas" title="Permanent link">&para;</a></h3>
+<p>As bibliotecas do VHDL é onde as definições dos tipos e das operações são realizadas, não será necessário mexer com isso ao longo do semestre, essa parte já vai estar pronta nos projetos que vocês forem mexer.</p>
+<h3 id="entidade">Entidade<a class="headerlink" href="#entidade" title="Permanent link">&para;</a></h3>
+<p>Podemos pensar na entidade como o trecho de código que define o módulo como uma caixa preta, ela explicita quem são as entradas e quais são as saídas desse módulo. Assim como um CHIP, que possui pinos de entradas e pinos de saída.</p>
+<p>No exemplo anterior, o módulo é chamado de <code>TopLevel</code> e possui uma entrada <code>a</code> e uma saída <code>b</code>. Tanto a entrada quanto a saída são do tipo <code>std_logic</code>. Cada porta tem a descrição de sua direção (<code>in</code>, <code>out</code>), como detalhado a seguir:</p>
+<p><img alt="" src="../figs/VHDL/entidade-descricao.png" width="800" /></p>
+<p>Uma entidade pode ter 0 ou 'infintas' portas, para adicionarmos uma porta nova a uma entidade, basta adicionarmos uma nova linha com as três propriedades:</p>
+<div class="codehilite"><pre><span></span>   NOME : DIREÇÃO TIPO;
+</pre></div>
+
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Note que a necessidade do <code>;</code> no final da linha, isso indica para o VHDL
+que essa descrição 'acabou'. A quebra de linha <code>Enter</code> não tem uso para o 
+VHDL, só serve para facilitar nossa leitura.</p>
 </div>
 <div class="admonition warning">
-<p class="admonition-title">Restrição</p>
-<p>A operação de <strong>leaw</strong> só aceita o registrador <code>%A</code></p>
+<p class="admonition-title">Warning</p>
+<p>O <code>;</code> não deve aparecer na ultima porta! No exemplo anterior a porta <code>b : out STD_LOGIC</code> não possui <code>;</code>.</p>
 </div>
-<p>A instrução <em>lea</em> armazena o valor passado (<code>const</code>) no
-registrador especificado </p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: %A = 15</span>
-<span class="nf">leaw</span> <span class="kc">$</span><span class="mi">15</span><span class="p">,</span> <span class="o">%</span><span class="nv">A</span>
+<h4 id="nome">Nome<a class="headerlink" href="#nome" title="Permanent link">&para;</a></h4>
+<p>No VHDL você <strong>não</strong> pode usar um nome de porta que:</p>
+<ul>
+<li>Comece com um número:  (<code>0</code>, <code>1</code>, ... ), ex: <code>0bus : out std_logic;</code></li>
+<li>É uma das muitas <a href="https://www.csee.umbc.edu/portal/help/VHDL/reserved.html">palavras reservadas</a>: <code>in</code>, <code>out</code>, <code>not</code>, ex: <code>bus : out std_logic;</code></li>
+<li>Possua espaço: <code>entrada 1: in std_logic;</code></li>
+</ul>
+<p>Para mais detalhes, de uma olhada na <a href="https://www.ics.uci.edu/~jmoorkan/vhdlref/names.html">documentação completa</a></p>
+<h4 id="direcao">Direção<a class="headerlink" href="#direcao" title="Permanent link">&para;</a></h4>
+<p>A direção <code>in</code>, <code>out</code> define se a informação irá 'entrar' no módulo ou 'sair'
+do módulo. Por exemplo, se quisermos 'ler' um botão, devemos declarar essa
+porta como sendo uma 'entrada' do módulo, mas se quisermos acionar um LED,
+devemos declarar essa porta como 'saída', pois ela será controlada por 
+nossa lógica.</p>
+<h4 id="tipo">Tipo<a class="headerlink" href="#tipo" title="Permanent link">&para;</a></h4>
+<p>O tipo define se a porta será composta por um único bit <code>std_logic</code> ou por
+um vetor de bits <code>std_logic_vector(2 downto 0)</code> (vetor de 3 bits). </p>
+<p>O tipo <code>STD_LOGIC</code> é muito mais complexo que só um bit, mas vamos deixar isso de lado 
+por ora.</p>
+<h4 id="exemplos">Exemplos<a class="headerlink" href="#exemplos" title="Permanent link">&para;</a></h4>
+<p>Módulo com duas entradas binárias: <code>a</code>, <code>x</code> e uma saída <code>b</code></p>
+<div class="codehilite"><pre><span></span>    <span class="k">entity</span> <span class="nc">TopLevel</span> <span class="k">is</span>
+      <span class="k">port</span><span class="p">(</span>
+            <span class="n">a</span>   <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_logic</span><span class="p">;</span>
+            <span class="n">x</span>   <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_logic</span><span class="p">;</span>
+            <span class="n">b</span>   <span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span>
+      <span class="p">);</span>
+    <span class="k">end</span> <span class="k">entity</span><span class="p">;</span>
 </pre></div>
 
-<hr />
-<h4 id="mov-copia-valores">MOV - Copia Valores<a class="headerlink" href="#mov-copia-valores" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p><strong>movw</strong> im*/reg/mem, reg/mem {, reg/mem, reg/mem}</p>
-</div>
+<p>Módulo chamado MUX que possui 4 entradas na forma de um vetor (<code>I : in std_logic_vector(3 downto 0)</code>), um seletor de dois bits na forma de um vetor (<code>S</code>) e uma saída <code>q</code> na forma de um bit.</p>
+<div class="codehilite"><pre><span></span>    <span class="k">entity</span> <span class="nc">mux</span> <span class="k">is</span>
+      <span class="k">port</span><span class="p">(</span>
+            <span class="n">I</span>   <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
+            <span class="n">S</span>   <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
+            <span class="n">q</span>   <span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span>
+      <span class="p">);</span>
+    <span class="k">end</span> <span class="k">entity</span><span class="p">;</span>
+</pre></div>
+
 <div class="admonition tip">
-<p class="admonition-title">Dica</p>
-<p>A operação de mov faz na verde uma cópia, deixando a origem com o 
-dado original.</p>
+<p class="admonition-title">Tip</p>
+<p>Note que a entrada <code>I</code> foi declarada como sendo um vetor que começa em <code>3</code> e termina em <code>0</code>, possuindo no total 4 bits: <code>3</code>, <code>2</code>, <code>1</code>, <code>0</code></p>
+<p>Em diagrama elétrico é utilizado a seguinte notação para indicar um vetor de bits:</p>
+<ul>
+<li>Uso de uma <code>/</code> no fio com a indicação da quantidade de bits</li>
+<li>Uso de uma linha mais grossa, para indicar um vetor</li>
+</ul>
+<p><img alt="" src="../figs/VHDL/vector-bus.png" width="300" /></p>
 </div>
-<p>A instrução <em>mov,</em> copia o valor da primeira posição para
-a segunda posição (terceira e quarta opcional).</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: S = RAM[A]</span>
-<span class="nf">movw</span> <span class="p">(</span><span class="o">%</span><span class="nv">A</span><span class="p">),</span> <span class="o">%</span><span class="nv">S</span>
+<p>Entidade de uma ULA</p>
+<div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">ALU</span> <span class="k">is</span>
+    <span class="k">port</span> <span class="p">(</span>
+            <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="o">:</span>   <span class="k">in</span> <span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">-- entradas de dados da ALU</span>
+            <span class="n">zx</span><span class="o">:</span>    <span class="k">in</span> <span class="kt">STD_LOGIC</span><span class="p">;</span>                     <span class="c1">-- zera a entrada x</span>
+            <span class="n">nx</span><span class="o">:</span>    <span class="k">in</span> <span class="kt">STD_LOGIC</span><span class="p">;</span>                     <span class="c1">-- inverte a entrada x</span>
+            <span class="n">zy</span><span class="o">:</span>    <span class="k">in</span> <span class="kt">STD_LOGIC</span><span class="p">;</span>                     <span class="c1">-- zera a entrada y</span>
+            <span class="n">ny</span><span class="o">:</span>    <span class="k">in</span> <span class="kt">STD_LOGIC</span><span class="p">;</span>                     <span class="c1">-- inverte a entrada y</span>
+            <span class="n">f</span><span class="o">:</span>     <span class="k">in</span> <span class="kt">STD_LOGIC</span><span class="p">;</span>                     <span class="c1">-- se 0 calcula x &amp; y, senão x + y</span>
+            <span class="n">no</span><span class="o">:</span>    <span class="k">in</span> <span class="kt">STD_LOGIC</span><span class="p">;</span>                     <span class="c1">-- inverte o valor da saída</span>
+            <span class="n">zr</span><span class="o">:</span>    <span class="k">out</span> <span class="kt">STD_LOGIC</span><span class="p">;</span>                    <span class="c1">-- setado se saída igual a zero</span>
+            <span class="n">ng</span><span class="o">:</span>    <span class="k">out</span> <span class="kt">STD_LOGIC</span><span class="p">;</span>                    <span class="c1">-- setado se saída é negativa</span>
+            <span class="n">saida</span><span class="o">:</span> <span class="k">out</span> <span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">)</span> <span class="c1">-- saída de dados da ALU</span>
+    <span class="p">);</span>
+<span class="k">end</span> <span class="k">entity</span><span class="p">;</span>
 </pre></div>
 
-<hr />
-<h4 id="add-adicao-de-inteiros">ADD - Adição de Inteiros<a class="headerlink" href="#add-adicao-de-inteiros" title="Permanent link">&para;</a></h4>
 <div class="admonition note">
-<p><strong>addw</strong> reg/mem, reg/mem/im*, reg/mem {, reg/mem, reg/mem}</p>
-</div>
-<div class="admonition tip">
-<p class="admonition-title">Dica</p>
-<p>A operação permite salvar o resultado em mais de um destino.</p>
-</div>
-<p>instrução add, soma o primeiro valor ao segundo
-valor e armazena o resultado no terceiro parâmetro (quarto e quinto
-opcional).</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: S = RAM[A]+D </span>
-<span class="nf">addw</span> <span class="p">(</span><span class="o">%</span><span class="nv">A</span><span class="p">),</span> <span class="o">%</span><span class="nv">D</span><span class="p">,</span> <span class="o">%</span><span class="nv">S</span>
+<p class="admonition-title">nota</p>
+<p>Note que a primeira linha declara duas portas com nome <code>x</code> e <code>y</code> com a mesma direção <code>in</code> e do tipo <code>std_logic_vector(15 downto 0)</code>. Isso é um atalho no VHDL, e deve ser evitado. O ideal é reescrever essa linha como a seguir:</p>
+<div class="codehilite"><pre><span></span><span class="k">port</span> <span class="p">(</span>
+  <span class="n">x</span><span class="o">:</span> <span class="k">in</span> <span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">-- entrada X de dados da ALU</span>
+  <span class="n">y</span><span class="o">:</span> <span class="k">in</span> <span class="kt">STD_LOGIC_VECTOR</span><span class="p">(</span><span class="mi">15</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span> <span class="c1">-- entrada Y de dados da ALU</span>
 </pre></div>
 
-<hr />
-<h4 id="sub-subtracao-de-inteiros">SUB - Subtração de Inteiros<a class="headerlink" href="#sub-subtracao-de-inteiros" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p><strong>subw</strong> reg/mem, rem/mem/im*, reg/mem {, reg/mem, reg/mem}</p>
 </div>
-<p>A instrução sub, subtrai o segundo valor do primeiro
-valor e armazena o resultado no terceiro parâmetro (quarto e quinto
-opcional).</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: A = D - RAM[A] </span>
-<span class="nf">subw</span> <span class="o">%</span><span class="nv">D</span><span class="p">,</span> <span class="p">(</span><span class="o">%</span><span class="nv">A</span><span class="p">),</span> <span class="o">%</span><span class="nv">A</span>
+<h3 id="arquitetura">Arquitetura<a class="headerlink" href="#arquitetura" title="Permanent link">&para;</a></h3>
+<p>A arquitetura (<code>architecture</code>) define a relação das entradas com as saídas da entidade. Nessa parte é onde será construída a lógica digital desse módulo. Pense que é na arquitetura onde transcrevemos uma equação lógica, ou onde descrevemos uma memória.</p>
+<div class="codehilite"><pre><span></span><span class="k">architecture</span> <span class="nc">rtl</span> <span class="k">of</span> <span class="nc">TopLevel</span> <span class="k">is</span>
+
+<span class="c1">-- Aqui é declaro os possíveis:</span>
+<span class="c1">--   a) sinais internos de uma entidade</span>
+<span class="c1">--   b) outras entidades que essa entidade pode utilizar</span>
+
+<span class="k">begin</span>
+
+    <span class="c1">-- Aqui é onde a coisa acontece de verdade</span>
+    <span class="c1">-- onde é feita a descrição da lógica digital</span>
+    <span class="n">a</span> <span class="o">&lt;=</span> <span class="k">not</span> <span class="n">b</span><span class="p">;</span>
+
+<span class="k">end</span> <span class="nc">rtl</span><span class="p">;</span>
 </pre></div>
 
-<hr />
-<h4 id="rsub-subtracao-de-inteiros-reversa">RSUB - Subtração de Inteiros Reversa<a class="headerlink" href="#rsub-subtracao-de-inteiros-reversa" title="Permanent link">&para;</a></h4>
+<h4 id="operacoes-basicas">Operações básicas<a class="headerlink" href="#operacoes-basicas" title="Permanent link">&para;</a></h4>
 <div class="admonition note">
-<p><strong>rsubw</strong> reg/mem/im*, rem/mem, reg/mem {, reg/mem, reg/mem}</p>
-</div>
-<p>A instrução rsub, subtrai o segundo valor do primeiro
-valor e armazena o resultado no terceiro parâmetro (quarto e quinto
-opcional).</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: A = RAM[A] - D</span>
-<span class="nf">rsubw</span> <span class="o">%</span><span class="nv">D</span><span class="p">,</span> <span class="p">(</span><span class="o">%</span><span class="nv">A</span><span class="p">),</span> <span class="o">%</span><span class="nv">A</span>
+<p>Suponha o uso da entidade a seguir para os exemplos que serão apresentados</p>
+<div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">Foo</span> <span class="k">is</span>
+<span class="k">port</span><span class="p">(</span>
+        <span class="n">x</span>   <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_logic</span><span class="p">;</span>
+        <span class="n">y</span>   <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_logic</span><span class="p">;</span>
+        <span class="n">q</span>   <span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span><span class="p">;</span>
+        <span class="n">p</span>   <span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span>
+  <span class="p">);</span>
+<span class="k">end</span> <span class="k">entity</span><span class="p">;</span>
 </pre></div>
 
-<hr />
-<h4 id="inc-incrementa-inteiro">INC - Incrementa Inteiro<a class="headerlink" href="#inc-incrementa-inteiro" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p><strong>incw</strong> reg/mem</p>
 </div>
+<p>No VHDL usamos <code>&lt;=</code> para representar que alguma coisa (a esquerda da seta) recebe algum outro valor (a direita da seta). Exemplos:</p>
+<ol>
+<li><code>q &lt;= x;</code> q recebe o valor de <code>x</code><ul>
+<li>Na prática estamos conectando um fio de <code>x</code> que liga em <code>q</code></li>
+</ul>
+</li>
+<li><code>q &lt;= '0';</code> q recebe o valor <code>0</code><ul>
+<li>Na prática estamos conectando um fio que sai de <code>q</code> e liga no terra</li>
+</ul>
+</li>
+<li><code>q &lt;= '1';</code> q recebe o valor <code>1</code><ul>
+<li>Na prática estamos conectando um fio que sai de <code>q</code> e liga no vcc</li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Note que aqui estamos usando aspas simples: <code>'0' e '1'</code> para indicar um número binário (<code>std_logic</code>). Aspas dupla <code>"0101"</code> em VHDL significa que estamos trabalhando com um vetor de números binários (<code>std_logic_vector</code>).</p>
+</div>
+<p>Podemos utilizar portas lógicas nas operações, alguns operadores implementados pela linguagem são: <code>not</code>, <code>and</code>, <code>or</code>, <code>nand</code>, <code>nor</code>, <code>xor</code>, <code>xnor</code>. O uso dos operadores é feito da seguinte maneira:</p>
+<ol>
+<li><code>q &lt;= not x</code> q recebe o valor de x <strong>negado</strong></li>
+<li><code>q &lt;= x and y</code> q recebe o valor de x <strong>E</strong> y</li>
+<li><code>p &lt;= x xor y</code> </li>
+</ol>
 <div class="admonition warning">
-<p class="admonition-title">Restrição</p>
-<p>O destino é o próprio registrador! A operação não permite
-salvar em um registrador diferente.</p>
+<p class="admonition-title">Warning</p>
+<p>Em VHDL não é possível 'ler' uma saída, a seguinte operação <strong>não pode</strong> ser realizada:</p>
+<div class="codehilite"><pre><span></span><span class="n">q</span> <span class="o">&lt;=</span> <span class="k">not</span> <span class="n">x</span><span class="p">;</span>
+<span class="n">p</span> <span class="o">&lt;=</span> <span class="n">q</span><span class="p">;</span>
+</pre></div>
+
 </div>
+<h4 id="operacao-com-vetores">Operação com vetores<a class="headerlink" href="#operacao-com-vetores" title="Permanent link">&para;</a></h4>
+<div class="admonition note">
+<p>Suponha o uso da entidade a seguir para os exemplos que serão apresentados</p>
+<div class="codehilite"><pre><span></span><span class="k">entity</span> <span class="nc">Bar</span> <span class="k">is</span>
+<span class="k">port</span><span class="p">(</span>
+        <span class="n">a</span>   <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_logic</span><span class="p">;</span>
+        <span class="n">b</span>   <span class="o">:</span> <span class="k">in</span>  <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">3</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
+        <span class="n">q</span>   <span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic</span><span class="p">;</span>
+        <span class="n">p</span>   <span class="o">:</span> <span class="k">out</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">2</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">)</span>
+  <span class="p">);</span>
+<span class="k">end</span> <span class="k">entity</span><span class="p">;</span>
+</pre></div>
+
+</div>
+<p>Exemplos de operação com vetores:</p>
+<ol>
+<li><code>p &lt;= "100"</code> <code>p</code> recebe o valor em binário <code>100</code></li>
+<li><code>p &lt;= not "100"</code> <code>p</code> recebe o valor em binário <code>011</code></li>
+<li><code>p &lt;= b(2 downto 0)</code> <code>p</code> recebe os três primeiros bits de <code>b</code></li>
+<li><code>p(0) &lt;= a</code> <code>p</code> <code>bit 0</code> recebe o valor da entrada <code>a</code></li>
+<li><code>q &lt;= not b(1)</code> a saída binária <code>q</code> recebe o <code>bit 1</code> da entrada <code>b</code> negado.</li>
+</ol>
 <div class="admonition tip">
-<p class="admonition-title">Dica</p>
-<p>Se quiser fazer a operação de <strong>inc</strong> e salvar em outro 
-registrador, pode utilizar a operação de <strong>addw</strong>:</p>
-<div class="codehilite"><pre><span></span><span class="c1">; D = A + 1</span>
-<span class="nf">addw</span> <span class="kc">$</span><span class="mi">1</span><span class="p">,</span> <span class="o">%</span><span class="nv">A</span><span class="p">,</span> <span class="o">%</span><span class="nv">D</span> 
-</pre></div>
-
+<p class="admonition-title">Tip</p>
+<p>É comum confundir quando usa aspas simples <code>''</code> e aspas dupla <code>""</code>, fique atento aos 
+erros de compilação.</p>
 </div>
-<p>A instrução <em>inc,</em> adiciona um (1) ao valor do
-registrador ou memória.</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: D = D + 1</span>
-<span class="nf">incw</span> <span class="o">%</span><span class="nv">D</span>
+<h4 id="signais">signais<a class="headerlink" href="#signais" title="Permanent link">&para;</a></h4>
+<p>Sinais são declarados entre a palavra reservada <code>architecture</code> e o <code>begin</code> e servem para
+facilitar/ possibilitar o desenvolvimento de um sistema digital, eles só são visíveis
+dentro de uma entidade e servem como 'fios' internos de um módulo. <code>Sinais</code> diferente de portas não possuem direção, e são declarados da seguinte maneira:</p>
+<div class="codehilite"><pre><span></span><span class="k">signal</span> <span class="n">NAME</span> <span class="o">:</span> <span class="k">TYPE</span>
 </pre></div>
 
-<hr />
-<h4 id="dec-decrementa-inteiro">DEC - Decrementa Inteiro<a class="headerlink" href="#dec-decrementa-inteiro" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p><strong>decw</strong> reg/mem</p>
-</div>
-<p>A instrução <em>dec,</em> subtrai um (1) do valor do registrador
-ou memória.</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: A = A-1</span>
-<span class="nf">decw</span> <span class="o">%</span><span class="nv">A</span>
-</pre></div>
-
-<hr />
-<h4 id="not-negacao-por-complemento-de-um">NOT - Negação por Complemento de Um<a class="headerlink" href="#not-negacao-por-complemento-de-um" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p><strong>notw</strong> reg</p>
-</div>
-<p>A instrução <em>not,</em> inverte o valor de cada bit do reg origem, ou seja,
-se um bit tem valor 0 fica com 1 e vice-versa.</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo:  D = !D</span>
-<span class="nf">notw</span> <span class="o">%</span><span class="nv">D</span>
-</pre></div>
-
-<hr />
-<h4 id="neg-negacao-por-complemento-de-dois">NEG - Negação por Complemento de dois<a class="headerlink" href="#neg-negacao-por-complemento-de-dois" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>negw reg/mem</p>
-</div>
-<p>A instrução <em>neg,</em> faz o valor ficar negativo, ou seja,
-um valor de x é modificado para -x.</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: A = -A</span>
- <span class="nf">negw</span> <span class="o">%</span><span class="nv">A</span>
-</pre></div>
-
-<hr />
-<h4 id="and-operador-e-and">AND - Operador E (and)<a class="headerlink" href="#and-operador-e-and" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>andw reg/mem, rem/mem</p>
-</div>
-<p>A instrução <em>and</em> executa o operador lógico E (and).</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: D = A&amp;D</span>
-<span class="nf">andw</span> <span class="o">%</span><span class="nv">A</span><span class="p">,</span> <span class="o">%</span><span class="nv">D</span><span class="p">,</span> <span class="o">%</span><span class="nv">D</span>
-</pre></div>
-
-<hr />
-<h4 id="or-operador-ou-or">OR - Operador OU (or)<a class="headerlink" href="#or-operador-ou-or" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>orw reg/mem, rem/mem</p>
-</div>
-<p>A instrução <em>or</em> executa o operador lógico Ou (or).</p>
-<div class="codehilite"><pre><span></span><span class="c1">; Exemplo: D = RAM[A] | D</span>
-<span class="nf">orw</span> <span class="p">(</span><span class="o">%</span><span class="nv">A</span><span class="p">),</span> <span class="o">%</span><span class="nv">D</span><span class="p">,</span> <span class="o">%</span><span class="nv">D</span>
-</pre></div>
-
-<hr />
-<h4 id="jmp-jump">JMP - Jump<a class="headerlink" href="#jmp-jump" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>jmp</p>
-</div>
-<p>A instrução <em>jmp</em> executa um desvio, no fluxo de
-execução, para o endereço armazenado em %A.</p>
-<div class="codehilite"><pre><span></span><span class="nf">jmp</span>
-</pre></div>
-
-<hr />
-<h4 id="je-desvia-execucao-se-igual-a-zero">JE - Desvia Execução se Igual a Zero<a class="headerlink" href="#je-desvia-execucao-se-igual-a-zero" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>je reg</p>
-</div>
-<p>A instrução <em>je</em> faz um desvio, no fluxo de execução,
-para o endereço armazenado em %A, somente se o valor do reg. for igual a
-zero.</p>
-<div class="codehilite"><pre><span></span><span class="nf">je</span> <span class="o">%</span><span class="nv">S</span>
-</pre></div>
-
-<hr />
-<h4 id="jne-desvia-execucao-se-diferente-de-zero">JNE - Desvia Execução se Diferente de Zero<a class="headerlink" href="#jne-desvia-execucao-se-diferente-de-zero" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>jne reg</p>
-</div>
-<p>A instrução <em>jne</em> faz um desvio, no fluxo de execução,
-para o endereço armazenado em %A, somente se o valor do reg. for
-diferente de zero.</p>
-<div class="codehilite"><pre><span></span><span class="nf">jne</span> <span class="o">%</span><span class="nv">D</span>
-</pre></div>
-
-<hr />
-<h4 id="jg-desvia-execucao-se-maior-que-zero">JG - Desvia Execução se Maior que Zero<a class="headerlink" href="#jg-desvia-execucao-se-maior-que-zero" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>jg reg</p>
-</div>
-<p>A instrução <em>jg</em> desvia, o fluxo de execução, para o
-endereço armazenado em %A, somente se o valor do reg. for maior que
-zero.</p>
-<div class="codehilite"><pre><span></span><span class="nf">jg</span> <span class="o">%</span><span class="nv">s</span>
-</pre></div>
-
-<hr />
-<h4 id="jge-desvia-execucao-se-maior-igual-a-zero">JGE - Desvia Execução se Maior Igual a Zero<a class="headerlink" href="#jge-desvia-execucao-se-maior-igual-a-zero" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>jge reg</p>
-</div>
-<p>A instrução <em>jge</em> faz um desvio, no fluxo de execução,
-para o endereço armazenado em %A, somente se o valor do reg. for maior
-ou igual a zero.</p>
-<div class="codehilite"><pre><span></span><span class="nf">jge</span> <span class="o">%</span><span class="nv">S</span>
-</pre></div>
-
-<hr />
-<h4 id="jl-desvia-execucao-se-menor-que-zero">JL - Desvia Execução se Menor que Zero<a class="headerlink" href="#jl-desvia-execucao-se-menor-que-zero" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>jl reg</p>
-</div>
-<p>A instrução <em>jl</em> faz desvio, no fluxo de execução, para o
-endereço armazenado em %A, somente se o valor do reg. for menor que
-zero.</p>
-<div class="codehilite"><pre><span></span><span class="nf">jl</span> <span class="o">%</span><span class="nv">S</span>
-</pre></div>
-
-<hr />
-<h4 id="jle-desvia-execucao-se-menor-igual-a-zero">JLE - Desvia Execução se Menor Igual a Zero<a class="headerlink" href="#jle-desvia-execucao-se-menor-igual-a-zero" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>jle reg</p>
-</div>
-<p>A instrução <em>jle</em> faz um desvio, no fluxo de execução,
-para o endereço armazenado em %A, somente se o valor do reg. for menor
-ou igual a zero.</p>
-<div class="codehilite"><pre><span></span><span class="nf">jle</span> <span class="o">%</span><span class="nv">D</span>
-</pre></div>
-
-<hr />
-<h4 id="nop-nao-faz-nada-no-operation">NOP - Não faz nada (No Operation)<a class="headerlink" href="#nop-nao-faz-nada-no-operation" title="Permanent link">&para;</a></h4>
-<div class="admonition note">
-<p>nop</p>
-</div>
-<p>A instrução <em>nop</em> não faz nada, usado para pular um ciclo
-de execução.</p>
-<div class="codehilite"><pre><span></span><span class="nf">nop</span>
-</pre></div>
-
-<hr />
-<h2 id="descricao-detalhada">Descrição Detalhada<a class="headerlink" href="#descricao-detalhada" title="Permanent link">&para;</a></h2>
-<p><strong>Formato das Instruções</strong></p>
-<p>Em Assembly, codificamos uma instrução por linha e ela é construída a
-partir do mnemônico da operação e seus argumentos. Além disso, temos
-marcadores de posição (endereço usado em desvios), constantes e
-possíveis variáveis. O formato das instruções na sintaxe AT&amp;T segue o
-seguinte formato:</p>
-<p>mnemônico origem, destino</p>
-<p><strong>Registradores</strong></p>
-<p>Todos os registradores devem ter como prefixo o sinal de porcentagem
-'%\', por exemplo: %A ou %D ou %S.</p>
-<p><strong>Valores Literais</strong></p>
-<p>Todos os valores literais devem ter como prefixo o sinal de cifrão
-'$\', por exemplo: $55, $376, sendo o maior valor 2047 (15 bits).</p>
-<p><strong>Endereçamento de Memória</strong></p>
-<p>Na sintaxe AT&amp;T, a memória é referenciada com parêntese em volta do
-registrador que armazena o endereço: por exemplo (%A).</p>
-<p><strong>Tamanho dos operadores</strong></p>
-<p>Algumas instruções podem trabalhar com diferentes tamanhos de dados,
-assim as instruções podem ter um sufixo, informando o tamanho do dado
-que irá manipular, sendo b (8 bits), w (16 bits) e l (32 bits). Por
-exemplo:</p>
-<p>movw $2000, (%A)</p>
-<p><strong>Instruções de Transferência de Controle</strong></p>
-<p>As instruções de jump, fazem o fluxo do programa desviar de uma posição
-do programa para outra. Para marcar as posições no programa, são usados
-marcadores (labels) que sempre terminam com dois pontos (:). Por
-exemplo: loop:</p>
-<p><strong>Registradores virtuais</strong></p>
-<p>Os símbolos R0, ..., R15 são automaticamente predefinidos para se
-referir aos endereços de RAM 0, ..., 15</p>
-<p><strong>Ponteiros de I/O</strong></p>
-<p>Os símbolos SCREEN e KBD são automaticamente predefinidos para se
-referir aos endereços de RAM 16384 e 24576, respectivamente.</p>
-<p><strong>Ponteiros de controle da VM</strong></p>
-<p>Os símbolos SP, LCL, ARG, THIS, e THAT são automaticamente predefinidos
-para se referir aos endereços de RAM 0-4, respectivamente.</p>
-<p><strong>Notações:</strong></p>
-<p>im : valor imediato (somente os valores 1, 0 e -1).</p>
-<p>reg : registrador.</p>
-<p>mem: memória, ou seja (%A).</p>
-<p><strong>Limitações:</strong></p>
 <ul>
-<li>
-<p>A arquitetura não permite somar o valor da memória apontada por (%A)
-    com o valor de %A, ou de (%A) com (%A), tampouco %A com %A.</p>
-</li>
-<li>
-<p>Não é possível somar (ou subtrair, se é que isso faz sentido) o
-    registrador com o mesmo, por exemplo somar %D com %D.</p>
-</li>
-<li>
-<p>Não é possível ler e gravar a memória ao mesmo tempo. Por exemplo,
-    as instruções abaixo não funcionam no nosso computador:</p>
-<ul>
-<li>incw (%A);</li>
-<li>subw (%A),%D,(%A).</li>
+<li><code>TYPE</code> pode ser: <code>std_logic</code>/ <code>std_logic_vector</code>, entre outros.</li>
 </ul>
-</li>
-</ul>
-<p><strong>Observação:</strong></p>
-<p>A linguagem Assembly apresentada é especifica para o processador
-produzido no curso. Embora muito similar a outras usadas em produtos de
-mercado, as instruções possuem limitações inerentes a cada hardware.</p>
+<p>Exemplo:</p>
+<div class="codehilite"><pre><span></span><span class="k">architecture</span> <span class="nc">rtl</span> <span class="k">of</span> <span class="nc">TopLevel</span> <span class="k">is</span>
+
+<span class="k">signal</span> <span class="n">aux1</span> <span class="o">:</span> <span class="kt">std_logic</span><span class="p">;</span>
+<span class="k">signal</span> <span class="n">aux2</span> <span class="o">:</span> <span class="kt">std_logic_vector</span><span class="p">(</span><span class="mi">1</span> <span class="k">downto</span> <span class="mi">0</span><span class="p">);</span>
+
+<span class="k">begin</span>
+
+    <span class="c1">--------------------</span>
+    <span class="n">aux1</span> <span class="o">&lt;=</span> <span class="k">not</span> <span class="n">a</span><span class="p">;</span>
+    <span class="n">q</span>    <span class="o">&lt;=</span> <span class="n">aux1</span><span class="p">;</span>
+    <span class="n">p</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">aux1</span><span class="p">;</span>
+
+    <span class="c1">--------------------</span>
+    <span class="n">aux2</span> <span class="o">&lt;=</span> <span class="n">b</span><span class="p">(</span><span class="mi">3</span> <span class="k">downto</span> <span class="mi">2</span><span class="p">);</span>
+    <span class="n">p</span><span class="p">(</span><span class="mi">2</span> <span class="k">downto</span> <span class="mi">1</span><span class="p">)</span> <span class="o">&lt;=</span> <span class="n">aux2</span><span class="p">;</span>
+
+<span class="k">end</span> <span class="nc">rtl</span><span class="p">;</span>
+</pre></div>
+
+<p>No exemplo anterior, criamos um sinal auxiliar chamado de <code>aux1</code> que recebe a entrada <code>a</code> negada, esse sinal é então atribuído a saída <code>q</code> e ao <code>bit 0</code> da saída <code>p</code>. Outro sinal <code>aux2</code>, vetor de 2 bits recebe os dois bits mais significativos da entrada <code>b</code> e então é atribuído a saída <code>p</code>, bits 2 e 1.</p>
                 
                   
                 
@@ -2330,7 +1963,7 @@ mercado, as instruções possuem limitações inerentes a cada hardware.</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../F-Assembly-Dicas/" title="Dicas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Util-Video-Aulas/" title="Vídeo Aulas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2339,19 +1972,19 @@ mercado, as instruções possuem limitações inerentes a cada hardware.</p>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Dicas
+                Vídeo Aulas
               </span>
             </div>
           </a>
         
         
-          <a href="../E-Sequencial-Projeto/" title="Projeto" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Util-Resumo-Labs/" title="Resumo" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                Projeto
+                Resumo
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
