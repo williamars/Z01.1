@@ -69,7 +69,7 @@ $ git push origin master
 Nessa disciplina iremos utilizar não só a ferramenta principal do github, que é o servidor de repositórios git mas todas as outras ferramentas já integradas na plataforma para gestão e acompanhamento de projeto. Para isso será alteramos algumas configurações no repositório:
 
 !!! example "Execute"
-    Na página do seu repositório vá em: `Settings -> Features ->` e ative `Issues ` e `Project`.
+    Na página do seu repositório vá em: `Settings` :arrow_right: `Features` :arrow_right: e ative `Issues ` e `Project`.
 
 A seguir alguns termos que serão utilizados nesse lab e é importante revisar/conhecer:
 
@@ -85,10 +85,27 @@ A seguir alguns termos que serão utilizados nesse lab e é importante revisar/c
 
 ![Pull-Request](figs/B-CI/pull-request.png)
 
-## Adicionando nomes ao `INTEGRANTES.json`
+## Atualizando ferramentas
 
 !!! warning
     Deve ser realizado individualmente!  
+    
+Após clonar o repositório devemos baixar e atualizar a infra necessária para o curso, ainda no terminal, vá para a pasta do repositório:
+
+```bash
+$ cd Z01.1-NomeDoGrupo/
+```
+
+E execute os seguinte comando no terminal:
+
+```bash
+$ ./updateZ01tools.sh
+```
+
+Isso irá baixar as dependências phython (via pip) e também clonar um repositório chamado `Z01-Tools` na raiz do usuário: `$HOME/Z01-Tools/`.
+
+## Adicionando nomes ao `INTEGRANTES.json`
+
 
 > - [ ] Gerar mudanças no repositório local
 > - [ ] Enviar mudanças para o repositório remoto
@@ -109,6 +126,8 @@ e adicionar a esse arquivo o seu nome, e-mail (insper) e usuário gituhb. Confor
 
 !!! warning 
     Uma única pessoa não deve editar o documento com todos os nomes.
+    
+    - Cada um deve realizar individualmente em seu computador.
 
 -----------
 > - [x] Gerar mudanças no repositório local
