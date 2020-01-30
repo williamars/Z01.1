@@ -598,6 +598,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tabela-verdade" class="md-nav__link">
+    Tabela Verdade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#funcoes-booleanas" class="md-nav__link">
     Funções booleanas
   </a>
@@ -615,6 +622,33 @@
           <li class="md-nav__item">
   <a href="#soma-dos-produtos" class="md-nav__link">
     Soma Dos Produtos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produto-das-somas" class="md-nav__link">
+    Produto das somas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplificacao" class="md-nav__link">
+    Simplificação
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplificacao-algebrica" class="md-nav__link">
+    Simplificação algébrica
   </a>
   
 </li>
@@ -1559,6 +1593,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#tabela-verdade" class="md-nav__link">
+    Tabela Verdade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#funcoes-booleanas" class="md-nav__link">
     Funções booleanas
   </a>
@@ -1576,6 +1617,33 @@
           <li class="md-nav__item">
   <a href="#soma-dos-produtos" class="md-nav__link">
     Soma Dos Produtos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produto-das-somas" class="md-nav__link">
+    Produto das somas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simplificacao" class="md-nav__link">
+    Simplificação
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplificacao-algebrica" class="md-nav__link">
+    Simplificação algébrica
   </a>
   
 </li>
@@ -1609,7 +1677,7 @@
 <p>Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e ligado, ou falso e verdadeiro, 0 volt e 5 volts, branco e preto. Porém normalmente na computação usamos <code>0</code> e <code>1</code> pela conveniência. Todos os computadores tem como sua menor unidade de dado, esse elemento. Em computação chamamos isso de bit. quem vem dígito binário (ou do inglês binary digit).</p>
 <h2 id="bit">bit<a class="headerlink" href="#bit" title="Permanent link">&para;</a></h2>
 <p>Bit é a unidade mais simples de representação de dados digitais, um bit é uma unidade que pode assumir apenas dois valores: <code>0</code> ou <code>1</code>. Com um bit podemos representar o estado de uma luz na sala de aula, se uma cadeira está vazio ou não, .... não conseguimos representar <strong>com apenas um bit</strong> uma informação que não seja binária. Mas se combinarmos mais de um bit, criando um vetor de bits, somos capazes de representar quantos estados desejarmos.</p>
-<iframe width="948" height="534" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
+<iframe width="310" height="300" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
 
 <h2 id="equacoes">Equações<a class="headerlink" href="#equacoes" title="Permanent link">&para;</a></h2>
 <p>Uma equação de lógica booleana pode possuir zero ou mais 'entradas' e apenas uma saída, na equação exemplo a seguir, <code>X</code> é uma saída (e pode assumir apenas valor <code>1</code> ou <code>0</code>) e <code>A</code> e <code>B</code> são entradas também do tipo binária.</p>
@@ -1857,21 +1925,141 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
 <li><a href="https://en.wikipedia.org/wiki/Logic_gate#Symbols">https://en.wikipedia.org/wiki/Logic_gate#Symbols</a></li>
 </ul>
 </div>
-<iframe width="948" height="534" src="https://www.youtube.com/embed/UvI-AMAtrvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="310" height="300" src="https://www.youtube.com/embed/UvI-AMAtrvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
+<h2 id="tabela-verdade">Tabela Verdade<a class="headerlink" href="#tabela-verdade" title="Permanent link">&para;</a></h2>
+<p>Nessa tabela criamos colunas para cada variável de entrada e de saída e colocamos as situações possíveis (resultado). Para construirmos uma tabela verdade basta seguir as regras a seguir (na sequência):</p>
+<ol>
+<li>Criar uma coluna para cada entrada do sistema (n)</li>
+<li>Criar uma coluna para cada saída do sistema </li>
+<li>A tabela verdade vai ter n² números de linhas  (onde n é a quantidade de entradas)<ul>
+<li>um sistema com 2 entradas possui 2² = 4 linhas</li>
+<li>um sistema com 3 entradas possui 2³ = 8 linhas ...</li>
+</ul>
+</li>
+<li>Preencher as linhas (com '1's e '0's ) de forma a cobrir todas as possibilidades de entrada</li>
+<li>Para cada linha, analisar se a combinação de '1's e '0' torna a saída '1' e '0'</li>
+</ol>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-tv.png" /></p>
 <h2 id="funcoes-booleanas">Funções booleanas<a class="headerlink" href="#funcoes-booleanas" title="Permanent link">&para;</a></h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>"INSERIR VÍDEO"</p>
-</div>
+<p>Resolver funções booleanas é entender quando a saída será <code>Verdadeira</code> ou <code>Falsa</code> dado a combinação possível de entradas.</p>
+<iframe width="310" height="300" src="https://www.youtube.com/embed/rZwCJWOhNG0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <h2 id="funcoes-geradas-a-partir-de-tabelas-verdade">Funções geradas a partir de Tabelas Verdade<a class="headerlink" href="#funcoes-geradas-a-partir-de-tabelas-verdade" title="Permanent link">&para;</a></h2>
+<iframe width="310" height="300" src="https://www.youtube.com/embed/Xgy6p12ZcTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 <p>É possível a partir de uma tabela verdade obter uma equação lógica que a represente (caminho inverso), podemos fazer isso por duas técnicas diferentes: </p>
 <ul>
 <li>Soma dos Produtos (SoP) </li>
 <li>Produto das Somas (PoS)</li>
 </ul>
 <h3 id="soma-dos-produtos">Soma Dos Produtos<a class="headerlink" href="#soma-dos-produtos" title="Permanent link">&para;</a></h3>
-<p>Na soma dos produtos, </p>
+<p>Na soma dos produtos iremos encontrar uma equação booleana que possui a seguinte forma:</p>
+<div class="codehilite"><pre><span></span> X = ( . . . ) + ( . . . ) + ... + ( . . . )
+       ----- 
+         |
+         | = &#39;1&#39;
+</pre></div>
+
+<p>Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em uma saída <strong>'1'</strong> e invertendo (ou não) as entras fazendo com que o termo <code>( . . . .)</code> resulte em <strong>'1'</strong> para a linha em questão.</p>
+<h3 id="produto-das-somas">Produto das somas<a class="headerlink" href="#produto-das-somas" title="Permanent link">&para;</a></h3>
+<div class="codehilite"><pre><span></span> X = ( + + + ) . ( + + + ) . ... . ( + + + )
+       -----
+         |
+         | = &#39;0&#39;
+</pre></div>
+
+<p>Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em uma saída <strong>'0'</strong> e invertendo (ou não) as entras gazer com que o termo <code>( . . . .)</code> resulte em <strong>'0'</strong> para a linha em questão.</p>
+<h2 id="simplificacao">Simplificação<a class="headerlink" href="#simplificacao" title="Permanent link">&para;</a></h2>
+<p>Existem duas formas bastante populares de simplificação de equações booleanas: algébrica ou via mapa de Karnaugh.</p>
+<h3 id="simplificacao-algebrica">Simplificação algébrica<a class="headerlink" href="#simplificacao-algebrica" title="Permanent link">&para;</a></h3>
+<p>Na simplificação algébrica iremos utilizar as seguintes propriedades de lógica booleana para nos ajudar a simplificar uma equação:</p>
+<table>
+<thead>
+<tr>
+<th>Propriedade</th>
+<th>Operação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Lei da Identidade</td>
+<td>A = A</td>
+</tr>
+<tr>
+<td></td>
+<td><span><span class="MathJax_Preview">\bar{A} = \bar{A}</span><script type="math/tex">\bar{A} = \bar{A}</script></span></td>
+</tr>
+<tr>
+<td>Lei da Comutatividade</td>
+<td>A . B = B . A</td>
+</tr>
+<tr>
+<td></td>
+<td>A + B = B + A</td>
+</tr>
+<tr>
+<td>Lei da Associatividade</td>
+<td>A . (B . C) = A  B  C</td>
+</tr>
+<tr>
+<td></td>
+<td>A + (B + C) = A + B + C</td>
+</tr>
+<tr>
+<td>Lei da Idempotência</td>
+<td>A . A = A</td>
+</tr>
+<tr>
+<td></td>
+<td>A + A = A</td>
+</tr>
+<tr>
+<td>Lei do Complemento Duplo</td>
+<td><span><span class="MathJax_Preview">\bar{\bar{A}} = A</span><script type="math/tex">\bar{\bar{A}} = A</script></span></td>
+</tr>
+<tr>
+<td>Lei da Complementariedade</td>
+<td><span><span class="MathJax_Preview">A \, \bar{A} = 0</span><script type="math/tex">A \, \bar{A} = 0</script></span></td>
+</tr>
+<tr>
+<td></td>
+<td><span><span class="MathJax_Preview">A + \bar{A} = 1</span><script type="math/tex">A + \bar{A} = 1</script></span></td>
+</tr>
+<tr>
+<td>Lei da Intersecção</td>
+<td>A . 1 = A</td>
+</tr>
+<tr>
+<td></td>
+<td>A . 0 = 0</td>
+</tr>
+<tr>
+<td>Lei da União</td>
+<td>A + 1 = 1</td>
+</tr>
+<tr>
+<td></td>
+<td>A + 0 = A</td>
+</tr>
+<tr>
+<td>Lei da Distributividade</td>
+<td>A . (B + C) = (A . B) + (A . C)</td>
+</tr>
+<tr>
+<td></td>
+<td>A + (B . C) = (A + B) (A + C)</td>
+</tr>
+<tr>
+<td>Teorema de DeMorgan</td>
+<td><span><span class="MathJax_Preview">\overline{A \, B} = \bar{A} + \bar{B}</span><script type="math/tex">\overline{A \, B} = \bar{A} + \bar{B}</script></span></td>
+</tr>
+<tr>
+<td></td>
+<td><span><span class="MathJax_Preview">\overline{A + B} = \bar{A} \, \bar{B}</span><script type="math/tex">\overline{A + B} = \bar{A} \, \bar{B}</script></span></td>
+</tr>
+</tbody>
+</table>
                 
                   
                 
@@ -1948,6 +2136,8 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
       <script src="../assets/javascripts/application.1f8d785c.js"></script>
       
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
     
   </body>
