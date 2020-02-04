@@ -58,7 +58,7 @@ Um código em VHDL possui basicamente três partes:
 
 As bibliotecas do VHDL é onde as definições dos tipos e das operações são realizadas, não será necessário mexer com isso ao longo do semestre, essa parte já vai estar pronta nos projetos que vocês forem mexer.
 
-### Entidade
+### Entidade (entity)
 
 Podemos pensar na entidade como o trecho de código que define o módulo como uma caixa preta, ela explicita quem são as entradas e quais são as saídas desse módulo. Assim como um CHIP, que possui pinos de entradas e pinos de saída.
 
@@ -171,7 +171,7 @@ end entity;
       y: in STD_LOGIC_VECTOR(15 downto 0); -- entrada Y de dados da ALU
     ```
 
-### Arquitetura 
+### Arquitetura (architecture)
 
 A arquitetura (`architecture`) define a relação das entradas com as saídas da entidade. Nessa parte é onde será construída a lógica digital desse módulo. Pense que é na arquitetura onde transcrevemos uma equação lógica, ou onde descrevemos uma memória.
 

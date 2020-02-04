@@ -195,7 +195,7 @@ Para cada desafio proposto a seguir, verifique se o RTL corresponde a lógica qu
 
 O desenvolvimento de projetos de hardware assim como os de softwares devem ser feitos de forma modular, onde especifica-se e implementa-se pequenos módulos (entidades) que são combinadas em sistemas cada vez mais complexos até chegar ao `TopLevel`.
 
-Esse projeto define uma série de pequenos módulos, cada um com sua especificidade (localizados em `C-LogicaCombinacional/src/rtl/`) :
+Esse projeto define uma série de pequenos módulos, um com sua especificidade (localizados em `C-LogicaCombinacional/src/rtl/`) :
 
 - And16.vhd
 - DMux2Way.vhd
