@@ -1687,20 +1687,20 @@
                 
                 
                 <h1 id="vhdl-basico">VHDL - Básico<a class="headerlink" href="#vhdl-basico" title="Permanent link">&para;</a></h1>
-<p>O VHDL é uma linguagem de descrição de hardware (Hardware description Language - HDL), e não uma programação. A linguagem foi criada durante a guerra fria no Departamento de Defesa Americano (DoD-DARPA) para a documentação de hardwares complexos (ela complementava/ substituía os esquemáticos). Com a evolução da tecnologia agora é possível utilizar a linguagem para implementar sistemas digitais em hardwares programáveis (FPGA/CPL/...).</p>
+<p>O VHDL é uma linguagem de descrição de hardware (Hardware Description Language - HDL), não sendo uma linguagem de programação. Foi criada durante a Guerra Fria no Departamento de Defesa Americano (DoD-DARPA) para a documentação de hardwares complexos (complementava/substituía os esquemáticos). Com a evolução da tecnologia agora é possível utilizar a linguagem para implementar sistemas digitais em hardwares programáveis (FPGA/CPL/...).</p>
 <p>Por não ser criada para o fim que a utilizamos, o VHDL é no primeiro momento bastante intricado. Mas com o usar, vocês irão se acostumar com a linguagem e serão capazes de realizar hardwares cada vez mais complexos.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Iremos utilizar a palavra 'codigo' para descrever um projeto em VHDL, 
+<p>Iremos utilizar a palavra 'código' para descrever um projeto em VHDL, 
 tenha em mente que não estamos falando de um programa e sim de um 
 projeto de hardware.</p>
 </div>
-<p>Um programa em <code>pyhton</code>/<code>java</code>/<code>C</code> é como uma receita de bolo que será executada em uma cozinha que já está montada, essa cozinha é o seu CPU (processador), e não da para mudar com código (software), o que você muda de um programa para outro é a receita. Uma cozinha é capaz de realizar diversas receitas diferentes ....</p>
+<p>Um programa em <code>Python</code>/<code>Java</code>/<code>C</code> é como uma receita de bolo que será executada em uma cozinha que já está montada, essa cozinha é o seu CPU (processador), e não dá para mudar com código (software), o que você muda de um programa para outro é a receita. Uma cozinha é capaz de realizar diversas receitas diferentes ....</p>
 <p>No caso do VHDL não temos essa 'cozinha' pronta, na verdade, podemos criar qualquer cozinha que quisermos. Com o VHDL você será o arquiteto de cozinhas, capaz de criar praticamente qualquer hardware!</p>
 <h2 id="regras-de-ouro-do-vhdl">Regras de Ouro do VHDL<a class="headerlink" href="#regras-de-ouro-do-vhdl" title="Permanent link">&para;</a></h2>
 <ul>
 <li>VHDL é uma descrição, ou projeto, do hardware e não uma programação dele.<ul>
-<li>As linhas de código não são executadas sequencialmente com exeção de algumas construções da linguagem.</li>
+<li>As linhas de código não são executadas sequencialmente com exceção de algumas construções da linguagem.</li>
 <li>As linhas de código serão executadas simultaneamente.</li>
 </ul>
 </li>
@@ -1743,7 +1743,7 @@ projeto de hardware.</p>
 <p>Podemos pensar na entidade como o trecho de código que define o módulo como uma caixa preta, ela explicita quem são as entradas e quais são as saídas desse módulo. Assim como um CHIP, que possui pinos de entradas e pinos de saída.</p>
 <p>No exemplo anterior, o módulo é chamado de <code>TopLevel</code> e possui uma entrada <code>a</code> e uma saída <code>b</code>. Tanto a entrada quanto a saída são do tipo <code>std_logic</code>. Cada porta tem a descrição de sua direção (<code>in</code>, <code>out</code>), como detalhado a seguir:</p>
 <p><img alt="" src="../figs/VHDL/entidade-descricao.png" width="800" /></p>
-<p>Uma entidade pode ter 0 ou 'infintas' portas, para adicionarmos uma porta nova a uma entidade, basta adicionarmos uma nova linha com as três propriedades:</p>
+<p>Uma entidade pode ter nenhuma ou 'infinitas' portas, para adicionarmos uma porta nova a uma entidade, basta adicionarmos uma nova linha com as três propriedades:</p>
 <div class="codehilite"><pre><span></span>   NOME : DIREÇÃO TIPO;
 </pre></div>
 
@@ -1755,7 +1755,7 @@ VHDL, só serve para facilitar nossa leitura.</p>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>O <code>;</code> não deve aparecer na ultima porta! No exemplo anterior a porta <code>b : out STD_LOGIC</code> não possui <code>;</code>.</p>
+<p>O <code>;</code> não deve aparecer na última porta! No exemplo anterior a porta <code>b : out STD_LOGIC</code> não possui <code>;</code>.</p>
 </div>
 <h4 id="nome">Nome<a class="headerlink" href="#nome" title="Permanent link">&para;</a></h4>
 <p>No VHDL você <strong>não</strong> pode usar um nome de porta que:</p>
@@ -1764,7 +1764,7 @@ VHDL, só serve para facilitar nossa leitura.</p>
 <li>É uma das muitas <a href="https://www.csee.umbc.edu/portal/help/VHDL/reserved.html">palavras reservadas</a>: <code>in</code>, <code>out</code>, <code>not</code>, ex: <code>bus : out std_logic;</code></li>
 <li>Possua espaço: <code>entrada 1: in std_logic;</code></li>
 </ul>
-<p>Para mais detalhes, de uma olhada na <a href="https://www.ics.uci.edu/~jmoorkan/vhdlref/names.html">documentação completa</a></p>
+<p>Para mais detalhes, dê uma olhada na <a href="https://www.ics.uci.edu/~jmoorkan/vhdlref/names.html">documentação completa</a></p>
 <h4 id="direcao">Direção<a class="headerlink" href="#direcao" title="Permanent link">&para;</a></h4>
 <p>A direção <code>in</code>, <code>out</code> define se a informação irá 'entrar' no módulo ou 'sair'
 do módulo. Por exemplo, se quisermos 'ler' um botão, devemos declarar essa
