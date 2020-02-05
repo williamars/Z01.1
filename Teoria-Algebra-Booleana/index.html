@@ -216,7 +216,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Util-Video-Aulas/" class="md-tabs__link md-tabs__link--active">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           Teoria
         </a>
       
@@ -523,18 +523,6 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../Util-Video-Aulas/" title="Vídeo Aulas" class="md-nav__link">
-      Vídeo Aulas
-    </a>
-  </li>
-
-        
-          
-          
-          
-
   
 
 
@@ -682,8 +670,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-grupos" class="md-nav__link">
-    1. Grupos
+  <a href="#3-grupos" class="md-nav__link">
+    3. Grupos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gerando-as-equacoes" class="md-nav__link">
+    4. Gerando as equações
   </a>
   
 </li>
@@ -715,8 +710,32 @@
 
 
   <li class="md-nav__item">
-    <a href="../Util-vhdl/" title="VHDL - Básico" class="md-nav__link">
-      VHDL - Básico
+    <a href="../Exercicio-Algebra-Booleana/" title="Álgebra Booleana" class="md-nav__link">
+      Álgebra Booleana
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-vhdl/" title="VHDL - Introdução" class="md-nav__link">
+      VHDL - Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Video-Aulas/" title="Vídeo Aulas (Luciano)" class="md-nav__link">
+      Vídeo Aulas (Luciano)
     </a>
   </li>
 
@@ -1717,8 +1736,15 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#1-grupos" class="md-nav__link">
-    1. Grupos
+  <a href="#3-grupos" class="md-nav__link">
+    3. Grupos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gerando-as-equacoes" class="md-nav__link">
+    4. Gerando as equações
   </a>
   
 </li>
@@ -1753,11 +1779,25 @@
                 
                 
                 <h1 id="algebra-booleana">Álgebra Booleana<a class="headerlink" href="#algebra-booleana" title="Permanent link">&para;</a></h1>
+<table>
+<thead>
+<tr>
+<th>Estudando</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>daw</td>
+<td></td>
+</tr>
+</tbody>
+</table>
 <p>A álgebra booleana foi desenvolvida por <a href="https://pt.wikipedia.org/wiki/George_Boole">George Boole</a>, um matemático britânico que desenvolveu os conceitos em 1847, base da computação moderna. Muito tempo depois, nos anos 30, Claude Shannon, um importante engenheiro na história da computação moderna, aplicou as ideias de Boole em circuitos elétricos. Ele trabalhava no Analisador Diferencial de Vannevar Bush, e logo percebeu a relação dos relés com álgebra booleana. Ele fazia um relé acionar o outro usando usando uma lógica binária do relé fechado ou aberto. Sua dissertação e artigos, levaram outras pessoas a perceber os benefícios da álgebra booleana em eletrônica e consequentemente computação.</p>
 <p>Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e ligado, ou falso e verdadeiro, 0 volt e 5 volts, branco e preto. Porém normalmente na computação usamos <code>0</code> e <code>1</code> pela conveniência. Todos os computadores tem como sua menor unidade de dado, esse elemento. Em computação chamamos isso de bit. quem vem dígito binário (ou do inglês binary digit).</p>
 <h2 id="bit">bit<a class="headerlink" href="#bit" title="Permanent link">&para;</a></h2>
 <p>Bit é a unidade mais simples de representação de dados digitais, um bit é uma unidade que pode assumir apenas dois valores: <code>0</code> ou <code>1</code>. Com um bit podemos representar o estado de uma luz na sala de aula, se uma cadeira está vazio ou não, .... não conseguimos representar <strong>com apenas um bit</strong> uma informação que não seja binária. Mas se combinarmos mais de um bit, criando um vetor de bits, somos capazes de representar quantos estados desejarmos.</p>
-<iframe width="" height="520" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
+<iframe width="710" height="520" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
 
 <h2 id="equacoes">Equações<a class="headerlink" href="#equacoes" title="Permanent link">&para;</a></h2>
 <p>Uma equação de lógica booleana pode possuir zero ou mais 'entradas' e apenas uma saída, na equação exemplo a seguir, <code>X</code> é uma saída (e pode assumir apenas valor <code>1</code> ou <code>0</code>) e <code>A</code> e <code>B</code> são entradas também do tipo binária.</p>
@@ -2189,7 +2229,10 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
 <p>O mapa pode ser criado para N entradas, porém só iremos tratar nesse curso sistemas de <strong>2</strong>, <strong>3</strong> ou <strong>4</strong> variáveis. A seguir exemplos de mapa as três quantidades de entradas:</p>
 <p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-construindo1.png" /></p>
 <p>Para criar o mapa basta seguir a receitinha anterior, note que a sequência das entras: <code>AB</code> e <code>CD</code> é da forma:</p>
-<div class="codehilite"><pre><span></span>AB \  00 01 11 10
+<div class="codehilite"><pre><span></span>     __ _      _
+     AB AB AB AB
+     -----------
+AB \ 00 01 11 10
 </pre></div>
 
 <p>e não:</p>
@@ -2202,11 +2245,26 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
 <p class="admonition-title">Warning</p>
 <p>Colocar qualquer sequência na criação do mapa é um dos erros mais comuns dos anos anteriores!</p>
 </div>
-<h4 id="1-grupos">1. Grupos<a class="headerlink" href="#1-grupos" title="Permanent link">&para;</a></h4>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Podemos começar a sequência com qualquer combinação, se seguirmos a ordem de só mudar um bit por vez, exemplo:</p>
+<div class="codehilite"><pre><span></span>AB \ 11 10 00 01
+</pre></div>
+
+<div class="codehilite"><pre><span></span>AB \ 01 11 10 00
+</pre></div>
+
+</div>
+<h4 id="3-grupos">3. Grupos<a class="headerlink" href="#3-grupos" title="Permanent link">&para;</a></h4>
 <p>No MK podemos agrupar '1's na quantidade de: <span><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span>, onde <code>n=0,1,2,3,</code> ou seja: 1, 2, 4, 8..., o agrupamento só pode ser feito na vertical ou horizontal, nunca na diagonal.</p>
 <p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-grupos1.png" /></p>
 <p>Devemos agrupar sempre na maior quantidade possível! E nunca na diagonal! A seguir exemplos do que <strong>não deve ser feito!</strong></p>
 <p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-grupos2.png" /></p>
+<p>Podemos pensar no MK não como sendo uma tabela plana, mas sim uma superfície mapeada em uma esfera, logo as pontas estão conectadas. Com isso podemos criar grupos nas situações a seguir:</p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-grupos3.png" width="600" /></p>
+<h4 id="4-gerando-as-equacoes">4. Gerando as equações<a class="headerlink" href="#4-gerando-as-equacoes" title="Permanent link">&para;</a></h4>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-exemplo1.png" /></p>
+<p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-exemplo2.png" /></p>
                 
                   
                 
@@ -2227,7 +2285,7 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Util-Video-Aulas/" title="Vídeo Aulas" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../Util-Infraestrutura/" title="Infraestrutura" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -2236,19 +2294,19 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Vídeo Aulas
+                Infraestrutura
               </span>
             </div>
           </a>
         
         
-          <a href="../Util-vhdl/" title="VHDL - Básico" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Exercicio-Algebra-Booleana/" title="Álgebra Booleana" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                VHDL - Básico
+                Álgebra Booleana
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
