@@ -1,5 +1,10 @@
 # Álgebra Booleana
 
+| Estudando |    |
+| --------- | -- |
+| daw       |    |
+
+
 A álgebra booleana foi desenvolvida por [George Boole](https://pt.wikipedia.org/wiki/George_Boole), um matemático britânico que desenvolveu os conceitos em 1847, base da computação moderna. Muito tempo depois, nos anos 30, Claude Shannon, um importante engenheiro na história da computação moderna, aplicou as ideias de Boole em circuitos elétricos. Ele trabalhava no Analisador Diferencial de Vannevar Bush, e logo percebeu a relação dos relés com álgebra booleana. Ele fazia um relé acionar o outro usando usando uma lógica binária do relé fechado ou aberto. Sua dissertação e artigos, levaram outras pessoas a perceber os benefícios da álgebra booleana em eletrônica e consequentemente computação.
 
 Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e ligado, ou falso e verdadeiro, 0 volt e 5 volts, branco e preto. Porém normalmente na computação usamos `0` e `1` pela conveniência. Todos os computadores tem como sua menor unidade de dado, esse elemento. Em computação chamamos isso de bit. quem vem dígito binário (ou do inglês binary digit).
@@ -8,7 +13,7 @@ Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e l
 
 Bit é a unidade mais simples de representação de dados digitais, um bit é uma unidade que pode assumir apenas dois valores: `0` ou `1`. Com um bit podemos representar o estado de uma luz na sala de aula, se uma cadeira está vazio ou não, .... não conseguimos representar **com apenas um bit** uma informação que não seja binária. Mas se combinarmos mais de um bit, criando um vetor de bits, somos capazes de representar quantos estados desejarmos.
 
-<iframe width="" height="520" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
+<iframe width="710" height="520" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
 
 ## Equações
 
@@ -286,6 +291,8 @@ A simplificação por mapa de Karnaugh é uma técnica visual de encontrarmos um
 1. Criar os grupos 
 1. Gerar as equações
 
+<iframe width="710" height="520" src="https://www.youtube.com/embed/ghHYBAwHrho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
 #### 2. Criando Mapa
 
 O mapa pode ser criado para N entradas, porém só iremos tratar nesse curso sistemas de **2**, **3** ou **4** variáveis. A seguir exemplos de mapa as três quantidades de entradas:
@@ -295,7 +302,10 @@ O mapa pode ser criado para N entradas, porém só iremos tratar nesse curso sis
 Para criar o mapa basta seguir a receitinha anterior, note que a sequência das entras: `AB` e `CD` é da forma:
 
 ```
-AB \  00 01 11 10
+     __ _      _
+     AB AB AB AB
+     -----------
+AB \ 00 01 11 10
 ```
 
 e não:
@@ -311,7 +321,18 @@ Como seria mais lógico (já que em binário: `00 = 0; 01 = 1; 10 = 2; 11 = 3`).
 !!! warning
     Colocar qualquer sequência na criação do mapa é um dos erros mais comuns dos anos anteriores!
 
-#### 1. Grupos
+!!! note
+    Podemos começar a sequência com qualquer combinação, se seguirmos a ordem de só mudar um bit por vez, exemplo:
+    
+    ```
+    AB \ 11 10 00 01
+    ```
+    
+    ```
+    AB \ 01 11 10 00
+    ```
+    
+#### 3. Grupos
 
 No MK podemos agrupar '1's na quantidade de: $2^n$, onde `n=0,1,2,3,` ou seja: 1, 2, 4, 8..., o agrupamento só pode ser feito na vertical ou horizontal, nunca na diagonal.
 
@@ -320,4 +341,15 @@ No MK podemos agrupar '1's na quantidade de: $2^n$, onde `n=0,1,2,3,` ou seja: 1
 Devemos agrupar sempre na maior quantidade possível! E nunca na diagonal! A seguir exemplos do que **não deve ser feito!**
 
 ![](figs/Teoria/LogicaBooleana-mk-grupos2.png)
+
+Podemos pensar no MK não como sendo uma tabela plana, mas sim uma superfície mapeada em uma esfera, logo as pontas estão conectadas. Com isso podemos criar grupos nas situações a seguir:
+
+![](figs/Teoria/LogicaBooleana-mk-grupos3.png){width=600}
+
+
+#### 4. Gerando as equações
+
+![](figs/Teoria/LogicaBooleana-mk-exemplo1.png)
+
+![](figs/Teoria/LogicaBooleana-mk-exemplo2.png)
 

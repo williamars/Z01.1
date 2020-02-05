@@ -1,4 +1,4 @@
-# VHDL - Básico
+# VHDL - Introdução
 
 O VHDL é uma linguagem de descrição de hardware (Hardware Description Language - HDL), não sendo uma linguagem de programação. Foi criada durante a Guerra Fria no Departamento de Defesa Americano (DoD-DARPA) para a documentação de hardwares complexos (complementava/substituía os esquemáticos). Com a evolução da tecnologia agora é possível utilizar a linguagem para implementar sistemas digitais em hardwares programáveis (FPGA/CPL/...).
 
