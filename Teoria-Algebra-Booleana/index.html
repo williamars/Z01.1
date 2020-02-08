@@ -3,7 +3,7 @@
 
 
 <!doctype html>
-<html lang="en" class="no-js">
+<html lang="pt" class="no-js">
   <head>
     
       <meta charset="utf-8">
@@ -13,21 +13,21 @@
       
       
       
-        <meta name="lang:clipboard.copy" content="Copy to clipboard">
+        <meta name="lang:clipboard.copy" content="Copiar para área de transferência">
       
-        <meta name="lang:clipboard.copied" content="Copied to clipboard">
+        <meta name="lang:clipboard.copied" content="Copiado para área de transferência">
       
-        <meta name="lang:search.language" content="en">
+        <meta name="lang:search.language" content="pt">
       
         <meta name="lang:search.pipeline.stopwords" content="True">
       
         <meta name="lang:search.pipeline.trimmer" content="True">
       
-        <meta name="lang:search.result.none" content="No matching documents">
+        <meta name="lang:search.result.none" content="Nenhum resultado encontrado">
       
-        <meta name="lang:search.result.one" content="1 matching document">
+        <meta name="lang:search.result.one" content="1 resultado encontrado">
       
-        <meta name="lang:search.result.other" content="# matching documents">
+        <meta name="lang:search.result.other" content="# resultados encontrados">
       
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
@@ -63,6 +63,8 @@
     <link rel="stylesheet" href="../assets/fonts/material-icons.css">
     
     
+      <link rel="stylesheet" href="../css/printing.css">
+    
     
       
     
@@ -86,25 +88,74 @@
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
       <a href="#algebra-booleana" tabindex="1" class="md-skip">
-        Skip to content
+        Ir para o conteúdo
       </a>
     
     
-      <header class="md-header" data-md-component="header">
+      <!--
+  Copyright (c) 2016-2019 Martin Donath <martin.donath@squidfunk.com>
+
+  Permission is hereby granted, free of charge, to any person obtaining a copy
+  of this software and associated documentation files (the "Software"), to
+  deal in the Software without restriction, including without limitation the
+  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
+  sell copies of the Software, and to permit persons to whom the Software is
+  furnished to do so, subject to the following conditions:
+
+  The above copyright notice and this permission notice shall be included in
+  all copies or substantial portions of the Software.
+
+  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
+  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+  IN THE SOFTWARE.
+-->
+
+<!-- Application header -->
+<script>
+    window.site_url = "";
+</script>
+
+<div class="md-printing-header">
+  <img class="cabecalho" src="css/cabecalho.png">
+  <img class="logo" src="css/logo.png">
+
+  <div class="frontmatter">
+    <div class="materia">  </div>
+    <div class="professor">  </div>
+    <div class="semestre">  </div>
+  </div>
+</div>
+<header class="md-header" data-md-component="header">
+
+
+
+  <!-- Top-level navigation -->
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
+
+      <!-- Link to home -->
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href=".." title="2020-1 - Elementos de Sistemas - Z01" class="md-header-nav__button md-logo">
+        <a href=".."
+            title="2020-1 - Elementos de Sistemas - Z01"
+            class="md-header-nav__button md-logo">
           
             <i class="md-icon">developer_board</i>
           
         </a>
-      </div>
+      </div>      
+      <!-- Button to toggle drawer -->
       <div class="md-flex__cell md-flex__cell--shrink">
-        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+        <label class="md-icon md-icon--menu md-header-nav__button"
+            for="__drawer"></label>
       </div>
+      <!-- Header title -->
       <div class="md-flex__cell md-flex__cell--stretch">
-        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+        <div class="md-flex__ellipsis md-header-nav__title"
+            data-md-component="title">
           
             <span class="md-header-nav__topic">
               2020-1 - Elementos de Sistemas - Z01
@@ -117,15 +168,20 @@
           
         </div>
       </div>
+
+      <!-- Button to open search dialogue -->
       <div class="md-flex__cell md-flex__cell--shrink">
         
-          <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+          <label class="md-icon md-icon--search md-header-nav__button"
+              for="__search"></label>
+
+          <!-- Search interface -->
           
 <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" placeholder="Buscar" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -135,7 +191,7 @@
       <div class="md-search__scrollwrap" data-md-scrollfix>
         <div class="md-search-result" data-md-component="result">
           <div class="md-search-result__meta">
-            Type to start searching
+            Digite para iniciar a busca
           </div>
           <ol class="md-search-result__list"></ol>
         </div>
@@ -145,6 +201,8 @@
 </div>
         
       </div>
+
+      <!-- Repository containing source -->
       
         <div class="md-flex__cell md-flex__cell--shrink">
           <div class="md-header-nav__source">
@@ -153,7 +211,7 @@
 
   
 
-<a href="https://github.com/insper/Z01.1/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/insper/Z01.1/" title="Ir ao repositório" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -203,21 +261,8 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Util-Vixi!-Sou-Scrum-Master/" class="md-tabs__link">
-          Util
-        </a>
-      
-    </li>
-  
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="./" class="md-tabs__link md-tabs__link--active">
-          Teoria
+        <a href="../Util-Resumo-Projetos/" class="md-tabs__link">
+          Projetos
         </a>
       
     </li>
@@ -242,8 +287,21 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Util-Resumo-Projetos/" class="md-tabs__link">
-          Projetos
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Teoria
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Exercicio-Algebra-Booleana-1/" class="md-tabs__link">
+          Estudo
         </a>
       
     </li>
@@ -257,6 +315,19 @@
       
         <a href="../Util-Aulas/" class="md-tabs__link">
           Aulas
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Util-Vixi!-Sou-Scrum-Master/" class="md-tabs__link">
+          Útil
         </a>
       
     </li>
@@ -290,7 +361,7 @@
 
   
 
-<a href="https://github.com/insper/Z01.1/" title="Go to repository" class="md-source" data-md-source="github">
+<a href="https://github.com/insper/Z01.1/" title="Ir ao repositório" class="md-source" data-md-source="github">
   
     <div class="md-source__icon">
       <svg viewBox="0 0 24 24" width="24" height="24">
@@ -376,11 +447,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
-      Util
+      Projetos
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
       <label class="md-nav__title" for="nav-2">
-        Util
+        Projetos
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -391,8 +462,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Util-Vixi!-Sou-Scrum-Master/" title="Vixi! Sou Scrum Master" class="md-nav__link">
-      Vixi! Sou Scrum Master
+    <a href="../Util-Resumo-Projetos/" title="Resumo" class="md-nav__link">
+      Resumo
     </a>
   </li>
 
@@ -403,8 +474,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Util-Dicas-GIT/" title="Dicas git" class="md-nav__link">
-      Dicas git
+    <a href="../X-Processadores-Projeto/" title="X - Mundo real" class="md-nav__link">
+      X - Mundo real
     </a>
   </li>
 
@@ -419,11 +490,11 @@
       <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-3" type="checkbox" id="nav-2-3">
     
     <label class="md-nav__link" for="nav-2-3">
-      ZO1.1
+      J - VM Translator
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
       <label class="md-nav__title" for="nav-2-3">
-        ZO1.1
+        J - VM Translator
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -434,8 +505,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Util-Z01.1-Cheat-Sheet/" title="Z01.1 Cheat Sheet" class="md-nav__link">
-      Z01.1 Cheat Sheet
+    <a href="../J-VMtranslator-Projeto/" title="Projeto" class="md-nav__link">
+      Projeto
     </a>
   </li>
 
@@ -446,8 +517,260 @@
 
 
   <li class="md-nav__item">
-    <a href="../Util-InstructionSet/" title="Instruction Set" class="md-nav__link">
-      Instruction Set
+    <a href="../J-VMtranslator-memoria/" title="VM Função" class="md-nav__link">
+      VM Função
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-4" type="checkbox" id="nav-2-4">
+    
+    <label class="md-nav__link" for="nav-2-4">
+      I - VM
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-4">
+        I - VM
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../I-VM-Projeto/" title="Projeto" class="md-nav__link">
+      Projeto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Resumo-VM/" title="VM Linguagem" class="md-nav__link">
+      VM Linguagem
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../I-VM-Ferramental-Memoria/" title="VM Memória" class="md-nav__link">
+      VM Memória
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
+    
+    <label class="md-nav__link" for="nav-2-5">
+      H - Assembler
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-5">
+        H - Assembler
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H-Assembler-Projeto/" title="Projeto" class="md-nav__link">
+      Projeto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H-Assembler-Prerequisitos/" title="Prerequisitos" class="md-nav__link">
+      Prerequisitos
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H-Assembler-Testando/" title="Testando" class="md-nav__link">
+      Testando
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H-Assembler-Dicas-SymbolTable/" title="Dicas SymbolTable" class="md-nav__link">
+      Dicas SymbolTable
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../H-Assembler-Dicas-Macro/" title="Dicas Macro" class="md-nav__link">
+      Dicas Macro
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-6" type="checkbox" id="nav-2-6">
+    
+    <label class="md-nav__link" for="nav-2-6">
+      G - CPU
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-6">
+        G - CPU
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../G-CPU-Projeto/" title="CPU Projeto" class="md-nav__link">
+      CPU Projeto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../G-CPU-Testando/" title="Dicas testando" class="md-nav__link">
+      Dicas testando
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../G-CPU-Dicas-Conceito-B-e-A/" title="Dicas rubrica B" class="md-nav__link">
+      Dicas rubrica B
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-7" type="checkbox" id="nav-2-7">
+    
+    <label class="md-nav__link" for="nav-2-7">
+      F - Assembly
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-2-7">
+        F - Assembly
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../F-Assembly-Projeto/" title="Projeto" class="md-nav__link">
+      Projeto
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../F-Assembly-Dicas/" title="Dicas" class="md-nav__link">
+      Dicas
     </a>
   </li>
 
@@ -464,18 +787,6 @@
   </li>
 
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Util-Resumo-VM/" title="Resumo VM" class="md-nav__link">
-      Resumo VM
-    </a>
-  </li>
-
-        
       </ul>
     </nav>
   </li>
@@ -487,231 +798,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Util-Infraestrutura/" title="Infraestrutura" class="md-nav__link">
-      Infraestrutura
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
-    
-    <label class="md-nav__link" for="nav-3">
-      Teoria
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        Teoria
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-  
-
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Álgebra Booleana
-      </label>
-    
-    <a href="./" title="Álgebra Booleana" class="md-nav__link md-nav__link--active">
-      Álgebra Booleana
-    </a>
-    
-      
-<nav class="md-nav md-nav--secondary">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">Table of contents</label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#bit" class="md-nav__link">
-    bit
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#equacoes" class="md-nav__link">
-    Equações
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#operacoes" class="md-nav__link">
-    Operações
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#not-and-or-nor" class="md-nav__link">
-    not, and, or, nor
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#tabela-verdade" class="md-nav__link">
-    Tabela Verdade
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#funcoes-geradas-a-partir-de-tabelas-verdade" class="md-nav__link">
-    Funções geradas a partir de Tabelas Verdade
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#soma-dos-produtos" class="md-nav__link">
-    Soma Dos Produtos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#produto-das-somas" class="md-nav__link">
-    Produto das somas
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#funcoes-booleanas" class="md-nav__link">
-    Funções booleanas
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#simplificacao" class="md-nav__link">
-    Simplificação
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#simplificacao-algebrica" class="md-nav__link">
-    Simplificação algébrica
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#exemplos" class="md-nav__link">
-    Exemplos
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#mapa-de-karnaugh-mk" class="md-nav__link">
-    Mapa de Karnaugh (MK)
-  </a>
-  
-    <nav class="md-nav">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#2-criando-o-mapa" class="md-nav__link">
-    2. Criando o Mapa
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#3-grupos" class="md-nav__link">
-    3. Grupos
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#4-gerando-as-equacoes" class="md-nav__link">
-    4. Gerando as equações
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-      
-      
-      
-      
-    </ul>
-  
-</nav>
-    
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Exercicio-Algebra-Booleana/" title="Álgebra Booleana" class="md-nav__link">
-      Álgebra Booleana
+    <a href="../E-Sequencial-Projeto/" title="E - Lógica Sequencial" class="md-nav__link">
+      E - Lógica Sequencial
     </a>
   </li>
 
@@ -722,8 +810,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Util-vhdl/" title="VHDL - Introdução" class="md-nav__link">
-      VHDL - Introdução
+    <a href="../D-ULA-Projeto/" title="D - ULA" class="md-nav__link">
+      D - ULA
     </a>
   </li>
 
@@ -734,8 +822,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../Util-Video-Aulas/" title="Vídeo Aulas (Luciano)" class="md-nav__link">
-      Vídeo Aulas (Luciano)
+    <a href="../C-Logica-Combinacional-Projeto/" title="C - Lógica Combinacional" class="md-nav__link">
+      C - Lógica Combinacional
     </a>
   </li>
 
@@ -752,13 +840,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
     
-    <label class="md-nav__link" for="nav-4">
+    <label class="md-nav__link" for="nav-3">
       Labs
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
+      <label class="md-nav__title" for="nav-3">
         Labs
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -807,13 +895,13 @@
 
   <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4-4" type="checkbox" id="nav-4-4">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-3-4" type="checkbox" id="nav-3-4">
     
-    <label class="md-nav__link" for="nav-4-4">
+    <label class="md-nav__link" for="nav-3-4">
       15: H Assembler Lab 1
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-4-4">
+      <label class="md-nav__title" for="nav-3-4">
         15: H Assembler Lab 1
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
@@ -1073,17 +1161,19 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" checked>
     
-    <label class="md-nav__link" for="nav-5">
-      Projetos
+    <label class="md-nav__link" for="nav-4">
+      Teoria
     </label>
     <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        Projetos
+      <label class="md-nav__title" for="nav-4">
+        Teoria
       </label>
       <ul class="md-nav__list" data-md-scrollfix>
         
@@ -1092,537 +1182,33 @@
           
           
 
-
-  <li class="md-nav__item">
-    <a href="../Util-Resumo-Projetos/" title="Resumo" class="md-nav__link">
-      Resumo
-    </a>
-  </li>
-
-        
-          
-          
-          
+  
 
 
-  <li class="md-nav__item">
-    <a href="../X-Processadores-Projeto/" title="X - Mundo real" class="md-nav__link">
-      X - Mundo real
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--active">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-3" type="checkbox" id="nav-5-3">
-    
-    <label class="md-nav__link" for="nav-5-3">
-      J - VM Translator
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-3">
-        J - VM Translator
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../J-VMtranslator-Projeto/" title="Projeto" class="md-nav__link">
-      Projeto
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../J-VMtranslator-memoria/" title="VM Função" class="md-nav__link">
-      VM Função
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-4" type="checkbox" id="nav-5-4">
-    
-    <label class="md-nav__link" for="nav-5-4">
-      I - VM
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-4">
-        I - VM
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../I-VM-Projeto/" title="Projeto" class="md-nav__link">
-      Projeto
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Util-Resumo-VM/" title="VM Linguagem" class="md-nav__link">
-      VM Linguagem
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../I-VM-Ferramental-Memoria/" title="VM Memória" class="md-nav__link">
-      VM Memória
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-5" type="checkbox" id="nav-5-5">
-    
-    <label class="md-nav__link" for="nav-5-5">
-      H - Assembler
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-5">
-        H - Assembler
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../H-Assembler-Projeto/" title="Projeto" class="md-nav__link">
-      Projeto
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../H-Assembler-Prerequisitos/" title="Prerequisitos" class="md-nav__link">
-      Prerequisitos
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../H-Assembler-Testando/" title="Testando" class="md-nav__link">
-      Testando
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../H-Assembler-Dicas-SymbolTable/" title="Dicas SymbolTable" class="md-nav__link">
-      Dicas SymbolTable
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../H-Assembler-Dicas-Macro/" title="Dicas Macro" class="md-nav__link">
-      Dicas Macro
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-6" type="checkbox" id="nav-5-6">
-    
-    <label class="md-nav__link" for="nav-5-6">
-      G - CPU
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-6">
-        G - CPU
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../G-CPU-Projeto/" title="CPU Projeto" class="md-nav__link">
-      CPU Projeto
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../G-CPU-Testando/" title="Dicas testando" class="md-nav__link">
-      Dicas testando
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../G-CPU-Dicas-Conceito-B-e-A/" title="Dicas rubrica B" class="md-nav__link">
-      Dicas rubrica B
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-7" type="checkbox" id="nav-5-7">
-    
-    <label class="md-nav__link" for="nav-5-7">
-      F - Assembly
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-7">
-        F - Assembly
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../F-Assembly-Projeto/" title="Projeto" class="md-nav__link">
-      Projeto
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../F-Assembly-Dicas/" title="Dicas" class="md-nav__link">
-      Dicas
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Util-Resumo-Assembly/" title="Resumo Assembly" class="md-nav__link">
-      Resumo Assembly
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-8" type="checkbox" id="nav-5-8">
-    
-    <label class="md-nav__link" for="nav-5-8">
-      E - Lógica Sequencial
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-8">
-        E - Lógica Sequencial
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../E-Sequencial-Projeto/" title="Projeto" class="md-nav__link">
-      Projeto
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-9" type="checkbox" id="nav-5-9">
-    
-    <label class="md-nav__link" for="nav-5-9">
-      D - ULA
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-9">
-        D - ULA
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../D-ULA-Projeto/" title="Projeto" class="md-nav__link">
-      Projeto
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5-10" type="checkbox" id="nav-5-10">
-    
-    <label class="md-nav__link" for="nav-5-10">
-      C - Lógica Combinacional
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
-      <label class="md-nav__title" for="nav-5-10">
-        C - Lógica Combinacional
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../C-Logica-Combinacional-Projeto/" title="Projeto" class="md-nav__link">
-      Projeto
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../B-Circuitos-Integrados-Projeto/" title="B - Circuitos Integrados" class="md-nav__link">
-      B - Circuitos Integrados
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../A-Transistores-Projeto/" title="A - Transistores" class="md-nav__link">
-      A - Transistores
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
     
       
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
     
-    <label class="md-nav__link" for="nav-6">
-      Aulas
-    </label>
-    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        Aulas
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Álgebra Booleana
       </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../Util-Aulas/" title="Aulas" class="md-nav__link">
-      Aulas
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
     
-  </ul>
-</nav>
-                  </div>
-                </div>
-              </div>
-            
-            
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
+    <a href="./" title="Álgebra Booleana" class="md-nav__link md-nav__link--active">
+      Álgebra Booleana
+    </a>
+    
+      
 <nav class="md-nav md-nav--secondary">
   
   
     
   
   
-    <label class="md-nav__title" for="__toc">Table of contents</label>
+    <label class="md-nav__title" for="__toc">Índice</label>
     <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#bit" class="md-nav__link">
-    bit
-  </a>
-  
-</li>
       
         <li class="md-nav__item">
   <a href="#equacoes" class="md-nav__link">
@@ -1686,9 +1272,406 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#funcoes-booleanas" class="md-nav__link">
-    Funções booleanas
+  <a href="#simplificacao" class="md-nav__link">
+    Simplificação
   </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simplificacao-algebrica" class="md-nav__link">
+    Simplificação algébrica
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplos" class="md-nav__link">
+    Exemplos
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mapa-de-karnaugh-mk" class="md-nav__link">
+    Mapa de Karnaugh (MK)
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#2-criando-o-mapa" class="md-nav__link">
+    2. Criando o Mapa
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-grupos" class="md-nav__link">
+    3. Grupos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-gerando-as-equacoes" class="md-nav__link">
+    4. Gerando as equações
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Teoria-VHDL-basico/" title="VHDL - Introdução" class="md-nav__link">
+      VHDL - Introdução
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Video-Aulas/" title="Vídeo Aulas (Luciano)" class="md-nav__link">
+      Vídeo Aulas (Luciano)
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      Estudo
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        Estudo
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exercicio-Algebra-Booleana-1/" title="Exercício - Álgebra Booleana - parte 1" class="md-nav__link">
+      Exercício - Álgebra Booleana - parte 1
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Exercicio-Algebra-Booleana-2/" title="Exercício - Álgebra Booleana - parte 2" class="md-nav__link">
+      Exercício - Álgebra Booleana - parte 2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Aulas
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        Aulas
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Aulas/" title="Aulas" class="md-nav__link">
+      Aulas
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      Útil
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        Útil
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Vixi!-Sou-Scrum-Master/" title="Vixi! Sou Scrum Master" class="md-nav__link">
+      Vixi! Sou Scrum Master
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Dicas-GIT/" title="Dicas git" class="md-nav__link">
+      Dicas git
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-7-3" type="checkbox" id="nav-7-3">
+    
+    <label class="md-nav__link" for="nav-7-3">
+      ZO1.1
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="2">
+      <label class="md-nav__title" for="nav-7-3">
+        ZO1.1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Z01.1-Cheat-Sheet/" title="Z01.1 Cheat Sheet" class="md-nav__link">
+      Z01.1 Cheat Sheet
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-InstructionSet/" title="Instruction Set" class="md-nav__link">
+      Instruction Set
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Resumo-Assembly/" title="Resumo Assembly" class="md-nav__link">
+      Resumo Assembly
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Resumo-VM/" title="Resumo VM" class="md-nav__link">
+      Resumo VM
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Util-Infraestrutura/" title="Infraestrutura" class="md-nav__link">
+      Infraestrutura
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#equacoes" class="md-nav__link">
+    Equações
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#operacoes" class="md-nav__link">
+    Operações
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#not-and-or-nor" class="md-nav__link">
+    not, and, or, nor
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tabela-verdade" class="md-nav__link">
+    Tabela Verdade
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funcoes-geradas-a-partir-de-tabelas-verdade" class="md-nav__link">
+    Funções geradas a partir de Tabelas Verdade
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#soma-dos-produtos" class="md-nav__link">
+    Soma Dos Produtos
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#produto-das-somas" class="md-nav__link">
+    Produto das somas
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1775,7 +1758,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/insper/Z01.1/edit/master/docs/Teoria-Algebra-Booleana.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/insper/Z01.1/edit/master/docs/Teoria-Algebra-Booleana.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
                 <h1 id="algebra-booleana">Álgebra Booleana<a class="headerlink" href="#algebra-booleana" title="Permanent link">&para;</a></h1>
@@ -1788,17 +1771,58 @@
 </thead>
 <tbody>
 <tr>
-<td>daw</td>
+<td>Bibliografia</td>
 <td></td>
+</tr>
+<tr>
+<td></td>
+<td>[Cap1. Cap2. NISAN, 2005]</td>
+</tr>
+<tr>
+<td></td>
+<td>[Cap6. TOCCI, 2011]</td>
+</tr>
+<tr>
+<td></td>
+<td>[Cap1. FLOYD, 2007]</td>
+</tr>
+<tr>
+<td></td>
+<td>[LAING, 2004]</td>
+</tr>
+<tr>
+<td>Vídeos (extra)</td>
+<td></td>
+</tr>
+<tr>
+<td><img alt="👍" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f44d.svg" title=":+1:" /></td>
+<td><iframe width="200" height="200" src="https://www.youtube.com/embed/YYIucfsQKl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://www.youtube.com/watch?v=_Lb2c18xdeo">Logic 101 (#11): Truth Tables</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://youtu.be/UaGM8T4o9xI?list=PLKI1h_nAkaQq5MDWlKXu0jeZmLDt-51on">Logic 101 (#12): Truth Table Practice</a></td>
+</tr>
+<tr>
+<td></td>
+<td><a href="https://www.youtube.com/watch?v=3vkMgTmieZI">Computer Science: Karnaugh Maps – Introduction</a></td>
+</tr>
+<tr>
+<td><img alt="👍" class="emojione" src="https://cdn.jsdelivr.net/emojione/assets/svg/1f44d.svg" title=":+1:" /></td>
+<td><a href="https://www.youtube.com/watch?v=YJSqf_Z024w">Computer Science: Karnaugh Maps - 4 vars</a></td>
 </tr>
 </tbody>
 </table>
 <p>A álgebra booleana foi desenvolvida por <a href="https://pt.wikipedia.org/wiki/George_Boole">George Boole</a>, um matemático britânico que desenvolveu os conceitos em 1847, base da computação moderna. Muito tempo depois, nos anos 30, Claude Shannon, um importante engenheiro na história da computação moderna, aplicou as ideias de Boole em circuitos elétricos. Ele trabalhava no Analisador Diferencial de Vannevar Bush, e logo percebeu a relação dos relés com álgebra booleana. Ele fazia um relé acionar o outro usando usando uma lógica binária do relé fechado ou aberto. Sua dissertação e artigos, levaram outras pessoas a perceber os benefícios da álgebra booleana em eletrônica e consequentemente computação.</p>
 <p>Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e ligado, ou falso e verdadeiro, 0 volt e 5 volts, branco e preto. Porém normalmente na computação usamos <code>0</code> e <code>1</code> pela conveniência. Todos os computadores tem como sua menor unidade de dado, esse elemento. Em computação chamamos isso de bit. que vem de dígito binário (ou do inglês binary digit).</p>
-<h2 id="bit">bit<a class="headerlink" href="#bit" title="Permanent link">&para;</a></h2>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
 <p>Bit é a unidade mais simples de representação de dados digitais, um bit é uma unidade que pode assumir apenas dois valores: <code>0</code> ou <code>1</code>. Com um bit podemos representar o estado de uma luz na sala de aula, se uma cadeira está vazio ou não, .... não conseguimos representar <strong>com apenas um bit</strong> uma informação que não seja binária. Mas se combinarmos mais de um bit, criando um vetor de bits, somos capazes de representar quantos estados desejarmos.</p>
-<iframe width="710" height="520" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
-
+<p><iframe width="710" height="520" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe></p>
+</div>
 <h2 id="equacoes">Equações<a class="headerlink" href="#equacoes" title="Permanent link">&para;</a></h2>
 <p>Uma equação de lógica booleana pode possuir uma ou mais 'entradas' e apenas uma saída, na equação exemplo a seguir, <code>X</code> é uma saída (e pode assumir apenas valor <code>1</code> ou <code>0</code>) e <code>A</code> e <code>B</code> são entradas também do tipo binária.</p>
 <div class="codehilite"><pre><span></span>    X(A,B) = A ^ B
@@ -1850,6 +1874,11 @@ ao longo do curso.</p>
 </div>
 <p>Podemos representar essa equação <code>X = A ^ B</code> como sendo um circuito digital, como ilustrado a seguir:</p>
 <p><img alt="" src="../figs/Teoria/LogicaBooleana-and1.png" width="400" /></p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Resolver funções booleanas é entender quando a saída será <code>Verdadeira</code> ou <code>Falsa</code> dado a combinação possível de entradas.</p>
+<p><iframe width="710" height="520" src="https://www.youtube.com/embed/rZwCJWOhNG0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+</div>
 <h2 id="operacoes">Operações<a class="headerlink" href="#operacoes" title="Permanent link">&para;</a></h2>
 <p>O <code>and</code> utilizado no exemplo anterior é um operador da lógica booleana, operadores possuem uma ou mais entradas e geram uma saída. Os operadores mais comuns são: <code>not</code>, <code>and</code>, <code>or</code>, <code>nand</code>, <code>nor</code>, <code>xor</code>.</p>
 <h3 id="not-and-or-nor">not, and, or, nor<a class="headerlink" href="#not-and-or-nor" title="Permanent link">&para;</a></h3>
@@ -2106,8 +2135,6 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
 <p class="admonition-title">Example</p>
 <p><img alt="" src="../figs/Teoria/LogicaBooleana-tv-exe1.png" /></p>
 </div>
-<h2 id="funcoes-booleanas">Funções booleanas<a class="headerlink" href="#funcoes-booleanas" title="Permanent link">&para;</a></h2>
-<p>Resolver funções booleanas é entender quando a saída será <code>Verdadeira</code> ou <code>Falsa</code> dado a combinação possível de entradas.</p>
 <h2 id="simplificacao">Simplificação<a class="headerlink" href="#simplificacao" title="Permanent link">&para;</a></h2>
 <p>Existem duas formas bastante populares de simplificar uma equação booleana: algébrica ou via mapa de Karnaugh. Veremos as duas com mais detalhes.</p>
 <h3 id="simplificacao-algebrica">Simplificação algébrica<a class="headerlink" href="#simplificacao-algebrica" title="Permanent link">&para;</a></h3>
@@ -2233,7 +2260,7 @@ X = A nand B  /  X = A . B  / X = ¬(A ∧ B)
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>O vídeo a seguir possui as resoluções de forma detalhada:</p>
-<p><iframe width="710" height="520" src="https://www.youtube.com/embed/rZwCJWOhNG0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
+<p><iframe width="710" height="520" src="https://www.youtube.com/embed/0as464WmfCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></p>
 </div>
 <h3 id="mapa-de-karnaugh-mk">Mapa de Karnaugh (MK)<a class="headerlink" href="#mapa-de-karnaugh-mk" title="Permanent link">&para;</a></h3>
 <p>A simplificação por mapa de Karnaugh é uma técnica visual de encontrarmos uma equação reduzida, porém para isso precisamos primeiro:</p>
@@ -2278,6 +2305,13 @@ AB \ 00 01 11 10
 <h4 id="3-grupos">3. Grupos<a class="headerlink" href="#3-grupos" title="Permanent link">&para;</a></h4>
 <p>No MK podemos agrupar '1's na quantidade de: <span><span class="MathJax_Preview">2^n</span><script type="math/tex">2^n</script></span>, onde <code>n=0,1,2,3,</code> ou seja, grupos de: <strong>1, 2, 4, 8, ...</strong>, o agrupamento só pode ser feito na vertical ou horizontal, nunca na diagonal.</p>
 <p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-grupos1.png" /></p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<ul>
+<li>Os grupos podem se sobrepor!</li>
+<li>Agrupar sempre na maior quantidade possível (2, 4, 8, ...)</li>
+</ul>
+</div>
 <p>Devemos agrupar sempre na maior quantidade possível! A seguir exemplos do que <strong>não deve ser feito!</strong></p>
 <p><img alt="" src="../figs/Teoria/LogicaBooleana-mk-grupos2.png" /></p>
 <div class="admonition note">
@@ -2386,28 +2420,28 @@ A equação feita via a tabela verdade seria:</p>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href="../Util-Infraestrutura/" title="Infraestrutura" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../A-Transistores-Lab-2/" title="Lab 1 : git - 1" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Previous
+                  Anterior
                 </span>
-                Infraestrutura
+                Lab 1 : git - 1
               </span>
             </div>
           </a>
         
         
-          <a href="../Exercicio-Algebra-Booleana/" title="Álgebra Booleana" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../Teoria-VHDL-basico/" title="VHDL - Introdução" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
               <span class="md-flex__ellipsis">
                 <span class="md-footer-nav__direction">
-                  Next
+                  Próximo
                 </span>
-                Álgebra Booleana
+                VHDL - Introdução
               </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink">
@@ -2441,9 +2475,26 @@ A equação feita via a tabela verdade seria:</p>
     
       <script src="../assets/javascripts/application.1f8d785c.js"></script>
       
+        
+        
+          
+          <script src="../assets/javascripts/lunr/lunr.stemmer.support.js"></script>
+          
+            
+              
+              
+                <script src="../assets/javascripts/lunr/lunr.pt.js"></script>
+              
+            
+          
+          
+        
+      
       <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+      
+        <script src="../translate_admonitions.js"></script>
       
     
   </body>
