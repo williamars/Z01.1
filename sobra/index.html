@@ -36,7 +36,7 @@
     
     
       
-        <title>Prerequisitos - 2020-1 - Elementos de Sistemas - Z01</title>
+        <title>Sobra - 2020-1 - Elementos de Sistemas - Z01</title>
       
     
     
@@ -86,6 +86,10 @@
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+    
+      <a href="#configurando-travis" tabindex="1" class="md-skip">
+        Ir para o conteúdo
+      </a>
     
     
       <!--
@@ -158,7 +162,7 @@
             </span>
             <span class="md-header-nav__topic">
               
-                Prerequisitos
+                Sobra
               
             </span>
           
@@ -233,9 +237,7 @@
       
         
 
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+<nav class="md-tabs" data-md-component="tabs">
   <div class="md-tabs__inner md-grid">
     <ul class="md-tabs__list">
       
@@ -257,7 +259,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Util-Resumo-Projetos/" class="md-tabs__link md-tabs__link--active">
+        <a href="../Util-Resumo-Projetos/" class="md-tabs__link">
           Projetos
         </a>
       
@@ -437,12 +439,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2">
     
     <label class="md-nav__link" for="nav-2">
       Projetos
@@ -590,12 +590,10 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5" checked>
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2-5" type="checkbox" id="nav-2-5">
     
     <label class="md-nav__link" for="nav-2-5">
       H - Assembler
@@ -623,18 +621,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Prerequisitos" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../H-Assembler-Prerequisitos/" title="Prerequisitos" class="md-nav__link">
       Prerequisitos
     </a>
-    
   </li>
 
         
@@ -1459,35 +1450,55 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+  
+    <label class="md-nav__title" for="__toc">Índice</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#configurando-travis" class="md-nav__link">
+    Configurando Travis
+  </a>
+  
+</li>
+      
+      
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/insper/Z01.1/edit/master/docs/H-Assembler-Prerequisitos.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
+                  <a href="https://github.com/insper/Z01.1/edit/master/docs/sobra.md" title="Editar esta página" class="md-icon md-content__icon">&#xE3C9;</a>
                 
                 
-                  <h1>Prerequisitos</h1>
+                  <h1>Sobra</h1>
                 
-                <p>(contanto com o restante da infra já esteja funcionando)</p>
+                <h2 id="configurando-travis">Configurando Travis<a class="headerlink" href="#configurando-travis" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Java JDK 8</li>
-<li>Maven <ul>
-<li><a href="https://maven.apache.org/install.html">https://maven.apache.org/install.html</a></li>
+<li>Criando um project no github</li>
 </ul>
-</li>
-<li>IDE <ul>
-<li>Intellij </li>
+<p><img alt="Project" src="../figs/C-LogiComb/C-2-project.gif" /></p>
+<ul>
+<li>Adicionando issues</li>
 </ul>
-</li>
-</ul>
-<p>Se você está usando o SSD fornecido, precisa apenas executar os comandos a seguir:</p>
-<div class="codehilite"><pre><span></span>$ sudo apt install maven
-$ python3 -m pip install joblib --user
-$ sudo snap install intellij-idea-community --classic --edge
-</pre></div>
-
-<p>Caso contrário precisa <a href="Infraestrutura-Detalhada#java-8---oracle">instalar o JAVA 8 oficial</a> (o open não funciona).</p>
+<p><img alt="Issues" src="../figs/C-LogiComb/C-3-issues.gif" /></p>
+<p>Os issues devem ser <a href="https://github.com/Insper/Z01.1/wiki/C-Logica-Combinacional-Projeto#o-que-deve-ser-feito-">todos os módulos</a> a serem implementados do projeto.</p>
                 
                   
                 
@@ -1504,41 +1515,6 @@ $ sudo snap install intellij-idea-community --classic --edge
       
         
 <footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid">
-        
-          <a href="../H-Assembler-Projeto/" title="Projeto" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
-            </div>
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Anterior
-                </span>
-                Projeto
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../H-Assembler-Testando/" title="Testando" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Próximo
-                </span>
-                Testando
-              </span>
-            </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
