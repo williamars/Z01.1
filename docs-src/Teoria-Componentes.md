@@ -12,6 +12,36 @@ Essa lista descreve os principais componentes digitais utilizados em projetos di
 - nor
 - xor
 
+## Tri-state ##
+
+![](https://upload.wikimedia.org/wikipedia/commons/c/c0/Tristate_buffer.svg)
+
+> [fonte wikipedia](https://en.wikipedia.org/wiki/Three-state_logic): A tristate buffer can be thought of as a switch. If B is on, the switch is closed. If B is off, the switch is open.
+
+```vhdl
+    entity tri_state is
+      port(
+            a   : in  std_logic;
+            b   : in  std_logic;
+            c   : out std_logic
+      );
+    end entity;
+```
+
+Com um tri-state buffer é possível se ter os estados 0, 1 e Z (alta impedância), o estado Z permite desconectar o sinal do resto do circuito,  a intenção é permitir que sinais de outros circuitos sejam compartilhados pelo mesmo barramento de dados, sem que haja interferência entre esses sinais.
+
+A entrada `a` por assumir 0 e 1, enquanto a saída `c` irá receber esse sinal caso a entrada `b` esteja em 1, caso contrário, o estado será Z.
+
+A seguir uma tabela verdade para um `tri-state`:
+
+| a                | b               |     c |
+| ---------------- | --------------- | ----- |
+| 0                | 0               |     Z |
+| 0                | 1               |     0 |
+| 1                | 0               |     Z |
+| 1                | 1               |     1 |
+
+
 ## Multiplexado (mux)
 
 ![](https://upload.wikimedia.org/wikipedia/commons/b/b2/Multiplexer2.png)
@@ -101,7 +131,7 @@ Enconders são componentes que codificam uma entrada em uma saída de outro form
 
 ### BCD
 
-[`Binary-coded decimal`](https://en.wikipedia.org/wiki/Binary-coded_decimal) (BCD) é uma forma de codificação de números inteiros em binário na qual utiliza-se para cada digito de um número inteiro, 4 bits em binário.
+[`Binary-coded decimal`](https://en.wikipedia.org/wiki/Binary-coded_decimal) (BCD) é uma forma de codificação de números inteiros em binário na qual utiliza-se para cada dígito de um número inteiro, 4 bits em binário.
 
 | Decimal Number | BCD 8421 Code  |
 | -------------- | -------------  |
@@ -174,7 +204,7 @@ O [código gray](https://pt.wikipedia.org/wiki/C%C3%B3digo_de_Gray) é uma forma
 |             15 |           1111 |        1000 |
 
 !!! note
-    Esse sistema era muito utilizado antigamente quando relés eram utilizados no lugar de transistor, em um cotador binário comum ocorre de muitos bits mudarem de uma única vez (0111 -> 1000) isso gerava um pico de corrente elétrica e muito ruído.
+    Esse sistema era muito utilizado antigamente quando relés eram utilizados no lugar de transistor, em um contador binário comum ocorre de muitos bits mudarem de uma única vez (0111 -> 1000) isso gerava um pico de corrente elétrica e muito ruído.
 
 !!! tip
     Utilizamos o código Gray para montar o Mapa de Karnaugh
@@ -188,7 +218,7 @@ Comparadores são componentes que podem possuir diversos atributos, tais como co
 -  se entrada A é igual a zero
 -  ...
 
-A seguir um exemplo de um comparador que possui apenas uma entrada `x[1..0]` e compara se essa entrada é maior que zero (`x > 0`), ou igual a zero (`x == 0`).
+A seguir um exemplo de um comparador que possui apenas uma entrada `x[1..0]` e compara se essa entrada é **igual** a zero (`x == 0`), ou **maior que** zero (`x > 0`).
 
 | x (inteiro) | x binário | eq | gt |
 |-------------|-----------|----|----|
