@@ -1,24 +1,36 @@
 # Álgebra Booleana
 
-| Estudando |    |
-| --------- | -- |
-| daw       |    |
-
+| Estudando      |                                                                                                                                                                                                            |
+| ---------      | --                                                                                                                                                                                                         |
+| Bibliografia   |                                                                                                                                                                                                            |
+|                | [Cap1. Cap2. NISAN, 2005]                                                                                                                                                                                  |
+|                | [Cap6. TOCCI, 2011]                                                                                                                                                                                        |
+|                | [Cap1. FLOYD, 2007]                                                                                                                                                                                        |
+|                | [LAING, 2004]                                                                                                                                                                                              |
+| Vídeos (extra) |                                                                                                                                                                                                            |
+|           :+1: | <iframe width="200" height="200" src="https://www.youtube.com/embed/YYIucfsQKl4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> |
+|                | [Logic 101 (#11): Truth Tables](https://www.youtube.com/watch?v=_Lb2c18xdeo)                                                                                                                               |
+|                | [Logic 101 (#12): Truth Table Practice](https://youtu.be/UaGM8T4o9xI?list=PLKI1h_nAkaQq5MDWlKXu0jeZmLDt-51on)                                                                                              |
+|                | [Computer Science: Karnaugh Maps – Introduction](https://www.youtube.com/watch?v=3vkMgTmieZI)                                                                                                              |
+|           :+1: | [Computer Science: Karnaugh Maps - 4 vars](https://www.youtube.com/watch?v=YJSqf_Z024w)                                                                                                                    |
+                  
+                  
 
 A álgebra booleana foi desenvolvida por [George Boole](https://pt.wikipedia.org/wiki/George_Boole), um matemático britânico que desenvolveu os conceitos em 1847, base da computação moderna. Muito tempo depois, nos anos 30, Claude Shannon, um importante engenheiro na história da computação moderna, aplicou as ideias de Boole em circuitos elétricos. Ele trabalhava no Analisador Diferencial de Vannevar Bush, e logo percebeu a relação dos relés com álgebra booleana. Ele fazia um relé acionar o outro usando usando uma lógica binária do relé fechado ou aberto. Sua dissertação e artigos, levaram outras pessoas a perceber os benefícios da álgebra booleana em eletrônica e consequentemente computação.
 
-Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e ligado, ou falso e verdadeiro, 0 volt e 5 volts, branco e preto. Porém normalmente na computação usamos `0` e `1` pela conveniência. Todos os computadores tem como sua menor unidade de dado, esse elemento. Em computação chamamos isso de bit. quem vem dígito binário (ou do inglês binary digit).
+Em Álgebra Booleana as variáveis só podem assumir dois valores. Desligado e ligado, ou falso e verdadeiro, 0 volt e 5 volts, branco e preto. Porém normalmente na computação usamos `0` e `1` pela conveniência. Todos os computadores tem como sua menor unidade de dado, esse elemento. Em computação chamamos isso de bit. que vem de dígito binário (ou do inglês binary digit).
 
-## bit
+!!! note
 
-Bit é a unidade mais simples de representação de dados digitais, um bit é uma unidade que pode assumir apenas dois valores: `0` ou `1`. Com um bit podemos representar o estado de uma luz na sala de aula, se uma cadeira está vazio ou não, .... não conseguimos representar **com apenas um bit** uma informação que não seja binária. Mas se combinarmos mais de um bit, criando um vetor de bits, somos capazes de representar quantos estados desejarmos.
+    Bit é a unidade mais simples de representação de dados digitais, um bit é uma unidade que pode assumir apenas dois valores: `0` ou `1`. Com um bit podemos representar o estado de uma luz na sala de aula, se uma cadeira está vazio ou não, .... não conseguimos representar **com apenas um bit** uma informação que não seja binária. Mas se combinarmos mais de um bit, criando um vetor de bits, somos capazes de representar quantos estados desejarmos.
 
-<iframe width="710" height="520" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
+    <iframe width="710" height="520" src="https://www.youtube.com/embed/ewokFOSxabs" frameborder="0" allow="accelerometer; autoplay; encrypted-media; -picture" allowfullscreen></iframe>
+
 
 ## Equações
 
 
-Uma equação de lógica booleana pode possuir zero ou mais 'entradas' e apenas uma saída, na equação exemplo a seguir, `X` é uma saída (e pode assumir apenas valor `1` ou `0`) e `A` e `B` são entradas também do tipo binária.
+Uma equação de lógica booleana pode possuir uma ou mais 'entradas' e apenas uma saída, na equação exemplo a seguir, `X` é uma saída (e pode assumir apenas valor `1` ou `0`) e `A` e `B` são entradas também do tipo binária.
 
 ```
     X(A,B) = A ^ B
@@ -49,7 +61,11 @@ Podemos representar essa equação `X = A ^ B` como sendo um circuito digital, c
 
 ![](figs/Teoria/LogicaBooleana-and1.png){width=400}
 
+!!! note 
 
+    Resolver funções booleanas é entender quando a saída será `Verdadeira` ou `Falsa` dado a combinação possível de entradas.
+
+    <iframe width="710" height="520" src="https://www.youtube.com/embed/rZwCJWOhNG0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Operações
 
@@ -67,7 +83,7 @@ O `and` utilizado no exemplo anterior é um operador da lógica booleana, operad
     - Notação: `not`, `-`, `~`, `¬`
 
     ```
-                                  _
+                                _
     X = not A  /  X = A  /  X = Ã / X = ¬ A
     ```
 
@@ -149,8 +165,8 @@ O `and` utilizado no exemplo anterior é um operador da lógica booleana, operad
     | A   | B   | X = A nand B |
     |-----|-----|--------------|
     | `0` | `0` | `1`          |
-    | `0` | `1` | `0`          |
-    | `1` | `0` | `0`          |
+    | `0` | `1` | `1`          |
+    | `1` | `0` | `1`          |
     | `1` | `1` | `0`          |
 
     - Simbologia
@@ -163,36 +179,42 @@ O `and` utilizado no exemplo anterior é um operador da lógica booleana, operad
 
     - https://en.wikipedia.org/wiki/Logic_gate#Symbols
 
-
-
 <iframe width="710" height="520" src="https://www.youtube.com/embed/UvI-AMAtrvE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
+!!! example "Check-Point"
+    <div class="riddle_target" data-rid-id="227742" data-fg="#1486CD" data-bg="rgb(255, 255, 255)" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="false" data-auto-scroll-offset="0">
+      <script src="https://www.riddle.com/files/js/embed.js"></script>
+      <link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+      <iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/227742?" title="Pop Quiz - ﻿Lógica booleana 1 "><section><h2><h2><strong>﻿Lógica booleana 1 </strong></h2></h2><p><p>Questões básicas</p></p></section><section><h2><h2>O que é correto afirmar sobre bits?</h2></h2></section><section><h3><p>1 AND 0</p></h3><p><p>Se aplicarmos as entradas 1 e 0 a porta, a saída será:</p></p></section><section><h3><p>1 OR 0</p></h3><p><p>Se aplicarmos as entradas 1 e 0 a porta, a saída será:</p></p></section><section><h2></h2></section><section><h3></h3></section></iframe>
+      </div>
+      
 ## Tabela Verdade
 
 Nessa tabela criamos colunas para cada variável de entrada e de saída e colocamos as situações possíveis (resultado). Para construirmos uma tabela verdade basta seguir as regras a seguir (na sequência):
 
 1. Criar uma coluna para cada entrada do sistema (n)
 1. Criar uma coluna para cada saída do sistema 
-1. A tabela verdade vai ter n² números de linhas  (onde n é a quantidade de entradas)
+1. A tabela verdade vai ter 2^n números de linhas  (onde n é a quantidade de entradas)
     - um sistema com 2 entradas possui 2² = 4 linhas
     - um sistema com 3 entradas possui 2³ = 8 linhas ...
-1. Preencher as linhas (com '1's e '0's ) de forma a cobrir todas as possibilidades de entrada
+1. Preencher as entradas (com '1's e '0's ) de forma a cobrir todas as possibilidades.
 1. Para cada linha, analisar se a combinação de '1's e '0' torna a saída '1' e '0'
 
 ![](figs/Teoria/LogicaBooleana-tv.png)
 
-## Funções booleanas 
-
-Resolver funções booleanas é entender quando a saída será `Verdadeira` ou `Falsa` dado a combinação possível de entradas.
-
-<iframe width="710" height="520" src="https://www.youtube.com/embed/rZwCJWOhNG0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+!!! example "Check-Point"
+    <div class="riddle_target" data-rid-id="227867" data-fg="#1486CD" data-bg="rgb(255, 255, 255)" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="false" data-auto-scroll-offset="0">
+    <script src="https://www.riddle.com/files/js/embed.js"></script>
+    <link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+    <iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/227867?" title="Pop Quiz - Lógica booleana - Tabela Verdade"><section><h2><p>Lógica booleana - Tabela Verdade</p></h2><p><p>Responda sobre tabela verdade</p></p></section><section><h2><h2>É correto afirmar sobre a tabela verdade:</h2></h2><p><p>(pode existir mais de um item correto)</p></p></section><section><h3><p>Considerando um circuito de <strong>4 entradas</strong> (A,B, C, D) quantas são as linhas da tabela verdade?</p></h3></section><section><h3><h2><strong>﻿Qual tabela verdade a seguir foi montada correta?</strong></h2></h3></section><section><h3><p>Considerando a equação:<strong> X = not(B) + A</strong>, e a tabela verdade da imagem, qual resposta está correta (na sequência da tabela)? </p><p><br></p><p>Resposta na sequência: X0; X1; X2; X3</p></h3></section><section><h2></h2></section><section><h3></h3></section></iframe>
+    </div>
+    
 ## Funções geradas a partir de Tabelas Verdade
 
 <iframe width="710" height="520" src="https://www.youtube.com/embed/Xgy6p12ZcTI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-É possível a partir de uma tabela verdade obter uma equação lógica que a represente (caminho inverso), podemos fazer isso por duas técnicas diferentes (formas canônicas): 
+É possível a partir de uma tabela verdade obter uma equação lógica que a represente (caminho inverso), podemos fazer isso por duas técnicas diferentes (chamadas de forma canônicas): 
 
 - Soma dos Produtos (SoP) 
 - Produto das Somas (PoS)
@@ -208,7 +230,8 @@ Na soma dos produtos iremos encontrar uma equação booleana que possui a seguin
          | = '1'
 ```
 
-Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em uma saída **'1'** e invertendo (ou não) as entras fazendo com que o termo `( . . . .)` resulte em **'1'** para a linha em questão.
+Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em uma saída **'1'** (Verdadeira) e invertendo (ou não) as entras fazendo com que o termo `( . . . .)` resulte em **'1'** para a linha em questão.
+
 
 ### Produto das somas 
 
@@ -221,9 +244,19 @@ Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em 
 
 Nesse método, precisamos encontrar as linhas da tabela verdade que resultam em uma saída **'0'** e invertendo (ou não) as entras gazer com que o termo `( . . . .)` resulte em **'0'** para a linha em questão.
 
+!!! example
+    ![](figs/Teoria/LogicaBooleana-tv-exe1.png)
+
+!!! example "Check-Point"
+    <div class="riddle_target" data-rid-id="228672" data-fg="#1486cd" data-bg="#ffffff" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="true" data-auto-scroll-offset="5">
+    <script src="https://www.riddle.com/files/js/embed.js"></script>
+    <link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+    <iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/228672?" title="Tap And Find - ﻿Lógica Booleana - Equações Canônicas "><section><h2><h2><strong>﻿Lógica Booleana - Equações Canônicas </strong></h2></h2><p><p>Encontre a equação correta dada a tabela verdade ou vice versa</p></p></section><section><h2><h2><strong>﻿Qual forma é a mais adequada?</strong></h2></h2></section><section><h3><h2><strong>﻿Qual forma é a mais adequada?</strong></h2></h3></section><section><h3><p>Qual equação representa a tabela verdade?</p></h3></section><section><h3><p>Qual equação representa a tabela verdade?</p></h3></section><section><h2></h2></section><section><h3></h3></section></iframe>
+    </div><p class="link-riddle" style="width: 640px; margin: 0px auto; padding-top: 10px;"><a href="https://www.riddle.com"  rel="nofollow" target="blank">Quiz Maker</a> - powered by Riddle</p>
+
 ## Simplificação
 
-Existem duas formas bastante populares de simplificação de equações booleanas: algébrica ou via mapa de Karnaugh.
+Existem duas formas bastante populares de simplificar uma equação booleana: algébrica ou via mapa de Karnaugh. Veremos as duas com mais detalhes.
 
 ### Simplificação algébrica
 
@@ -265,26 +298,23 @@ Para simplificarmos uma equação, aplicamos as propriedades da tabela anterior 
 
 #### Exemplos
 
-A resulução dos exemplos está detalhada no vídeo a seguir:
+!!! example "Exemplo 1"
+    ![](figs/Teoria/LogicaBooleana-simplificacao1.png)
 
-<iframe width="710" height="520" src="https://www.youtube.com/embed/0as464WmfCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+!!! example "Exemplo 2"
+    ![](figs/Teoria/LogicaBooleana-simplificacao2.png)
 
-- Exemplo 1
+!!! example "Exemplo 3"
+    ![](figs/Teoria/LogicaBooleana-simplificacao3.png)
 
-![](figs/Teoria/LogicaBooleana-simplificacao1.png)
-
-- Exemplo 2
-
-![](figs/Teoria/LogicaBooleana-simplificacao2.png)
-
-- Exemplo 3
-
-![](figs/Teoria/LogicaBooleana-simplificacao3.png)
-
+!!! tip 
+    O vídeo a seguir possui as resoluções de forma detalhada:
+    
+    <iframe width="710" height="520" src="https://www.youtube.com/embed/0as464WmfCo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ### Mapa de Karnaugh (MK)
 
-A simplificação por mapa de Karnaugh é uma técnica visual de encontrarmos uma fora reduzida, porém para isso precisamos primeiro:
+A simplificação por mapa de Karnaugh é uma técnica visual de encontrarmos uma equação reduzida, porém para isso precisamos primeiro:
 
 1. Gerar a tabela verdade
 1. Gerar o mapa de Karnaugh
@@ -293,9 +323,9 @@ A simplificação por mapa de Karnaugh é uma técnica visual de encontrarmos um
 
 <iframe width="710" height="520" src="https://www.youtube.com/embed/ghHYBAwHrho" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-#### 2. Criando Mapa
+#### 2. Criando o Mapa
 
-O mapa pode ser criado para N entradas, porém só iremos tratar nesse curso sistemas de **2**, **3** ou **4** variáveis. A seguir exemplos de mapa as três quantidades de entradas:
+O mapa pode ser criado para N entradas, mas só iremos tratar nesse curso sistemas de **2**, **3** ou **4** variáveis (entradas). A seguir exemplos do mapa para 2, 3 e 4 entradas:
 
 ![](figs/Teoria/LogicaBooleana-mk-construindo1.png)
 
@@ -314,14 +344,14 @@ e não:
 AB \ 00 01 10 11
 ```
 
-Como seria mais lógico (já que em binário: `00 = 0; 01 = 1; 10 = 2; 11 = 3`). Porém no MK assume que as variáveis estão ordenadas na forma de [código gray](https://pt.wikipedia.org/wiki/C%C3%B3digo_de_Gray), onde alterasse apenas um bit por vez!
+Como seria mais lógico (já que em binário: `00 = 0; 01 = 1; 10 = 2; 11 = 3`). Porém o mapa de Karnaugh assume que as variáveis estão ordenadas na forma de [código gray](https://pt.wikipedia.org/wiki/C%C3%B3digo_de_Gray), onde um bit é alterado por vez!
 
 ![](figs/Teoria/LogicaBooleana-mk-construindo2.png){width=450}
 
 !!! warning
     Colocar qualquer sequência na criação do mapa é um dos erros mais comuns dos anos anteriores!
 
-!!! note
+!!! tip
     Podemos começar a sequência com qualquer combinação, se seguirmos a ordem de só mudar um bit por vez, exemplo:
     
     ```
@@ -332,24 +362,135 @@ Como seria mais lógico (já que em binário: `00 = 0; 01 = 1; 10 = 2; 11 = 3`).
     AB \ 01 11 10 00
     ```
     
+!!! example "Check-Point"
+    <div class="riddle_target" data-rid-id="228677" data-fg="#1486cd" data-bg="#ffffff" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="true" data-auto-scroll-offset="5">
+    <script src="https://www.riddle.com/files/js/embed.js"></script>
+    <link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+    <iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/228677?" title="Tap And Find - Lógica Booleana - Karnaugh 1"><section><h2><p>Lógica Booleana - Karnaugh 1</p></h2><p><p>Encontre a montagem do mapa de Karnaugh correta.</p></p></section><section><h2><p>Qual mapa de K. foi montado certo?</p></h2></section><section><h3><p>Qual mapa de K. foi montado certo?</p></h3></section><section><h2></h2></section><section><h3></h3></section></iframe>
+    </div><p class="link-riddle" style="width: 640px; margin: 0px auto; padding-top: 10px;"><a href="https://www.riddle.com"  rel="nofollow" target="blank">Quiz Maker</a> - powered by Riddle</p>
+
 #### 3. Grupos
 
-No MK podemos agrupar '1's na quantidade de: $2^n$, onde `n=0,1,2,3,` ou seja: 1, 2, 4, 8..., o agrupamento só pode ser feito na vertical ou horizontal, nunca na diagonal.
+No MK podemos agrupar '1's na quantidade de: $2^n$, onde `n=0,1,2,3,` ou seja, grupos de: **1, 2, 4, 8, ...**, o agrupamento só pode ser feito na vertical ou horizontal, nunca na diagonal.
 
 ![](figs/Teoria/LogicaBooleana-mk-grupos1.png)
 
-Devemos agrupar sempre na maior quantidade possível! E nunca na diagonal! A seguir exemplos do que **não deve ser feito!**
+!!! tip
+    - Os grupos podem se sobrepor!
+    - Agrupar sempre na maior quantidade possível (2, 4, 8, ...)
+
+Devemos agrupar sempre na maior quantidade possível! A seguir exemplos do que **não deve ser feito!**
 
 ![](figs/Teoria/LogicaBooleana-mk-grupos2.png)
 
-Podemos pensar no MK não como sendo uma tabela plana, mas sim uma superfície mapeada em uma esfera, logo as pontas estão conectadas. Com isso podemos criar grupos nas situações a seguir:
+!!! note
+    Não agrupar na maior quantidade de uns possível impacta em não obter a equação reduzida.
+    
+
+Podemos pensar no MK **não como sendo uma tabela plana**, mas sim uma superfície mapeada em uma esfera, logo as pontas estão conectadas. Com isso podemos criar grupos nas situações a seguir:
 
 ![](figs/Teoria/LogicaBooleana-mk-grupos3.png){width=600}
 
+!!! tip
+    O agrupamento no mapa de Karnaugh só pode ser realizado quando juntamos uns que estão a um bit de distância. Essa é a razão de não podermos juntar na diagonal.
+    
+    ```
+      AB  00   01   11   10
+    CD \---------------------
+    00 | 0000 0100 1100 1000
+    10 | 0010 0110 1110 1010 
+    11 | 0011 0111 1111 1011
+    10 | 0010 0110 1110 1010
+    ```
+    
+    Note que no exemplo anterior se juntarmos duas possibilidades na horizontal (as duas primeira):
+    
+    ```
+     ---------
+    [0000 0100]
+     ---------
+    ```
 
+    Apenas o bit referente a entrada **B** muda. Mas se considerarmos a diagonal:
+    
+    ```
+     ----
+    [0000 
+         0110]
+         ----
+    ```
+    
+    Temos duas mudanças de bit, a da entrada **B** e a da entrada **C**, isso não pode!
+    
+    O ultimo caso são os cantos, por exemplo:
+    
+    ```
+    ----              ----
+    0000]            [1000
+    ----              ----
+    ```
+    
+    Nesse caso apenas o bit **A** muda, logo podemos juntar!
+    
+    Um caso que não pode juntar são as extremidades:
+    
+    ```
+    ----
+    0000]
+    ----
+                       ----
+                      [1010
+                       ----
+    ```
+    
+    Nesse caso **A** e **C** mudam!
+    
+!!! example "Check-Point"    
+    <div class="riddle_target" data-rid-id="228679" data-fg="#1486CD" data-bg="rgb(255, 255, 255)" style="margin:0 auto;max-width:100%;width:640px;" data-auto-scroll="true" data-auto-scroll-offset="5">
+    <script src="https://www.riddle.com/files/js/embed.js"></script>
+    <link href="https://www.riddle.com/files/css/embed.css" rel="stylesheet">
+    <iframe style="width:100%;height:300px;border:1px solid #cfcfcf;" src="https://www.riddle.com/a/228679?" title="Tap And Find - [COPY] Lógica Booleana - Karnaugh 1"><section><h2>[COPY] Lógica Booleana - Karnaugh 1</h2><p><p>Encontre a montagem do mapa de Karnaugh correta.</p></p></section><section><h2><p>Qual mapa de K. foi montado certo?</p></h2></section><section><h3><p>Qual mapa de K. foi montado certo?</p></h3></section><section><h2></h2></section><section><h3></h3></section></iframe>
+    </div><button id="riddleFullScreenButton-228679" class="btn-fullscreen" onclick="window.riddleAPI.toggleFullScreen(228679);"><img src="https://cdn.riddle.com/website/assets/icons/spot/screenfull.svg" /></button>
+    
 #### 4. Gerando as equações
 
-![](figs/Teoria/LogicaBooleana-mk-exemplo1.png)
+Gera-se uma equação por agrupamento, cada grupo irá fornecer um componente na forma da equação da Soma Dos Produtos:  (. . . ) + (. . . ). O truque é identificar no grupo quais são as variáveis que assumem todas as possibilidades. 
+ 
+!!! example "Exemplo 1"
+    ![](figs/Teoria/LogicaBooleana-mk-exemplo1a.png){width=400}
+     
+    Nesse caso, a variável **B** pode assumir tanto `0` quanto `1` para **A** fixo em `0`, para o grupo em questão as entradas **A** e **B** são:
+    
+    ```
+    AB: 00
+    AB: 01
+    ```
+    A equação feita via a tabela verdade seria:
+   
+    
+    $\bar{A}.B + \bar{A} . \bar{B}$ que pode ser reduzida para $\bar{A} (\bar{B}. B)$ e então para: $\bar{A}$
+    
+    O mapa de Karnaugh já nos fornece o resultado de forma direta!
 
-![](figs/Teoria/LogicaBooleana-mk-exemplo2.png)
-
+!!! example "Exemplo 2"
+    ![](figs/Teoria/LogicaBooleana-mk-exemplo1c.png){width=400}
+     
+    Nesse caso, a variável **A** pode assumir tanto `0` quanto `1` para **B** fixo em `0`, ou seja, **A** não impacta nesse grupo.
+    
+!!! example "Exemplo 3"
+    ![](figs/Teoria/LogicaBooleana-mk-exemplo1b.png){width=400}
+     
+    Aqui temos um caso particular, para todas as combinações de entrada **A** e **B** a saída é sempre `1`, logo essa equação é sempre verdadeira: $F = 1$.
+ 
+!!! example "Exemplo 4"
+    ![](figs/Teoria/LogicaBooleana-mk-exemplo1d.png){width=600}
+     
+    Nesse exemplo não foi possível agrupar uns em maior quantidade, logo, não iremos conseguir obter um resultado melhor que a tabela verdade. Nenhuma variável é descartável.
+ 
+!!! example "Exemplo 5"
+    ![](figs/Teoria/LogicaBooleana-mk-exemplo1e.png){width=600}
+     
+    Nesse caso criamos dois grupos um na horizontal outro na vertical. Cada grupo irá gerar um termo da equação na forma da SoP.
+     
+!!! example "Casos extras"
+    ![](figs/Teoria/LogicaBooleana-mk-exemplo2.png)

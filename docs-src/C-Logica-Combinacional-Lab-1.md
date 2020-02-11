@@ -12,6 +12,16 @@
 !!! tip 
     Você é `Scrum Master` e não sabe por onde começar? De uma olhada nessas dicas: [Vixi! Sou Scrum Master](Vixi!-Sou-Scrum-Master)
 
+!!! tip "Antes de começar!"
+    Após clonar o repositório devemos baixar e atualizar a infra necessária para o curso, ainda no terminal, vá para a pasta do repositório:
+
+    ```bash
+    $ cd Z01.1-NomeDoGrupo/
+    $ ./updateZ01tools.sh
+    ```
+
+    Isso irá baixar as dependências phython (via pip) e também clonar um repositório chamado `Z01-Tools` na raiz do usuário: `$HOME/Z01-Tools/`.
+
 
 Nesse lab iremos pela primeira vez programar uma FPGA e começar a trabalhar com uma linguagem de descrição de hardware (HDL), o VHDL.
 
