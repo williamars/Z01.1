@@ -260,7 +260,7 @@ Exemplos de operação com vetores:
     É comum confundir quando usa aspas simples `''` e aspas dupla `""`, fique atento aos 
     erros de compilação.
 
-#### signais
+#### signal
 
 Sinais são declarados entre a palavra reservada `architecture` e o `begin` e servem para
 facilitar/ possibilitar o desenvolvimento de um sistema digital, eles só são visíveis
