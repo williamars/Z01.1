@@ -81,16 +81,17 @@ nav:
 #  - 'Lab 6 : C Logica Comb. - 3': 'C-Logica-Combinacional-Lab-3.md'
 #  - 'Lab 5 : C Logica Comb. - 1': 'C-Logica-Combinacional-Lab-1.md'
 #  - 'Lab 3 : B CI': 'B-Circuitos-Integrados-Lab-1.md'
-#  - 'Lab 2 : A Transistores': 'A-Transistores-Lab-1.md'
-#  - 'A-Ambiente-Lab-3.md'
-# - 'A-Ambiente-Lab-2.md'
+  - 'A-Transistores-Lab-1.md'
+  - 'A-Ambiente-Lab-2.md'
   - 'A-Ambiente-Lab-1.md'
 
 - 'Teoria':
   - 'Teoria-Algebra-Booleana.md'
+  - 'Teoria-RTL.md'
   - 'Teoria-Componentes.md'
   - 'Teoria-VHDL-basico.md'
   - 'Teoria-VHDL-Combinacional.md'
+  - 'Teoria-VHDL-exemplos.md'
   - 'Vídeo Aulas (Luciano)': 'Util-Video-Aulas.md'
 
 - 'Estudo':
@@ -109,7 +110,6 @@ nav:
     - 'Resumo Assembly': 'Util-Resumo-Assembly.md'
     - 'Resumo VM': 'Util-Resumo-VM.md'
   - 'Infraestrutura': 'Util-Infraestrutura.md'
-
 
 extra_javascript:
   - 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML'

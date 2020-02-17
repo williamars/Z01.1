@@ -1,3 +1,5 @@
+# Lab 3: Transistores
+
 Esse laboratório tem como objetivo trabalhar com os conceitos básicos de portas lógicas do tipo RTL realizadas a base de transistores discretos do tipo BJT . Assim como desenvolver o trabalho em grupo via a fragmentação das atividades em módulos.
 
 ## Materiais
@@ -46,7 +48,7 @@ partir de transistores e resistores
 
 - Implementação:
 
-![RTL](figs/A-Transistores/AandBorC-rtl.png)
+![RTL](figs/A-Transistores/AandBorC-rtl.png){width=400}
 
 !!! note
     Esse será o mesmo material utilizado para o **Projeto A - Transistores**, guardem com vocês.
@@ -105,7 +107,7 @@ Para isso, deveremos utilizar a protoboard e o transistor recebido, a pinagem do
 
 Agora que as duas `NOT` foram implementadas, testadas e estão funcionado, conecte a saída de uma na entrada da outra. Isso vai fazer com que a saída siga o valor de referência da entrada.
 
-![not not A](figs/A-Transistores/notnot.png)
+![not not A](figs/A-Transistores/notnot.png){width=300}
 
 !!! example "Exercício 1b"
     Levante a tabela verdade do circuito recém montado
