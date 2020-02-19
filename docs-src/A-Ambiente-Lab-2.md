@@ -141,7 +141,7 @@ Vamos agora gerar o pull-request na interface do github, de forma similar ao exe
 ## Aceitando pull-request
 
 !!! warning "Apenas o mediador"
-    Essa etapa deve ser realizada apenas pelo mediador do projeto!
+    Vocês devem escolher um do grupo para assumir o papel do mediador!
 
 O **mediador** do projeto deve revisar os pull-requests (e corrigir eventuais erros de merge) 
 e aceitar ou negar o pedido. 
