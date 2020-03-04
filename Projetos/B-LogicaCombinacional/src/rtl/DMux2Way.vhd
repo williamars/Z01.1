@@ -12,7 +12,7 @@ end entity;
 architecture rtl of DMux2Way is
 begin
 
-	-- Peguei a tabela verdade e fiz as condições das saídas
+	-- Peguei a tabela verdade e fiz as condições das saídas 
 	q0 <='1' when (a = '1' AND sel ='0') else
 		'0';
 		 
