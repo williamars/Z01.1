@@ -536,6 +536,8 @@ set_global_assignment -name OUTPUT_IO_TIMING_FAR_END_VMEAS "HALF SIGNAL SWING" -
 
 # end ENTITY(TopLevel)
 # --------------------
+
+set_global_assignment -name VHDL_FILE ../src/rtl/binarioToBcd.vhd
 set_global_assignment -name VHDL_FILE ../src/TopLevel.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/Or16.vhd
 set_global_assignment -name VHDL_FILE ../src/rtl/Or8Way.vhd
