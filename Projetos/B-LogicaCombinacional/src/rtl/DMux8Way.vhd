@@ -18,5 +18,23 @@ end entity;
 architecture arch of DMux8Way is
 begin
 
+	q0 <= '1' when (a ='1' AND sel = "000") else
+	'0';
+	q1 <= '1' when (a ='1' AND sel = "001") else
+	'0';
+	q2 <= '1' when (a ='1' AND sel = "010") else
+	'0';
+	q3 <= '1' when (a ='1' AND sel = "011") else
+	'0';
+	q4 <= '1' when (a ='1' AND sel = "100") else
+	'0';
+	q5 <= '1' when (a ='1' AND sel = "101") else
+	'0';
+	q6 <= '1' when (a ='1' AND sel = "110") else
+	'0';
+	q7 <= '1' when (a ='1' AND sel = "111") else
+	'0';
+
+	
 
 end architecture;
