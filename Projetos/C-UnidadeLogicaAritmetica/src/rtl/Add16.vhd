@@ -12,7 +12,8 @@ entity Add16 is
 	port(
 		a   :  in STD_LOGIC_VECTOR(15 downto 0);
 		b   :  in STD_LOGIC_VECTOR(15 downto 0);
-		q   : out STD_LOGIC_VECTOR(15 downto 0)
+		q   : out STD_LOGIC_VECTOR(15 downto 0);
+		g   : out STD_LOGIC
 	);
 end entity;
 
@@ -44,12 +45,12 @@ begin
 	    a => a(1),
 	    b => b(1),
 	    c => carry(0),
-	    vaium => carry(1),
-	    soma => q(1)	
-        ); 
-
+		vaium => carry(1),
+		soma => q(1)
+	);
+		
 	u3: FullAdder port map(
-	    a => a(2),
+		a => a(2),
 	    b => b(2),
 	    c => carry(1),
 	    vaium => carry(2),
@@ -156,7 +157,7 @@ begin
 	    a => a(15),
 	    b => b(15),
 	    c => carry(14),
-	    vaium => carry(15),
+		vaium => g,
 	    soma => q(15)	
         ); 
 
