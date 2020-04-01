@@ -35,7 +35,7 @@ architecture rtl of BinaryDigit is
 		);
 	end component;
 
-	signal inClock : std_logic := '0';
+	
 	signal dffout,muxout, clear, preset: std_logic;
 
 begin
