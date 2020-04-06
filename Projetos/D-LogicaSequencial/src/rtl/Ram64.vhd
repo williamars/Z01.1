@@ -2,7 +2,7 @@
 -- by Luciano Soares
 -- Ram64.vhd
 
-Library ieee;
+Library ieee; 
 use ieee.std_logic_1164.all;
 
 entity Ram64 is
@@ -10,7 +10,7 @@ entity Ram64 is
 		clock:   in  STD_LOGIC;
 		input:   in  STD_LOGIC_VECTOR(15 downto 0);
 		load:    in  STD_LOGIC;
-		address: in  STD_LOGIC_VECTOR( 5 downto 0);
+		address: in  STD_LOGIC_VECTOR(5 downto 0);
 		output:  out STD_LOGIC_VECTOR(15 downto 0)
 	);
 end entity;
@@ -22,7 +22,7 @@ architecture arch of Ram64 is
 			clock:   in  STD_LOGIC;
 			input:   in  STD_LOGIC_VECTOR(15 downto 0);
 			load:    in  STD_LOGIC;
-			address: in  STD_LOGIC_VECTOR( 2 downto 0);
+			address: in  STD_LOGIC_VECTOR(2 downto 0);
 			output:  out STD_LOGIC_VECTOR(15 downto 0)
 		);
 	end component;
@@ -36,9 +36,10 @@ architecture arch of Ram64 is
 				e:   in  STD_LOGIC_VECTOR(15 downto 0);
 				f:   in  STD_LOGIC_VECTOR(15 downto 0);
 				g:   in  STD_LOGIC_VECTOR(15 downto 0);
-				h:   in  STD_LOGIC_VECTOR(15 downto 0);
-				sel: in  STD_LOGIC_VECTOR( 2 downto 0);
+				h:   in  STD_LOGIC_VECTOR(15 downto 0); 
+				sel: in  STD_LOGIC_VECTOR( 2 downto 0); 
 				q:   out STD_LOGIC_VECTOR(15 downto 0));
+			
 	end component;
 
 	component DMux8Way is
@@ -60,5 +61,95 @@ architecture arch of Ram64 is
 
 begin
 
+	dmux: DMux8Way port map(
+		a => load,
+		sel => address(2 downto 0),
+		q0 => load0,
+		q1 => load1,
+		q2 => load2,
+		q3 => load3,
+		q4 => load4,
+		q5 => load5,
+		q6 => load6,	
+		q7 => load7
+	);
+
+	ram1: Ram8 port map (
+		clock =>  clock,
+		input => input,
+		load => load0,
+		address => address(5 downto 3),
+		output => output0 
+	);
+
+
+	ram2: Ram8 port map (
+		clock =>   clock,
+		input =>  input,
+		load =>    load1,
+		address => address(5 downto 3),
+		output => output1
+	);
+
+	ram3: Ram8 port map (
+		clock => clock,
+		input => input,
+		load => load2,
+		address => address(5 downto 3),
+		output => output2
+	);
+
+	ram4: Ram8 port map (
+		clock =>  clock,
+		input => input,
+		load => load3,
+		address => address(5 downto 3),
+		output => output3
+	);
+
+	ram5: Ram8 port map (
+		clock =>  clock,
+		input => input,
+		load => load4,
+		address => address(5 downto 3),
+		output => output4
+	);
+
+	ram6: Ram8 port map (
+		clock => clock,
+		input => input,
+		load => load5,
+		address => address(5 downto 3),
+		output => output5
+	);
+
+	ram7: Ram8 port map (
+		clock =>  clock,
+		input => input,
+		load => load6,
+		address => address(5 downto 3),
+		output => output6
+	);
+
+	ram9: Ram8 port map (
+		clock => clock,
+		input => input,
+		load => load7,
+		address => address(5 downto 3),
+		output => output7
+	);
+	
+	mux64: Mux8Way16 port map(
+			a => output0,
+			b => output1,
+			c => output2,
+			d => output3,
+			e => output4,
+			f => output5,
+			g => output6,
+			h => output7,
+			sel => address(2 downto 0),
+			q  => output
+	);
 
 end architecture;
