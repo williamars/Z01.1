@@ -24,11 +24,11 @@ architecture tb of tb_FlipFlopT is
 	end component;
 
 	signal clk : std_logic := '0';
-  signal j,k,q,notq : std_logic;
+  signal j,k,outQ,notQ : std_logic;
 
 begin
 
-	mapping: FlipFlopJK port map(clk, j, k, q, notq);
+	mapping: FlipFlopJK port map(clk, j, k, outQ, notQ);
 
 	clk <= not clk after 100 ps;
 
@@ -38,6 +38,26 @@ begin
 
     -- IMPLEMENTE AQUI!
     wait until clk'event and clk='0';
+
+    -- Teste: 0
+	  j <= '0'; k <= '0'; 
+    wait until clk'event and clk='0';
+		assert(outQ = outQ)  report "Falha em teste: 0" severity error;
+
+		-- Teste: 1
+		j <= '0'; k <= '1'; 
+    wait until clk'event and clk='0';
+		assert(outQ = '0')  report "Falha em teste: 1" severity error;
+
+		-- Teste: 2
+		j <= '1'; k <= '1'; 
+    wait until clk'event and clk='0';
+		assert(outQ = notQ)  report "Falha em teste: 2" severity error;
+
+		-- Teste: 3
+		j <= '1'; k <= '0'; 
+    wait until clk'event and clk='0';
+		assert(outQ = '1')  report "Falha em teste: 3" severity error;
 
     -- finish
     wait until clk'event and clk='0';

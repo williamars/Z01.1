@@ -55,8 +55,7 @@ begin
 		q => muxout
 	);
 
-	output <= dffout when load = '0' else
-		      input  when load = '1';
+	output <= dffout;
 						  			
 						  
 	
