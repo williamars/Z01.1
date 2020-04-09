@@ -16,7 +16,12 @@ end entity;
 
 architecture arch of FlipFlopJK is
 
+signal temp, notTemp: std_logic;
+
 begin
+
+    q => temp;
+    notq => notTemp;
 
    process(clock) begin
 
@@ -29,10 +34,10 @@ begin
                     q <= '0';
 
                 elsif (J='1' and K='1') then
-                    q <= notq;
+                    q <= notTemp;
 
                 elsif(J='0' and K='0') then
-                    q <=q;
+                    q <= temp;
                     
                  end if;
 

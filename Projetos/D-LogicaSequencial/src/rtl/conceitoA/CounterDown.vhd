@@ -17,8 +17,8 @@ architecture arch of CounterDown is
 		port(
 		clock:  in std_logic;
 		t:      in std_logic;
-		q:      out std_logic:= '0';
-		notq:   out std_logic:= '1'
+		q:      out std_logic;
+		notq:   out std_logic
 	);
 	end component;
 
@@ -46,17 +46,10 @@ begin
 		q => q2
 	);
 
-	q <= q2 & q1 & q0; 
-	
-	process(clock) begin
+	q(2) <= q2;
+	q(1) <= q1;
+	q(0) <= q0;
 
-        if (rising_edge(clock)) then
-            q <= ;
-        end if;
 
-    end process;
 	
-	
-	
-
 end architecture;
