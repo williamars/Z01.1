@@ -23,8 +23,6 @@ architecture arch of CounterDown is
 	end component;
 
 
-
-
 begin
 
 	
