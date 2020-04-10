@@ -20,8 +20,7 @@ signal temp, notTemp: std_logic;
 
 begin
 
-    q => temp;
-    notq => notTemp;
+    temp <= q;
 
    process(clock) begin
 
@@ -34,7 +33,7 @@ begin
                     q <= '0';
 
                 elsif (J='1' and K='1') then
-                    q <= notTemp;
+                    q <= not temp;
 
                 elsif(J='0' and K='0') then
                     q <= temp;

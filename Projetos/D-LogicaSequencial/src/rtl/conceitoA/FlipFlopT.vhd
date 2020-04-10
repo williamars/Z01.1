@@ -15,12 +15,12 @@ end entity;
 
 architecture arch of FlipFlopT is
 
-signal temp: std_logic;
+signal temp, notTemp: std_logic;
 
 begin
-
     
-    temp <= t;
+    
+    temp <= q;
 
 	process(clock) begin
 
@@ -28,7 +28,7 @@ begin
             if (t='0') then
                 q <= temp;
             elsif (t='1') then 
-                q <= not(temp);
+                q <= not temp;
             end if;
         end if;
 

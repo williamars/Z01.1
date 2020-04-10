@@ -22,7 +22,7 @@ architecture arch of CounterDown is
 	);
 	end component;
 
-signal q0, q1, q2: std_logic;
+
 
 
 begin
@@ -31,25 +31,20 @@ begin
 	t0: FlipFlopT port map(
 		clock => clock,
 		t =>  '1', 	
-		q => q0
+		q => q(0)
 		);
 
 	t1: FlipFlopT port map(
-		clock => q0,
+		clock => q(0),
 		t => '1',
-		q => q1
+		q => q(1)
 	);
 
 	t2: FlipFlopT port map(
-		clock => q1,
+		clock => q(1),
 		t => '1',
-		q => q2
+		q => q(2)
 	);
-
-	q(2) <= q2;
-	q(1) <= q1;
-	q(0) <= q0;
-
 
 	
 end architecture;
