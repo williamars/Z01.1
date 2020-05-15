@@ -126,7 +126,7 @@ BEGIN
 
     reg:  Register16
       port map(
-        clock => CLK_FAST,
+        clock => CLK_SLOW,
         input => INPUT,
         load  => LOAD_LED,
         output => LED16
