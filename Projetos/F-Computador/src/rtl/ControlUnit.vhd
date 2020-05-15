@@ -1,11 +1,12 @@
 -- Elementos de Sistemas
 -- developed by Luciano Soares
 -- file: ControlUnit.vhd
--- date: 4/4/2017
+-- date: 4/4/2017  
 -- Modificação:
 --   - Rafael Corsi : nova versão: adicionado reg S
 --
 -- Unidade que controla os componentes da CPU
+-- CODE PRA TESTAR --> ./testeHW.py lib.tb_controlunit.all
 
 library ieee;
 use ieee.std_logic_1164.all;
@@ -21,7 +22,7 @@ entity ControlUnit is
                                                                      -- reg. A e Mem. RAM para ALU
                                                                      -- A  e Mem. RAM para ALU
 		zx, nx, zy, ny, f, no       : out STD_LOGIC;                     -- sinais de controle da ALU
-		loadA, loadD, loadM, loadPC : out STD_LOGIC               -- sinais de load do reg. A,
+		loadA, loadD, loadM, loadPC : out STD_LOGIC                      -- sinais de load do reg. A,
                                                                      -- reg. D, Mem. RAM e Program Counter
     );
 end entity;
@@ -30,5 +31,10 @@ architecture arch of ControlUnit is
 
 begin
 
-
+  loadD <= instruction(17) and instruction(4);
+  loadM <= instruction(17) and instruction(5);
+  loadA <= not(instruction(17)) and instruction(3);
+  muxALUI_A <= not(instruction(17));  
+  zx <= instruction(12) and instruction(17);
+  
 end architecture;

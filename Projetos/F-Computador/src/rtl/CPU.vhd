@@ -100,4 +100,73 @@ architecture arch of CPU is
 
 begin
 
+  MUX1: Mux16 port map (
+    a    => s_ALUout,
+    b    => instruction,  
+    sel  => c_muxALUI_A, 
+    q    => s_muxALUI_Aout
+  );
+
+  MUX2: Mux16 port map (
+    a    => s_regAout,
+    b    => inM,  
+    sel  => c_muxAM, 
+    q    => s_muxAM_out
+  );
+
+  REG_A: Register16 port map(
+    clock   => clock,
+    input   => s_muxALUI_Aout,
+    load    => c_loadA,
+    output  => s_regAout   
+  );
+
+  REG_D: Register16 port map(
+    clock   => clock,
+    input   => s_ALUout,
+    load    => c_loadD,  
+    output  => s_regDout
+  );      
+
+  ULA: ALU port map (
+    x     => s_regDout,
+    y     => s_muxAM_out,
+    zx    => c_zx,  
+    nx    => c_nx,   
+    zy    => c_zy,
+    ny    => c_ny,   
+    f     => c_f,    
+    no    => c_no,   
+    zr    => c_zr,   
+    ng    => c_ng,    
+    saida => s_ALUout
+  );
+
+  PC: pc port map(
+    clock     => clock,
+    increment => ,
+    load      => c_loadPC,
+    reset     => reset,
+    input     => s_regAout, 
+    output    => s_pcout
+  );
+
+  ContUnit: ControlUnit port map(
+    instruction  => instruction,
+    zr           => c_zr,
+    ng           => c_ng,                
+    muxALUI_A    => c_muxALUI_A,        
+    muxAM        => c_muxAM,
+    zx           => c_zx,
+    nx           => c_nx, 
+    zy           => c_zy, 
+    ny           => c_ny, 
+    f            => c_f, 
+    no           => c_no,
+    loadA        => c_loadA,
+    loadD        => c_loadD, 
+    loadM        => , 
+    loadPC       => c_loadPC
+  );
+
 end architecture;

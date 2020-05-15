@@ -1,7 +1,7 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+ 
 entity MemoryIO is
 
    PORT(
@@ -58,7 +58,7 @@ ARCHITECTURE logic OF MemoryIO IS
           );
   end component;
 
-  component RAM16K IS
+component RAM16K IS
       PORT
       (
           address	: IN STD_LOGIC_VECTOR (13 DOWNTO 0);
@@ -67,16 +67,16 @@ ARCHITECTURE logic OF MemoryIO IS
           wren		: IN STD_LOGIC ;
           q		   : OUT STD_LOGIC_VECTOR (15 DOWNTO 0)
       );
-  end component;
+end component;
 
-  component Mux4Way16 is
+component Mux4Way16 is
       Port (    sel : in  STD_LOGIC_VECTOR (1 downto 0);     -- select input
                 a   : in  STD_LOGIC_VECTOR (15 downto 0);     -- inputs
                 b   : in  STD_LOGIC_VECTOR (15 downto 0);     -- inputs
                 c   : in  STD_LOGIC_VECTOR (15 downto 0);     -- inputs
                 d   : in  STD_LOGIC_VECTOR (15 downto 0);     -- inputs
                 q   : out STD_LOGIC_VECTOR (15 downto 0));    -- output
-  end component;
+end component;
 
   SIGNAL LOAD_RAM         : STD_LOGIC := '0';
   SIGNAL LOAD_DISPLAY     : STD_LOGIC := '0';
@@ -114,11 +114,23 @@ BEGIN
              LCD_INIT_OK  => LCD_INIT_OK,
 
              LCD_CS_N 	  => LCD_CS_N ,
-             LCD_D 		    => LCD_D,
+             LCD_D 		  => LCD_D,
              LCD_RD_N 	  => LCD_RD_N,
              LCD_RESET_N  => LCD_RESET_N,
-             LCD_RS 	    => LCD_RS,
+             LCD_RS 	  => LCD_RS,
              LCD_WR_N 	  => LCD_WR_N
+    );
+    
+    RAM: RAM16K port map(
+          address => ADDRESS(13 downto 0),	
+          clock	=> CLK_FAST,
+          data => INPUT,
+          wren => LOAD_RAM,		 
+          q => OUTPUT_RAM
+    );
+
+    REG16: REG16 port map(
+            
     );
 
 END logic;
