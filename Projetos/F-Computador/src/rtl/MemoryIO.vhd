@@ -126,18 +126,18 @@ BEGIN
 
     reg:  Register16
       port map(
-        clock => CLK_FAST,
+        clock => CLK_SLOW,
         input => INPUT,
         load  => LOAD_LED,
         output => LED16
         );
 
     ----------------------------------------
-    -- Controla LOAD do display e da ram! --
+    -- Controla LOAD do display e da ram e LED ! --
     ----------------------------------------
-    --LOAD_DISPLAY <= ; ?????
-    --LOAD_RAM     <= ; ????
-    --LOAD_LED     <= ; ?????
+    --LOAD_DISPLAY <= ??????; 
+    --LOAD_RAM     <= ??????; 
+    --LOAD_LED     <= ??????; 
 
     ----------------------------------------
     -- SW e LED                           --
@@ -153,7 +153,7 @@ BEGIN
     -- SAIDA do memory I/O                --
     ----------------------------------------
     -- precisar ser: RAM ou SW16
-    -- OUTPUT <= ;
+    -- OUTPUT <= ?????? ;
 
 
 END logic;
