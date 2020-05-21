@@ -1,6 +1,6 @@
 name: mkdocs
 on:
-  push
+  push:
     branches:
       - docs
  
