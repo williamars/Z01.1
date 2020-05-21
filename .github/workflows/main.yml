@@ -1,7 +1,8 @@
 name: mkdocs
 on:
-  push:
-    branches: [ docs ]
+  push
+#:
+#    branches: [ docs ]
 
 # Environment
 env:
