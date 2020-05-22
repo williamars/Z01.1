@@ -1,9 +1,9 @@
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
-
+ 
 entity MemoryIO is
-
+ 
    PORT(
         -- Sistema
         CLK_SLOW : IN  STD_LOGIC;
@@ -94,6 +94,7 @@ ARCHITECTURE logic OF MemoryIO IS
   SIGNAL OUTPUT_RAM       : STD_LOGIC_VECTOR(15 downto 0);
 	SIGNAL SW16 : STD_LOGIC_VECTOR(15 downto 0);
 	SIGNAL LED16 : STD_LOGIC_VECTOR(15 downto 0);
+  SIGNAL DMUX_SEL : STD_LOGIC_VECTOR(1 downto 0);
 
   BEGIN
 
@@ -115,7 +116,6 @@ ARCHITECTURE logic OF MemoryIO IS
              LOAD         => LOAD_DISPLAY,
              ADDRESS      => ADDRESS(13 downto 0),
              LCD_INIT_OK  => LCD_INIT_OK,
-
              LCD_CS_N 	  => LCD_CS_N ,
              LCD_D 		    => LCD_D,
              LCD_RD_N 	  => LCD_RD_N,
@@ -126,18 +126,31 @@ ARCHITECTURE logic OF MemoryIO IS
 
     reg:  Register16
       port map(
-        clock => CLK_FAST,
+        clock => CLK_SLOW,
         input => INPUT,
         load  => LOAD_LED,
         output => LED16
         );
 
+    --mux: Mux4Way16
+    --  port map(
+    --    sel => MUX_SEL,
+    --    a => SW16,
+    --   b => OUTPUT_RAM, 
+    --    c => MUX_C,
+    --    d => MUX_D,
+    --    q  =>OUTPUT
+    --  );
+
+    DMUX_SEL <= "00" when (ADDRESS < "011111111111111" or ADDRESS = "101001011000001") 
+           else "01" when (ADDRESS = "101001011000000")
+           else "10";  
     ----------------------------------------
     -- Controla LOAD do display e da ram! --
     ----------------------------------------
-    --LOAD_DISPLAY <= ; ?????
-    --LOAD_RAM     <= ; ????
-    --LOAD_LED     <= ; ?????
+    LOAD_DISPLAY <= LOAD when DMUX_SEL= "10";
+    LOAD_RAM     <= LOAD when DMUX_SEL= "00";
+    LOAD_LED     <= LOAD when DMUX_SEL= "01";
 
     ----------------------------------------
     -- SW e LED                           --
@@ -153,7 +166,8 @@ ARCHITECTURE logic OF MemoryIO IS
     -- SAIDA do memory I/O                --
     ----------------------------------------
     -- precisar ser: RAM ou SW16
-    -- OUTPUT <= ;
+    OUTPUT <= SW16  when (ADDRESS = "101001011000001") else
+              OUTPUT_RAM;
 
 
 END logic;
