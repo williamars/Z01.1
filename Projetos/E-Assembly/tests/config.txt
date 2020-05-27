@@ -38,8 +38,8 @@
 ## conceito A
 ###########################
 
-#vectorMean 2 2000
-#SWeLED2.nasm 1 1000
+vectorMean.nasm 2 2000
+SWeLED2.nasm 1 1000
 
 
 
