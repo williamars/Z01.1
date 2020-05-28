@@ -18,7 +18,7 @@ entity CPU is
     pcout:       out STD_LOGIC_VECTOR(14 downto 0)     -- endereço para ser enviado a memória ROM
     );
 end entity;
-
+ 
 architecture arch of CPU is
 
   component Mux16 is
@@ -71,13 +71,15 @@ architecture arch of CPU is
       zr,ng                       : in STD_LOGIC;
       muxALUI_A                   : out STD_LOGIC;
       muxAM                       : out STD_LOGIC;
+      muxSD                       : out STD_LOGIC;
       zx, nx, zy, ny, f, no       : out STD_LOGIC;
-      loadA, loadD, loadM, loadPC : out STD_LOGIC
+      loadA, loadD, loadM, loadPC, loadS : out STD_LOGIC
       );
   end component;
 
   signal c_muxALUI_A: STD_LOGIC;
   signal c_muxAM: STD_LOGIC;
+  signal c_muxSD: STD_LOGIC;
   signal c_zx: STD_LOGIC;
   signal c_nx: STD_LOGIC;
   signal c_zy: STD_LOGIC;
@@ -86,14 +88,17 @@ architecture arch of CPU is
   signal c_no: STD_LOGIC;
   signal c_loadA: STD_LOGIC;
   signal c_loadD: STD_LOGIC;
+  signal c_loadS: STD_LOGIC;
   signal c_loadPC: STD_LOGIC;
   signal c_zr: std_logic := '0';
   signal c_ng: std_logic := '0';
 
   signal s_muxALUI_Aout: STD_LOGIC_VECTOR(15 downto 0);
+  signal s_muxSD_out: STD_LOGIC_VECTOR(15 downto 0);
   signal s_muxAM_out: STD_LOGIC_VECTOR(15 downto 0);
-  signal s_regAout: STD_LOGIC_VECTOR(15 downto 0);
   signal s_regDout: STD_LOGIC_VECTOR(15 downto 0);
+  signal s_regSout: STD_LOGIC_VECTOR(15 downto 0);
+  signal s_regAout: STD_LOGIC_VECTOR(15 downto 0);
   signal s_ALUout: STD_LOGIC_VECTOR(15 downto 0);
 
   signal s_pcout: STD_LOGIC_VECTOR(15 downto 0);
@@ -109,31 +114,43 @@ begin
 
   MUX2: Mux16 port map (
     a    => s_regAout,
-    b    => inM,  
+    b    => inM,   
     sel  => c_muxAM, 
     q    => s_muxAM_out
   );
 
-  REG_A: Register16 port map(
+  MUX3: Mux16 port map (
+    a    => s_regDout,
+    b    => s_regSout,   
+    sel  => c_muxSD, 
+    q    => s_muxSD_out
+  );
+
+  REG_A: Register16 port map( 
     clock   => clock,
     input   => s_muxALUI_Aout,
     load    => c_loadA,
-    output  => s_regAout   
+    output  => s_regAout  
   );
-  
-  addressM <= s_regAout(14 downto 0);
+
+  REG_S: Register16 port map(
+    clock   => clock,
+    input   => s_ALUout,
+    load    => c_loadS,
+    output  => s_regSout 
+  );
 
   REG_D: Register16 port map(
     clock   => clock,
     input   => s_ALUout,
-    load    => c_loadD,  
+    load    => c_loadD,
     output  => s_regDout
   );      
 
   ULA: ALU port map (
-    x     => s_regDout,
+    x     => s_muxSD_out,
     y     => s_muxAM_out,
-    zx    => c_zx,  
+    zx    => c_zx, 
     nx    => c_nx,   
     zy    => c_zy,
     ny    => c_ny,   
@@ -143,6 +160,7 @@ begin
     ng    => c_ng,    
     saida => s_ALUout
   );
+  
   outM <= s_ALUout;
 
   ProgramCounter: pc port map(
@@ -162,6 +180,7 @@ begin
     ng           => c_ng,                
     muxALUI_A    => c_muxALUI_A,        
     muxAM        => c_muxAM,
+    MuxSD        => c_muxSD,
     zx           => c_zx,
     nx           => c_nx, 
     zy           => c_zy, 
@@ -171,9 +190,8 @@ begin
     loadA        => c_loadA,
     loadD        => c_loadD, 
     loadM        => writeM,
-    loadPC       => c_loadPC
-  );
-
-  
+    loadPC       => c_loadPC,
+    loadS        => c_loadS
+  );  
 
 end architecture;
