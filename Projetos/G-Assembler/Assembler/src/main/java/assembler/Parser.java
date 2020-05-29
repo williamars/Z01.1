@@ -89,7 +89,15 @@ public class Parser {
      */
     public CommandType commandType(String command) {
         /* TODO: implementar */
-    	return null;
+        if (command.startsWith("leaw ")){
+            return CommandType.A_COMMAND;
+        }
+        if (command.endsWith(":")){
+            return CommandType.L_COMMAND;
+        }
+        else {
+            return CommandType.C_COMMAND;
+        }
     }
 
     /**
