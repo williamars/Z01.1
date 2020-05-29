@@ -27,7 +27,98 @@ public class Code {
      */
     public static String comp(String[] mnemnonic) {
         /* TODO: implementar */
-    	return "";
+        switch (mnemnonic[0]){
+            case "movw":
+                switch (mnemnonic[1]){
+                    case "%A":
+                        return "000110000";
+                    case "%D":
+                        return "000001100";
+                    case "(%A)":
+                        return "001110000";
+                }
+
+            case "addw":
+                switch (mnemnonic[1]){
+                    case "%A":
+                        return "000000010";
+                    case "(%A)":
+                        return "001000010";
+                    case "$1":
+                        return "001110111";
+                }
+
+            case "andw":
+                switch (mnemnonic[1]){
+                    case "(%A)":
+                        return "001000000";
+                    case "%D":
+                        return "000000000";
+                }
+
+            case "incw":
+                switch (mnemnonic[1]){
+                    case "%A":
+                        return "000110111";
+                    case "%D":
+                        return "000011111";
+                    case "(%A)":
+                        return "001110111";
+                }
+
+            case "subw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "001010011";
+                    case "(%A)":
+                        return "001110010";
+
+                }
+
+            case "orw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "000010101";
+                    case "(%A)":
+                        return "001010101";
+                }
+
+            case "notw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "000001101";
+                    case "%A":
+                        return "000110001";
+                }
+
+            case "negw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "000001111";
+                    case "%A":
+                        return "000110011";
+
+                }
+
+            case "decw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "000001110";
+                    case "%A":
+                        return "000110010";
+                }
+
+            case "rsubw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "001000111";
+                }
+
+            default    : return "000001100";
+
+
+        }
+
     }
 
     /**
@@ -57,7 +148,8 @@ public class Code {
      */
     public static String toBinary(String symbol) {
         /* TODO: implementar  string.format */
-    	return "";
+        int number = Integer.parseInt(symbol);
+        return String.format("%16s", Integer.toBinaryString(number)).replace(" ", "0");
     }
 
 }
