@@ -47,11 +47,11 @@ begin
               (instruction(2) and ng)) and instruction(17);                                                                                                
   muxALUI_A <= not(instruction(17));
   muxAM <= instruction(17) and instruction(13); 
-  zx <= instruction(12) and (instruction(17) or (instruction(16) and instruction(17))) ;
-  nx <= instruction(11) and (instruction(17) or (instruction(16) and instruction(17)));
-  zy <= instruction(10) and (instruction(17) or (instruction(16) and instruction(17)));
-  ny <= instruction(9) and (instruction(17) or (instruction(16) and instruction(17)));
-  f  <= instruction(8) and (instruction(17) or (instruction(16) and instruction(17)));
-  no <= instruction(7) and (instruction(17) or (instruction(16) and instruction(17)));
+  zx <= instruction(12) and instruction(17)  ;
+  nx <= instruction(11) and instruction(17) ;
+  zy <= instruction(10) and instruction(17) ;
+  ny <= instruction(9) and instruction(17) ;
+  f  <= instruction(8) and instruction(17) ;
+  no <= instruction(7) and instruction(17) ;
   
 end architecture;

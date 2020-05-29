@@ -142,7 +142,7 @@ begin
 
   REG_D: Register16 port map(
     clock   => clock,
-    input   => s_ALUout,
+    input   => s_muxALUI_Aout,
     load    => c_loadD,
     output  => s_regDout
   );      

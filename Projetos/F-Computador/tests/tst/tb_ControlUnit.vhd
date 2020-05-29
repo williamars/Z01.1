@@ -188,7 +188,7 @@ begin
 
     -----------------------------------------------
 
-     -----------------------------------------------
+    -----------------------------------------------
     -- Zero na saida da ALU gravando    RUBRICA - BÊ
     ----------------------------------------------
     -- mov 0 -> S
@@ -264,6 +264,16 @@ begin
     assert(loadA  = '0' and loadD  = '0' and  loadM  = '0' and  loadPC = '0' and
            zx = '0' and nx = '0' and zy = '1' and ny = '1' and f = '0' and no = '0')
       report " **Falha** em jge %D falso" severity error;
+
+
+
+    -- jne %S
+    instruction <= "11" & "000" & "001100" & "0000" & "101";
+    zr <= '0';  ng <= '0';
+    wait until clk = '1';
+    assert(loadA  = '0' and loadD  = '0' and loadS='0' and  loadM  = '0' and  loadPC = '1' and
+          zx = '0' and nx = '0' and zy = '1' and ny = '1' and f = '0' and no = '0')
+      report " **Falha** em jne %S" severity error;
 
     test_runner_cleanup(runner); -- Simulation ends here
 
