@@ -37,7 +37,17 @@ public class Code {
      */
     public static String jump(String[] mnemnonic) {
         /* TODO: implementar */
-    	return "";
+        switch (mnemnonic[0]){
+            case "jmp"  : return "111";
+            case "jg"  : return "001";
+            case "je"  : return "010";
+            case "jge"  : return "011";
+            case "jl"  : return "100";
+            case "jne"  : return "101";
+            case "jle"  : return "110";
+
+            default    : return "000";
+        }
     }
 
     /**
@@ -46,7 +56,7 @@ public class Code {
      * @return Valor em binário (String de 15 bits) representado com 0s e 1s.
      */
     public static String toBinary(String symbol) {
-        /* TODO: implementar */
+        /* TODO: implementar  string.format */
     	return "";
     }
 
