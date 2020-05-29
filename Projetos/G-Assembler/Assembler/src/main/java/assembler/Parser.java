@@ -130,7 +130,9 @@ public class Parser {
      * @return o símbolo da instrução (sem os dois pontos).
      */
     public String label(String command) {
-        /* TODO: implementar */
+        if (commandType(command)== CommandType.L_COMMAND){
+            return command.substring(0,command.length()-1);
+        }
     	return null;
     }
 
