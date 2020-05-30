@@ -17,8 +17,50 @@ public class Code {
      */
     public static String dest(String[] mnemnonic) {
         /* TODO: implementar */
-    	return "";
+
+        if (mnemnonic.length > 1 && mnemnonic.length < 4) { // Casos em que o tamanho do vetor é 2 ou 3,
+            switch (mnemnonic[mnemnonic.length - 1]) {      // apenas o último elemento é importante!
+                case "%A":                                  // Ex: incw %D; movw %A, %D.
+                    return "0001";
+
+                case "%D":
+                    return "0010";
+
+                case "(%A)":
+                    return "0100";
+            }
+        } else if (mnemnonic.length > 3) {
+
+            if (mnemnonic[0] == "movw" || mnemnonic.length == 5) { // Casos em que instruções do tipo mov, add,
+                                                                   // sub e rsub jogam para dois valores.
+                if ((mnemnonic[mnemnonic.length - 2] == "%D" && mnemnonic[mnemnonic.length - 1] == "(%A)") ||
+                    (mnemnonic[mnemnonic.length - 2] == "(%A)" && mnemnonic[mnemnonic.length - 1] == "%D")) {
+                    return "0110";
+                } else if (mnemnonic[mnemnonic.length - 2] == "%A" && mnemnonic[mnemnonic.length - 1] == "(%A)") {
+                    return "0101";
+                } else if ((mnemnonic[mnemnonic.length - 2] == "%D" && mnemnonic[mnemnonic.length - 1] == "%A") ||
+                           (mnemnonic[mnemnonic.length - 2] == "%A" && mnemnonic[mnemnonic.length - 1] == "%D")) {
+                    return "0011";
+                }
+
+            }
+            else  {                                               // Casos em que instruções do tipo add, sub e rsub
+                switch (mnemnonic[mnemnonic.length - 1]) {        // jogam para apenas 1 valor.
+                    case "%A":
+                        return "0001";
+
+                    case "%D":
+                        return "0010";
+
+                    case "(%A)":
+                        return "0100";
+                }
+            }
+        }
+        return "0000";   // Casos de jump e nop
     }
+
+
 
     /**
      * Retorna o código binário do mnemônico para realizar uma operação de cálculo.
