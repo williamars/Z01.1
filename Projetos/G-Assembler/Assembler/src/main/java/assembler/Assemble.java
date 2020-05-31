@@ -55,9 +55,12 @@ public class Assemble {
         while (parser.advance()){
             if (parser.commandType(parser.command()) == Parser.CommandType.L_COMMAND) {
                 String label = parser.label(parser.command());
-                /* TODO: implementar */
+                /* TODO: imlpementar */
                 // deve verificar se tal label já existe na tabela,
                 // se não, deve inserir. Caso contrário, ignorar.
+                if (!table.contains(label)){
+                    table.addEntry(label,romAddress);
+                }
             }
             romAddress++;
         }
@@ -78,6 +81,10 @@ public class Assemble {
                     // deve verificar se tal símbolo já existe na tabela,
                     // se não, deve inserir associando um endereço de
                     // memória RAM a ele.
+                    if (!table.contains(symbol)){
+                        parser.symbol(symbol);
+                        table.addEntry(symbol,ramAddress);
+                    }
                 }
             }
         }
@@ -95,6 +102,7 @@ public class Assemble {
     public void generateMachineCode() throws FileNotFoundException, IOException{
         Parser parser = new Parser(inputFile);  // abre o arquivo e aponta para o começo
         String instruction  = "";
+        Code code = new Code();
 
         /**
          * Aqui devemos varrer o código nasm linha a linha
@@ -106,8 +114,10 @@ public class Assemble {
             switch (parser.commandType(parser.command())){
                 /* TODO: implementar */
                 case C_COMMAND:
+                    instruction = "10" + code.comp(parser.instruction(parser.command())) + code.dest(parser.instruction(parser.command())) + code.jump(parser.instruction(parser.command()));
                 break;
             case A_COMMAND:
+                    instruction = "0" + code.toBinary(parser.symbol(parser.command()));
                 break;
             default:
                 continue;
