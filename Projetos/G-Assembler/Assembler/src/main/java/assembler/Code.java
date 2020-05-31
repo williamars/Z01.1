@@ -17,8 +17,50 @@ public class Code {
      */
     public static String dest(String[] mnemnonic) {
         /* TODO: implementar */
-    	return "";
+
+        if (mnemnonic.length > 1 && mnemnonic.length < 4) { // Casos em que o tamanho do vetor é 2 ou 3,
+            switch (mnemnonic[mnemnonic.length - 1]) {      // apenas o último elemento é importante!
+                case "%A":                                  // Ex: incw %D; movw %A, %D.
+                    return "0001";
+
+                case "%D":
+                    return "0010";
+
+                case "(%A)":
+                    return "0100";
+            }
+        } else if (mnemnonic.length > 3) {
+
+            if (mnemnonic[0] == "movw" || mnemnonic.length == 5) { // Casos em que instruções do tipo mov, add,
+                                                                   // sub e rsub jogam para dois valores.
+                if ((mnemnonic[mnemnonic.length - 2] == "%D" && mnemnonic[mnemnonic.length - 1] == "(%A)") ||
+                    (mnemnonic[mnemnonic.length - 2] == "(%A)" && mnemnonic[mnemnonic.length - 1] == "%D")) {
+                    return "0110";
+                } else if (mnemnonic[mnemnonic.length - 2] == "%A" && mnemnonic[mnemnonic.length - 1] == "(%A)") {
+                    return "0101";
+                } else if ((mnemnonic[mnemnonic.length - 2] == "%D" && mnemnonic[mnemnonic.length - 1] == "%A") ||
+                           (mnemnonic[mnemnonic.length - 2] == "%A" && mnemnonic[mnemnonic.length - 1] == "%D")) {
+                    return "0011";
+                }
+
+            }
+            else  {                                               // Casos em que instruções do tipo add, sub e rsub
+                switch (mnemnonic[mnemnonic.length - 1]) {        // jogam para apenas 1 valor.
+                    case "%A":
+                        return "0001";
+
+                    case "%D":
+                        return "0010";
+
+                    case "(%A)":
+                        return "0100";
+                }
+            }
+        }
+        return "0000";   // Casos de jump e nop
     }
+
+
 
     /**
      * Retorna o código binário do mnemônico para realizar uma operação de cálculo.
@@ -27,7 +69,98 @@ public class Code {
      */
     public static String comp(String[] mnemnonic) {
         /* TODO: implementar */
-    	return "";
+        switch (mnemnonic[0]){
+            case "movw":
+                switch (mnemnonic[1]){
+                    case "%A":
+                        return "000110000";
+                    case "%D":
+                        return "000001100";
+                    case "(%A)":
+                        return "001110000";
+                }
+
+            case "addw":
+                switch (mnemnonic[1]){
+                    case "%A":
+                        return "000000010";
+                    case "(%A)":
+                        return "001000010";
+                    case "$1":
+                        return "001110111";
+                }
+
+            case "andw":
+                switch (mnemnonic[1]){
+                    case "(%A)":
+                        return "001000000";
+                    case "%D":
+                        return "000000000";
+                }
+
+            case "incw":
+                switch (mnemnonic[1]){
+                    case "%A":
+                        return "000110111";
+                    case "%D":
+                        return "000011111";
+                    case "(%A)":
+                        return "001110111";
+                }
+
+            case "subw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "001010011";
+                    case "(%A)":
+                        return "001110010";
+
+                }
+
+            case "orw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "000010101";
+                    case "(%A)":
+                        return "001010101";
+                }
+
+            case "notw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "000001101";
+                    case "%A":
+                        return "000110001";
+                }
+
+            case "negw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "000001111";
+                    case "%A":
+                        return "000110011";
+
+                }
+
+            case "decw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "000001110";
+                    case "%A":
+                        return "000110010";
+                }
+
+            case "rsubw":
+                switch (mnemnonic[1]){
+                    case "%D":
+                        return "001000111";
+                }
+
+            default    : return "000001100";
+
+
+        }
+
     }
 
     /**
@@ -57,7 +190,8 @@ public class Code {
      */
     public static String toBinary(String symbol) {
         /* TODO: implementar  string.format */
-    	return "";
+        int number = Integer.parseInt(symbol);
+        return String.format("%16s", Integer.toBinaryString(number)).replace(" ", "0");
     }
 
 }

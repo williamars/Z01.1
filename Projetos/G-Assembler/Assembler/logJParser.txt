@@ -2,3 +2,4 @@ OK  : testParser_label
 OK  : testParser_commandType
 OK  : testParser_advance
 OK  : testParser_instruction
+OK  : testParser_symbol

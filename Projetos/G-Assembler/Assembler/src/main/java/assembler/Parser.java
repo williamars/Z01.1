@@ -108,8 +108,20 @@ public class Parser {
      * @return somente o símbolo ou o valor número da instrução.
      */
     public String symbol(String command) {
-        /* TODO: implementar */
-    	return null;
+        if (commandType(command)== CommandType.A_COMMAND){
+            int inicio = 0;
+            int fim = 0;
+            for (int i = 0; i < command.length(); i++) {
+                if (command.charAt(i) == '$'){
+                    inicio = i+1;
+                }
+                if (command.charAt(i) == ','){
+                    fim = i;
+                }
+            }
+            return (command.substring(inicio,fim));
+        }
+        return "";
     }
 
     /**
