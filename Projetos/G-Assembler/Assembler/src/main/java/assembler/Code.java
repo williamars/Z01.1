@@ -78,6 +78,12 @@ public class Code {
                         return "000001100";
                     case "(%A)":
                         return "001110000";
+                    case "$1":
+                        return "000111111";
+                    case "$0":
+                        return "000101010";
+                    case  "$-1":
+                        return "000111010";
                 }
 
             case "addw":
@@ -88,6 +94,7 @@ public class Code {
                         return "001000010";
                     case "$1":
                         return "001110111";
+
                 }
 
             case "andw":
@@ -95,6 +102,8 @@ public class Code {
                     case "(%A)":
                         return "001000000";
                     case "%D":
+                        return "000000000";
+                    case "%A":
                         return "000000000";
                 }
 
