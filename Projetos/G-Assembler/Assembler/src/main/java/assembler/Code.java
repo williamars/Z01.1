@@ -96,6 +96,8 @@ public class Code {
                         return "001000000";
                     case "%D":
                         return "000000000";
+                    case "%A":
+                        return "000000000";
                 }
 
             case "incw":

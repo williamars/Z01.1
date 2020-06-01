@@ -37,6 +37,19 @@ public class Assemble {
         table      = new SymbolTable();                          // Cria e inicializa a tabela de simbolos
     }
 
+
+    public static boolean isNumeric(String strNum) {
+        if (strNum == null) {
+            return false;
+        }
+        try {
+            double d = Double.parseDouble(strNum);
+        } catch (NumberFormatException nfe) {
+            return false;
+        }
+        return true;
+    }
+
     /**
      * primeiro passo para a construção da tabela de símbolos de marcadores (labels)
      * varre o código em busca de novos Labels e Endereços de memórias (variáveis)
@@ -61,8 +74,9 @@ public class Assemble {
                 if (!table.contains(label)){
                     table.addEntry(label,romAddress);
                 }
+            } else{
+                romAddress++;
             }
-            romAddress++;
         }
         parser.close();
 
@@ -117,7 +131,11 @@ public class Assemble {
                     instruction = "10" + code.comp(parser.instruction(parser.command())) + code.dest(parser.instruction(parser.command())) + code.jump(parser.instruction(parser.command()));
                 break;
             case A_COMMAND:
-                    instruction = "0" + code.toBinary(parser.symbol(parser.command()));
+                if (!isNumeric(parser.symbol(parser.command()))){
+                    instruction = "00" + code.toBinary(table.getAddress(parser.symbol(parser.command())).toString());
+                }else {
+                    instruction = "00" + code.toBinary(parser.symbol(parser.command()));
+                }
                 break;
             default:
                 continue;
